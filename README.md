@@ -1,2 +1,3 @@
 # Sesshin
-seshin website development
+Preview ongoing development here: https://victorjoey.github.io/Sesshin/
+
