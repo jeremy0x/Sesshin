@@ -179,6 +179,10 @@ nav ul li a:hover {
   text-decoration: none;
 }
 
+nav ul li a.active {
+  color: var(--secondary);
+}
+
 nav.light ul li a:hover {
   color: var(--secondary-medium);
   text-decoration: none;
@@ -566,6 +570,7 @@ main.nav-active .hamburger-bar:after {
 
 .section-footer .top-footer .flex-col:nth-child(1) {
   width: 25%;
+  margin: auto;
 }
 
 .section-footer .footer-image {
@@ -621,6 +626,7 @@ main.nav-active .hamburger-bar:after {
   height: 8em;
   width: 8em;
   border-radius: 4em;
+  margin: auto;
 }
 .circle-text {
   margin: 0;
@@ -648,6 +654,7 @@ main.nav-active .hamburger-bar:after {
 @media screen and (max-width: 900px) {
   .section-footer .top-footer .flex-col:nth-child(1) {
     width: 25%;
+    margin: auto;
   }
 
   .section-footer .top-footer .flex-col:nth-child(2) {
@@ -690,7 +697,7 @@ main.nav-active .hamburger-bar:after {
     width: 70%;
     display: flex;
     justify-content: center;
-    left: 5em;
+    margin: auto;
   }
 
   .section-footer .top-footer .flex-col:nth-child(2) {
@@ -737,10 +744,10 @@ main.nav-active .hamburger-bar:after {
   }
 
   .circle {
-   width: 10em;
-   height: 10em;
+   width: 7em;
+   height: 7em;
    border-radius: 5em;
-   left: 10em;
+   margin: auto;
  }
 }
 
