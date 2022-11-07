@@ -10,7 +10,7 @@
 /* Colors */
 
 :root {
-  --primary: #212121;
+  --primary: #000000;
   --primary-medium: #343434;
   
   --white: #fff;
@@ -114,9 +114,6 @@ img {
 nav {
   position: relative !important;
 }
-nav.dark {
-  background-color: var(--primary);
-}
 nav.light {
   background-color: var(--white);
 }
@@ -136,7 +133,7 @@ nav.light {
   -ms-overflow-style: none;
   width: 100%;
   -webkit-mask: linear-gradient(90deg, #0000, #000 10% 80%, #0000);
-  mask: linear-gradient(50deg, #0000, #000 10% 80%, #0000);
+  mask: linear-gradient(90deg, #0000, #000 10% 80%, #0000);
   cursor: grab;
 }
 .featured-strains:active {
@@ -335,6 +332,14 @@ h1.apparel__title.white {
   position: relative;
   width: 215px;
   height: 435px;
+  border-width: 3px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      #FAC89E, #875AE2
+    )1;
+    
 }
 @media (max-width: 480px) {
   .apparel__color-cards .card {
@@ -487,7 +492,7 @@ h1.apparel__title.white {
 }
 
 .apparel-extension .right {
-  padding-right: 2rem;
+  padding-inline: 1.5rem;
 }
 
 .apparel-extension .image-list {

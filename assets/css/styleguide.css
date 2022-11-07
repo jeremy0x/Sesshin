@@ -95,10 +95,10 @@ address, dl, fieldset, figure, ol, p, pre, ul {margin: initial;}
 /* ------------------------- Colors -------------------------------------------------- */
 
 :root {
-    --primary: #202020;
+    --primary: #000;
     --primary-medium: #2C2C2C;
-    --secondary: #E89E4A;
-    --secondary-medium: #D98C40;
+    --secondary: linear-gradient(to right, #875AE2 , #FAC89E);
+    --secondary-medium: #FAC89E;
     --secondary-dark: #BD6629;
 
     --bg-light: #F2F2F2;
@@ -135,6 +135,7 @@ html, body {
     -webkit-font-smoothing: antialiased;
     position: relative;
     background-color: var(--primary);
+    overflow-x: hidden;
 }
 
 body.locked {

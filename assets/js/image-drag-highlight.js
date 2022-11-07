@@ -5,7 +5,8 @@ featuredStrains.forEach(function (strain) {
     featuredStrains.forEach(function (strain) {
       strain.classList.remove("active");
     });
-    strain.classList.toggle("active");
+
+    strain.classList.add("active");
   });
 });
 
