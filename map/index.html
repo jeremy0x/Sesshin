@@ -84,7 +84,7 @@
           </li>
         </ul>
         <div class="flex-col right-nav slow-load">
-          <a href="victorjoey.github.io/sesshin/map/" class="btn loop">
+          <a href="javascript:void(0)" class="btn loop">
             <div class="btn-wrap">
               <div class="btn-text">Find Us Nearby</div>
               <div class="btn-text yellow-dot">•</div>
@@ -103,38 +103,20 @@
     <div class="nav-back"></div>
 
     <section class="apparel">
-      <h1 class="tricks apparel__title white">Apparel</h1>
-      <div class="apparel__color-cards">
-        <div class="black card">
-          <a href="./black-apparel/" title="black apparel" class="preview">
-            <img src="/assets/images/black-hat.png" alt="black hat" class="blackSlides" />
-            <img src="/assets/images/black-beanie.png" alt="black beanie" class="blackSlides" />
-            <img src="/assets/images/black-sweatshirt.png" alt="black sweatshirt" class="blackSlides" />
-          </a>
-        </div>
-        <div class="blue card">
-          <a href="./blue-apparel/" title="blue-apparel" class="preview">
-            <img src="/assets/images/blue-hat.png" alt="blue hat" class="blueSlides" />
-            <img src="/assets/images/blue-beanie.png" alt="blue beanie" class="blueSlides" />
-            <img src="/assets/images/blue-sweatshirt.png" alt="blue sweatshirt" class="blueSlides" />
-          </a>
-        </div>
-        <div class="tan card">
-          <a href="./tan-apparel/" title="tan apparel" class="preview">
-            <img src="/assets/images/tan-hat.png" alt="tan hat" class="tanSlides" />
-            <img src="/assets/images/tan-beanie.png" alt="tan beanie" class="tanSlides" />
-            <img src="/assets/images/tan-sweatshirt.png" alt="tan sweatshirt" class="tanSlides" />
-          </a>
-        </div>
-        <div class="white card">
-          <a href="./white-apparel/" title="white apparel" class="preview">
-            <img src="/assets/images/white-hat.png" alt="white hat" class="whiteSlides" />
-          </a>
-        </div>
-      </div>
-      <div class="apparel__cta">
-        <a href="./black-apparel/" role="button"> Shop Apparel </a>
-      </div>
+      <h1 class="tricks apparel__title white">Find us</h1>
+
+      <!-- Api key -->
+      <div id="map"
+      style="height: 700px; width:100%"
+      ></div>
+
+      <!-- 
+       The `defer` attribute causes the callback to execute after the full HTML
+       document has been parsed. For non-blocking uses, avoiding race conditions,
+       and consistent behavior across browsers, consider loading using Promises
+       with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+      -->
+
     </section>
   </main>
 
@@ -158,11 +140,9 @@
           </div>
         </div>
         <div class="flex-col">
-          <a href="">
           <div style="right: 1em; text-align: center" class="circle playbutton-inner-wrap">
             <div class="circle-text" style="color: #fff">Find Us</div>
           </div>
-        </a>
         </div>
       </div>
       <div class="row bottom-footer">
@@ -191,6 +171,14 @@
     </div>
   </footer>
 
+  <!-- Google map API -->
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQWolTX3xnYItKYsDnf4yFtaJvpidmBBE&callback=initMap">
+</script>
+<!-- Script source -->
+<script src="app.js"></script>
+
+<!-- CDN -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
   <script src="https://unpkg.com/@barba/core"></script>
