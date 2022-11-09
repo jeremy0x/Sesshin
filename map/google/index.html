@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta Tags -->
+  <title>Apparel — Sesshin</title>
+  <meta name="title" content="Apparel — Sesshin" />
+  <meta name="description" content="Elevate Your Sessh" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="Apparel — Sesshin" />
+  <meta property="og:description" content="Elevate Your Sessh" />
+  <meta property="og:image" content="https://i.ibb.co/yfWpmF9/sesshin.png" />
+  <meta property="og:site_name" content="Apparel — Sesshin" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="" />
+  <meta property="twitter:title" content="Apparel — Sesshin" />
+  <meta property="twitter:description" content="Elevate Your Sessh" />
+  <meta property="twitter:image" content="https://i.ibb.co/yfWpmF9/sesshin.png" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <link rel="stylesheet" href="../assets/css/styleguide.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <link href="../assets/css/normalize.css" rel="stylesheet" />
+  <link href="../assets/css/uikit.min.css" rel="stylesheet" />
+  <link href="../assets/css/styleguide.css" rel="stylesheet" />
+  <link href="../assets/css/style.css" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- JS -->
+  <script src="/assets/js/slideshow.js" defer></script>
+
+  <!-- Mapbox -->
+
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="./style.css">
+
+  <style>
+  
+    h1 {
+      font-size: 22px;
+      margin: 0;
+      font-weight: 400;
+      line-height: 20px;
+      padding: 20px 2px;
+    }
+  
+    a {
+      color: #404040;
+      text-decoration: none;
+    }
+  
+    a:hover {
+      color: #101010;
+    }
+  
+    /* The page is split between map and sidebar - the sidebar gets 1/3, map
+    gets 2/3 of the page. You can adjust this to your personal liking. */
+    .sidebar {
+      position: absolute;
+      width: 33.3333%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      border-right: 1px solid rgba(0, 0, 0, 0.25);
+    }
+  
+    .map {
+      position: absolute;
+      left: 33.3333%;
+      width: 66.6666%;
+      top: 0;
+      bottom: 0;
+    }
+  
+    .heading {
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      height: 60px;
+      line-height: 60px;
+      padding: 0 10px;
+    }
+  </style>  
+
+
+</head>
+
+<body>
+  <main>
+    <nav id="sticky" class="nav-up-down dark">
+      <div class="row">
+        <div class="flex-col left-nav slow-load">
+          <a href="/" class="logo animate-logo">
+             <img height="auto" viewBox="100 0 100 100" width="140"
+                         src="../logo.png" alt="">
+                     </a>
+          </a>
+        </div>
+        <ul class="flex-col center-nav slow-load">
+          <li class="home-li-nav">
+            <a href="/">Home </a>
+          </li>
+          <li class="">
+            <a href="../featured-strains/">Featured Strains
+              <div class="nav-number">13</div>
+            </a>
+          </li>
+
+          <li class="external">
+            <a href="#" class="active">Apparel
+              <svg width="10" viewBox="0 0 10 10" height="10">
+                <g stroke="#242424" fill="none" fill-rule="evenodd">
+                  <path d="M1 1h8v8M1 9l8-8" />
+                </g>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="flex-col right-nav slow-load">
+          <a href="javascript:void(0)" class="btn loop">
+            <div class="btn-wrap">
+              <div class="btn-text">Find Us Nearby</div>
+              <div class="btn-text yellow-dot">•</div>
+              <div class="btn-text">Find Us Nearby</div>
+              <div class="btn-text yellow-dot">•</div>
+              <div class="btn-text">Find Us Nearby</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="nav-icon slow-load">
+        <div class="hamburger-bar"></div>
+        <div class="nav-icon-back"></div>
+      </div>
+    </nav>
+    <div class="nav-back"></div>
+
+    <section class="apparel" style="position: relative;" >
+      <h1 class="tricks apparel__title white">Find us</h1>
+
+      <!-- Api key -->
+      <!-- <div id="map"
+      style="height: 700px; width:100%"
+      ></div> -->
+
+      <!-- 
+       The `defer` attribute causes the callback to execute after the full HTML
+       document has been parsed. For non-blocking uses, avoiding race conditions,
+       and consistent behavior across browsers, consider loading using Promises
+       with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+      -->
+
+      <div class='sidebar'>
+        <div class='heading'>
+          <h1>Our locations</h1>
+        </div>
+        <div id='listings' class='listings'></div>
+      </div>
+      <div id="map" class="map"></div>
+
+    </section>
+  </main>
+
+  <footer class="section section-footer dark" style="background-color: #000000; padding-bottom: 0; padding-top: 5em">
+    <div class="container">
+      <div class="row top-footer">
+        <div class="flex-col">
+          <img style="width: 50%" src="../assets/img/sessh_circle.png" alt="" srcset="" />
+        </div>
+        <div class="flex-col">
+          <div class="footer-text">
+            <div class="line"></div>
+            <h2 style="
+                  padding: 0em 2em 0em 2em;
+                  color: #6b6b6b;
+                  text-align: center;
+                ">
+              Elevate your Sessh
+            </h2>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="flex-col">
+          <div style="right: 1em; text-align: center" class="circle playbutton-inner-wrap">
+            <div class="circle-text" style="color: #fff">Find Us</div>
+          </div>
+        </div>
+      </div>
+      <div class="row bottom-footer">
+        <div class="flex-col">
+          <a href="https://wowpage.design" target="_blank"><svg width="60" viewBox="0 0 60 60" height="60">
+              <g fill="none" fill-rule="evenodd">
+                <rect fill="#E89E4A" width="60" height="60" rx="30" />
+                <g transform="translate(18 18)" stroke="#FFF" stroke-width="2">
+                  <circle cx="12" cy="12" r="12" />
+                  <path d="M6 12a6 6 0 1 0 12 0" />
+                </g>
+              </g>
+            </svg>
+            <h4 style="color: #fff">Powered by WOWPage</h4>
+          </a>
+        </div>
+        <div class="flex-col">
+          <ul>
+            <li class="small" style="color: #fff">© 2022 Sesshin</li>
+            <li class="small">
+              <a style="color: #fff" href="newsletter.html">Terms & Conditions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+    <!-- mapbox -->
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1Ijoic2Vzc2hpbjEiLCJhIjoiY2xhNndoOWcxMDBtYjQxb3ptNzQ5ZTNyMyJ9.IRZoTu3MJbBsgtO5o7STuw';
+    
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/light-v10',
+        center: [-77.034084, 38.909671],
+        zoom: 13,
+        scrollZoom: false
+    });
+    </script>
+
+  <!-- Google map API -->
+  <!-- <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQWolTX3xnYItKYsDnf4yFtaJvpidmBBE&callback=initMap">
+</script> -->
+<!-- Script source -->
+<script src="app.js"></script>
+
+<!-- CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <script src="https://unpkg.com/@barba/core"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script src="https://www.google.com/recaptcha/api.js?render=6Ld1MiYcAAAAANo3Cv2czYgssQlPHMOJE-hAFc1u"></script>
+  <script>
+    // Barba Load Wrapper
+    barba.hooks.beforeEnter(() => {
+      grecaptcha.ready(function () {
+        grecaptcha
+          .execute('6Ld1MiYcAAAAANo3Cv2czYgssQlPHMOJE-hAFc1u', {
+            action: 'submit',
+          })
+          .then(function (token) {
+            document.getElementById('g-recaptcha-response').value = token;
+          });
+      });
+    });
+  </script>
+
+  <!-- Scripts -->
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/cookies.js"></script>
+  <script src="../assets/js/page-transition.js"></script>
+  <script src="../assets/js/observers.js"></script>
+  <script src="../assets/js/uikit.min.js"></script>
+  <script src="../assets/js/swiper-custom.js"></script>
+  <script src="../assets/js/nav-up-down.js"></script>
+  <script src="../assets/js/magnetic.js"></script>
+</body>
+
+</html>
