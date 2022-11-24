@@ -12,7 +12,7 @@
 :root {
   --primary: #000000;
   --primary-medium: #343434;
-  
+
   --white: #fff;
   --black: #000;
 }
@@ -37,9 +37,10 @@
 }
 
 /* * General Styles * */
-/* body, html {
-  cursor: url("/favicon-32x32.png"), default;
-} */
+html,
+body {
+  scroll-behavior: smooth;
+}
 
 body {
   font-size: 16px;
@@ -127,7 +128,7 @@ nav.light {
   align-items: center;
   justify-content: flex-start;
   gap: 3rem;
-  padding: 7rem 5rem 0 5rem ;
+  padding: 7rem 5rem 0 5rem;
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -136,7 +137,11 @@ nav.light {
   mask: linear-gradient(90deg, #0000, #000 10% 80%, #0000);
   cursor: grab;
 }
-.featured-strains:active {
+.featured-strains a {
+  cursor: grab;
+}
+.featured-strains:active
+.featured-strains a:active {
   cursor: grabbing;
 }
 .featured-strains::-webkit-scrollbar {
@@ -186,8 +191,12 @@ nav.light {
 }
 
 @keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .strains-description {
@@ -216,7 +225,7 @@ nav.light {
 .strains-description__text p.contents {
   font-style: italic;
 }
-  
+
 @media (min-width: 1200px) {
   .strains-description__text p:first-child {
     padding-inline: 2rem;
@@ -299,7 +308,7 @@ nav.light {
 h1.apparel__title {
   font-weight: 400;
   font-size: 4rem;
-  font-family: "BauzietNorm", sans-serif;
+  font-family: 'BauzietNorm', sans-serif;
   color: var(--black);
 }
 
@@ -329,12 +338,7 @@ h1.apparel__title.white {
   height: 435px;
   border-width: 3px;
   border-style: solid;
-  border-image: 
-    linear-gradient(
-      to bottom, 
-      #FAC89E, #875AE2
-    )1;
-    
+  border-image: linear-gradient(to bottom, #fac89e, #875ae2) 1;
 }
 @media (max-width: 480px) {
   .apparel__color-cards .card {
@@ -426,7 +430,7 @@ h1.apparel__title.white {
 .apparel__cta a {
   font-size: 1.2rem;
   font-weight: 400;
-  font-family: "ClarikaProGeo", sans-serif;
+  font-family: 'ClarikaProGeo', sans-serif;
   text-decoration: none;
   color: var(--white);
   border: 1px solid var(--white);
