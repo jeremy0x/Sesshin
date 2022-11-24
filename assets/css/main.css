@@ -345,6 +345,9 @@ h1.apparel__title.white {
 
 .apparel__color-cards .black {
   background-color: var(--black);
+  background-image: url('/assets/images/stylish_happy_young_adult_in_a_black_hoodie_at_conc.png');
+  background-size: cover;
+  background-position: center;
 }
 .apparel__color-cards .black .preview {
   border: 5px solid var(--black);
@@ -352,6 +355,9 @@ h1.apparel__title.white {
 
 .apparel__color-cards .white {
   background-color: var(--white);
+  background-image: url('/assets/images/stylish_happy_young_adult_in_a_white_hoodie_photosh.png');
+  background-size: cover;
+  background-position: center;
 }
 .apparel__color-cards .white .preview {
   border: 5px solid var(--white);
@@ -359,6 +365,9 @@ h1.apparel__title.white {
 
 .apparel__color-cards .tan {
   background-color: #ebd8ba;
+  background-image: url('/assets/images/stylish_happy_young_woman_in_a_beige_hoodie_at_park.png');
+  background-size: cover;
+  background-position: center;
 }
 .apparel__color-cards .tan .preview {
   border: 5px solid #ebd8ba;
@@ -366,6 +375,9 @@ h1.apparel__title.white {
 
 .apparel__color-cards .blue {
   background-color: #96b8d1;
+  background-image: url('/assets/images/Happy_young_woman_in_sky_blue_knit_beanie.png');
+  background-size: cover;
+  background-position: center;
 }
 .apparel__color-cards .blue .preview {
   border: 5px solid #96b8d1;
