@@ -140,8 +140,7 @@ nav.light {
 .featured-strains a {
   cursor: grab;
 }
-.featured-strains:active
-.featured-strains a:active {
+.featured-strains:active .featured-strains a:active {
   cursor: grabbing;
 }
 .featured-strains::-webkit-scrollbar {
@@ -228,7 +227,6 @@ nav.light {
     transform: translateX(-50%) translateY(0);
   }
 }
-
 
 [data-tab-info] {
   display: none;
@@ -391,6 +389,7 @@ h1.apparel__title.white {
   border-width: 3px;
   border-style: solid;
   border-image: linear-gradient(to bottom, #fac89e, #875ae2) 1;
+  cursor: context-menu;
 }
 @media (max-width: 480px) {
   .apparel__color-cards .card {
