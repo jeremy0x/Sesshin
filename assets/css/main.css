@@ -12,7 +12,7 @@
 :root {
   --primary: #000000;
   --primary-medium: #343434;
-  
+
   --white: #fff;
   --black: #000;
 }
@@ -37,9 +37,10 @@
 }
 
 /* * General Styles * */
-/* body, html {
-  cursor: url("/favicon-32x32.png"), default;
-} */
+html,
+body {
+  scroll-behavior: smooth;
+}
 
 body {
   font-size: 16px;
@@ -127,7 +128,7 @@ nav.light {
   align-items: center;
   justify-content: flex-start;
   gap: 3rem;
-  padding: 7rem 5rem 0 5rem ;
+  padding: 7rem 5rem 0 5rem;
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -136,7 +137,10 @@ nav.light {
   mask: linear-gradient(90deg, #0000, #000 10% 80%, #0000);
   cursor: grab;
 }
-.featured-strains:active {
+.featured-strains a {
+  cursor: grab;
+}
+.featured-strains:active .featured-strains a:active {
   cursor: grabbing;
 }
 .featured-strains::-webkit-scrollbar {
@@ -173,6 +177,57 @@ nav.light {
   filter: drop-shadow(0 0 35px #ffffffb3);
 }
 
+.featured-strains-section {
+  position: relative;
+}
+
+.scroll-down {
+  position: absolute;
+  animation: bounce 1.5s infinite;
+  left: 3rem;
+}
+
+.scroll-up {
+  position: fixed;
+  display: none;
+  right: 1rem;
+  animation: fadeEffect 1.5s;
+}
+
+.scroll-down,
+.scroll-up {
+  bottom: 2rem;
+  transform: translateX(-50%);
+  z-index: 1;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.scroll-down img,
+.scroll-up img {
+  width: 50px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .scroll-down img,
+  .scroll-up img {
+    width: 35px;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(5px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
 [data-tab-info] {
   display: none;
 }
@@ -186,8 +241,12 @@ nav.light {
 }
 
 @keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .strains-description {
@@ -216,7 +275,7 @@ nav.light {
 .strains-description__text p.contents {
   font-style: italic;
 }
-  
+
 @media (min-width: 1200px) {
   .strains-description__text p:first-child {
     padding-inline: 2rem;
@@ -299,7 +358,7 @@ nav.light {
 h1.apparel__title {
   font-weight: 400;
   font-size: 4rem;
-  font-family: "BauzietNorm", sans-serif;
+  font-family: 'BauzietNorm', sans-serif;
   color: var(--black);
 }
 
@@ -329,12 +388,8 @@ h1.apparel__title.white {
   height: 435px;
   border-width: 3px;
   border-style: solid;
-  border-image: 
-    linear-gradient(
-      to bottom, 
-      #FAC89E, #875AE2
-    )1;
-    
+  border-image: linear-gradient(to bottom, #fac89e, #875ae2) 1;
+  cursor: context-menu;
 }
 @media (max-width: 480px) {
   .apparel__color-cards .card {
@@ -345,6 +400,9 @@ h1.apparel__title.white {
 
 .apparel__color-cards .black {
   background-color: var(--black);
+  background-image: url('/assets/images/stylish_happy_young_adult_in_a_black_hoodie_at_conc.png');
+  background-size: cover;
+  background-position: center;
 }
 .apparel__color-cards .black .preview {
   border: 5px solid var(--black);
@@ -352,6 +410,9 @@ h1.apparel__title.white {
 
 .apparel__color-cards .white {
   background-color: var(--white);
+  background-image: url('/assets/images/stylish_happy_young_adult_in_a_white_hoodie_photosh.png');
+  background-size: cover;
+  background-position: center;
 }
 .apparel__color-cards .white .preview {
   border: 5px solid var(--white);
@@ -359,6 +420,9 @@ h1.apparel__title.white {
 
 .apparel__color-cards .tan {
   background-color: #ebd8ba;
+  background-image: url('/assets/images/stylish_happy_young_woman_in_a_beige_hoodie_at_park.png');
+  background-size: cover;
+  background-position: center;
 }
 .apparel__color-cards .tan .preview {
   border: 5px solid #ebd8ba;
@@ -366,6 +430,9 @@ h1.apparel__title.white {
 
 .apparel__color-cards .blue {
   background-color: #96b8d1;
+  background-image: url('/assets/images/Happy_young_woman_in_sky_blue_knit_beanie.png');
+  background-size: cover;
+  background-position: center;
 }
 .apparel__color-cards .blue .preview {
   border: 5px solid #96b8d1;
@@ -414,7 +481,7 @@ h1.apparel__title.white {
 .apparel__cta a {
   font-size: 1.2rem;
   font-weight: 400;
-  font-family: "ClarikaProGeo", sans-serif;
+  font-family: 'ClarikaProGeo', sans-serif;
   text-decoration: none;
   color: var(--white);
   border: 1px solid var(--white);
