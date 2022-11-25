@@ -21,6 +21,46 @@
     <link href="assets/css/uikit.min.css" rel="stylesheet" />
     <link href="assets/css/styleguide.css" rel="stylesheet" />
     <link href="assets/css/style.css" rel="stylesheet" />
+<style>
+  #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#mobile-indicator {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    #mobile-indicator {
+        display: block;
+    }
+}
+</style>
+<script>
+  var vid = document.getElementById("myVideo");
+vid.volume = 0.2;
+
+(function($){
+            $(window).on("load",function(e){
+				$('video source').each(function(){
+					var isMobile = $('#mobile-indicator').is(':visible');
+					if (isMobile == true){
+    					var videoSrc = ($(this).attr('src'));
+						var videoSmall = "https://www.w3schools.com/html/mov_bbb.mp4";
+						$(this).attr('src', videoSmall);
+						$("video")[0].load();
+						//console.log(newExt);
+					}
+				});
+				
+            });
+        })(jQuery);
+
+</script>
   </head>
 
   <body data-barba="wrapper">
@@ -269,34 +309,47 @@
             </div>
           </div>
         </header>
-        <div class="video-modal size_option2">
-          <div class="video-modal-wrap">
+        <!-- <div class="video-modal" style="border: 3px solid white;">
+          <div class="video-modal-wrap" style="border: 3px solid blue;">
             <iframe
               id="vimeo-modal"
-              src="https://player.vimeo.com/video/760665900?playsinline=0&amp;title=0&amp;byline=0&amp;portrait=0"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%"
+              src="media/pages/home/sesshin-intro.mp4"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 3px solid red;"
               frameborder="0"
               allow="autoplay; fullscreen"
               allowfullscreen
               playsinline="0"
             ></iframe>
           </div>
-        </div>
+        </div> -->
         <div class="video-modal-bg">
           <div class="close-button">
             <svg class="icon" width="16" height="16">
               <g stroke="#FFF" fill="none" fill-rule="evenodd"><path d="M1 1l14.142 14.142M15.142 1L1 15.142" /></g>
             </svg>
           </div>
+       
+            <!-- <video autoplay loop id="myVideo">
+              <source src="media/pages/home/sesshin-trim.mp4">
+
+            </video>
+             -->
+
+             <video class="video" id="bg_video" playsinline autoplay muted loop >
+              <source src="./media/pages/home/sesshin-intro.mp4" type="video/mp4">
+            </video>
+        
+
         </div>
-        <!-- <section class="section section-home-intro dark" id="home-intro" style="background-color: #000;">
+        <div id="mobile-indicator"></div>
+        <section class="section section-home-intro dark" id="home-intro" style="background-color: #000;">
             <div class="container small">
                <div class="row">
                   <h4 class="subs" uk-scrollspy="cls: animate; repeat: true; offset-top: 0;">Elevate Your Sessh</h4>
                   <h2>Each strain, and each batch, is meticulously developed to get you the same experience <span> every time. </span> From the packaging to the high, we've considered it all so you don't have to worry about a thing.</h2>
                </div>
             </div>
-        </section> -->
+        </section>
         <!-- <section class="section slider projects-grid section-home-projects-grid dark" uk-slider="finite: true">
    <div class="container">
       <div class="row">
