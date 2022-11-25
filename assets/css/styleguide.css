@@ -618,8 +618,8 @@ h2 span, h3 span {
 }
 
 .btn.loop:hover {
-    border-top: 1px solid var(--secondary);
-    border-bottom: 1px solid var(--secondary);
+    border-top: 1px solid var(--secondary-dark);
+    border-bottom: 1px solid var(--secondary-dark);
 }
 
 .btn.loop.loop-light:hover, nav.light .loop:hover{
