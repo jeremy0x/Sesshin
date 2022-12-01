@@ -8,7 +8,7 @@ tl.fromTo(
   {
     clipPath: "circle(75%)",
     duration: 1.5,
-    delay: 2.5,
+    delay: 2,
   }
 );
 
