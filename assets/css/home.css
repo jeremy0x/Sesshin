@@ -53,7 +53,12 @@ html {
 
 /* Hero Section */
 .hero {
+  background: linear-gradient(to right, #875ae2, #fac89e);
+}
+
+.hero-container {
   position: relative;
+  clip-path: circle(0%);
 }
 
 .hero-video {
@@ -218,7 +223,6 @@ html {
 }
 
 /* ScrollReveal extension */
-html.sr .reveal,
-html.sr .ellipse {
+html.sr .reveal {
   visibility: hidden;
 }
