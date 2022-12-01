@@ -159,6 +159,8 @@ html {
 
   position: relative;
   color: var(--white);
+
+  transition: all 0.2s ease-in;
 }
 
 @media (min-width: 480px) {
@@ -209,6 +211,10 @@ html {
   object-fit: cover;
   object-position: center;
   z-index: 1;
+}
+
+.vibe:hover {
+  transform: translateY(-5px);
 }
 
 /* ScrollReveal extension */
