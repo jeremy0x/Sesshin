@@ -54,6 +54,7 @@ html {
 /* Hero Section */
 .hero {
   position: relative;
+  clip-path: circle(0%);
 }
 
 .hero-video {
@@ -218,7 +219,6 @@ html {
 }
 
 /* ScrollReveal extension */
-html.sr .reveal,
-html.sr .ellipse {
+html.sr .reveal {
   visibility: hidden;
 }
