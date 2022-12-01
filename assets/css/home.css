@@ -53,6 +53,10 @@ html {
 
 /* Hero Section */
 .hero {
+  background: linear-gradient(to right, #875ae2, #fac89e);
+}
+
+.hero-container {
   position: relative;
   clip-path: circle(0%);
 }

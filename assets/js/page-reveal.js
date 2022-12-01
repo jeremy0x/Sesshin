@@ -1,7 +1,7 @@
 let tl = gsap.timeline({});
 
 tl.fromTo(
-  ".hero",
+  ".hero-container",
   {
     clipPath: "circle(0%)",
   },
