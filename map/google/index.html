@@ -58,7 +58,6 @@
   <link rel="stylesheet" href="./style.css">
 
   <style>
-  
     h1 {
       font-size: 22px;
       margin: 0;
@@ -66,16 +65,16 @@
       line-height: 20px;
       padding: 20px 2px;
     }
-  
+
     a {
       color: #404040;
       text-decoration: none;
     }
-  
+
     a:hover {
       color: #101010;
     }
-  
+
     /* The page is split between map and sidebar - the sidebar gets 1/3, map
     gets 2/3 of the page. You can adjust this to your personal liking. */
     .sidebar {
@@ -87,7 +86,7 @@
       overflow: hidden;
       border-right: 1px solid rgba(0, 0, 0, 0.25);
     }
-  
+
     .map {
       position: absolute;
       left: 33.3333%;
@@ -95,7 +94,7 @@
       top: 0;
       bottom: 0;
     }
-  
+
     .heading {
       background: #fff;
       border-bottom: 1px solid #eee;
@@ -103,7 +102,7 @@
       line-height: 60px;
       padding: 0 10px;
     }
-  </style>  
+  </style>
 
 
 </head>
@@ -114,9 +113,8 @@
       <div class="row">
         <div class="flex-col left-nav slow-load">
           <a href="/" class="logo animate-logo">
-             <img height="auto" viewBox="100 0 100 100" width="140"
-                         src="../logo.png" alt="">
-                     </a>
+            <img height="auto" viewBox="100 0 100 100" width="140" src="../logo.png" alt="">
+          </a>
           </a>
         </div>
         <ul class="flex-col center-nav slow-load">
@@ -124,7 +122,7 @@
             <a href="/home/">Home </a>
           </li>
           <li class="">
-            <a href="../featured-strains/">Featured Strains
+            <a href="../featured-strains/">Products
               <div class="nav-number">13</div>
             </a>
           </li>
@@ -158,7 +156,7 @@
     </nav>
     <div class="nav-back"></div>
 
-    <section class="apparel" style="position: relative;" >
+    <section class="apparel" style="position: relative;">
       <h1 class="tricks apparel__title white">Find us</h1>
 
       <!-- Api key -->
@@ -234,27 +232,27 @@
       </div>
     </div>
   </footer>
-    <!-- mapbox -->
-    <script>
-      mapboxgl.accessToken = 'pk.eyJ1Ijoic2Vzc2hpbjEiLCJhIjoiY2xhNndoOWcxMDBtYjQxb3ptNzQ5ZTNyMyJ9.IRZoTu3MJbBsgtO5o7STuw';
-    
-      const map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/light-v10',
-        center: [-77.034084, 38.909671],
-        zoom: 13,
-        scrollZoom: false
+  <!-- mapbox -->
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2Vzc2hpbjEiLCJhIjoiY2xhNndoOWcxMDBtYjQxb3ptNzQ5ZTNyMyJ9.IRZoTu3MJbBsgtO5o7STuw';
+
+    const map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/mapbox/light-v10',
+      center: [-77.034084, 38.909671],
+      zoom: 13,
+      scrollZoom: false
     });
-    </script>
+  </script>
 
   <!-- Google map API -->
   <!-- <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQWolTX3xnYItKYsDnf4yFtaJvpidmBBE&callback=initMap">
 </script> -->
-<!-- Script source -->
-<script src="app.js"></script>
+  <!-- Script source -->
+  <script src="app.js"></script>
 
-<!-- CDN -->
+  <!-- CDN -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
   <script src="https://unpkg.com/@barba/core"></script>

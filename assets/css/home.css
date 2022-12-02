@@ -53,12 +53,12 @@ html {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right, #875ae2, #fac89e);
+  background: var(--black);
 }
 
 .hero-container {
   position: relative;
-  clip-path: circle(0%);
+  clip-path: circle(7%);
 }
 
 .hero-video {
@@ -95,12 +95,11 @@ html {
   justify-content: center;
   align-items: center;
 
-  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9));
-  border-radius: 50% 50% 0 0;
+  background: var(--black);
+  clip-path: ellipse(60% 100% at 50% 100%);
 
   z-index: 1;
-  /* animation: fade-in 7s ease-in-out, bounce 2s ease-in-out infinite; */
-  animation: bounce 2s ease-in-out infinite;
+  animation: bounce 2.5s ease-in-out infinite;
 }
 
 @keyframes bounce {
@@ -161,6 +160,7 @@ html {
   width: 150px;
   border-radius: 10px;
   overflow: hidden;
+  text-decoration: none;
 
   position: relative;
   color: var(--white);
@@ -173,25 +173,6 @@ html {
     height: 200px;
     width: 200px;
   }
-}
-
-.vibe-cover {
-  font-size: clamp(1rem, 4vw, 1.5rem);
-  font-weight: 400;
-  font-family: ClarikaProGeo, sans-serif;
-  color: var(--black);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
 }
 
 .vibe-creative {
@@ -215,11 +196,19 @@ html {
   width: 100%;
   object-fit: cover;
   object-position: center;
-  z-index: 1;
+  transition: 0.5s ease;
 }
 
-.vibe:hover {
-  transform: translateY(-5px);
+.vibe-text {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.vibe:hover img {
+  transform: scale(1.05);
 }
 
 /* ScrollReveal extension */
