@@ -379,16 +379,16 @@ h1.apparel__title.white {
   align-items: center;
   flex-wrap: wrap;
   margin-top: 3rem;
-  gap: 0.4rem;
+  gap: 0;
 }
 
 .apparel__color-cards .card {
   position: relative;
   width: 215px;
   height: 435px;
-  border-width: 3px;
-  border-style: solid;
-  border-image: linear-gradient(to bottom, #fac89e, #875ae2) 1;
+  /* border-width: 3px; */
+  /* border-style: solid; */
+  /* border-image: linear-gradient(to bottom, #fac89e, #875ae2) 1; */
 }
 @media (max-width: 480px) {
   .apparel__color-cards .card {
