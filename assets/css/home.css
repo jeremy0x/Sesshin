@@ -53,12 +53,12 @@ html {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right, #875ae2, #fac89e);
+  background: var(--black);
 }
 
 .hero-container {
   position: relative;
-  clip-path: circle(0%);
+  clip-path: circle(7%);
 }
 
 .hero-video {
