@@ -95,12 +95,11 @@ html {
   justify-content: center;
   align-items: center;
 
-  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.9));
-  border-radius: 50% 50% 0 0;
+  background: var(--black);
+  clip-path: ellipse(60% 100% at 50% 100%);
 
   z-index: 1;
-  /* animation: fade-in 7s ease-in-out, bounce 2s ease-in-out infinite; */
-  animation: bounce 2s ease-in-out infinite;
+  animation: bounce 2.5s ease-in-out infinite;
 }
 
 @keyframes bounce {
