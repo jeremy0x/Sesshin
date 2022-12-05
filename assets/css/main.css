@@ -375,9 +375,11 @@ h1.apparel__title.white {
 .apparel__color-cards {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   margin-top: 3rem;
   gap: 0;
 }
