@@ -374,7 +374,7 @@ h2 span, h3 span {
 
 .flex-col {
     display: block;
-    width: 100%;
+    /* width: 100%; */
     order: 2;
     position: relative;
 }
