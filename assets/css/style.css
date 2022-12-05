@@ -859,14 +859,14 @@ main.nav-active .hamburger-bar:after {
     padding: 3em 0;
   }
 
-  .section-footer .bottom-footer .flex-col:nth-child(1) {
+  /* .section-footer .bottom-footer .flex-col:nth-child(1) {
     width: 100%;
   }
 
   .section-footer .bottom-footer .flex-col:nth-child(2) {
     width: 100%;
     padding-top: 2em;
-  }
+  } */
 
   .section-footer .bottom-footer .flex-col:nth-child(2) li {
     width: 100%;
