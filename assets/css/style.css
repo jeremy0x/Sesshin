@@ -578,11 +578,11 @@ main.nav-active .hamburger-bar:after {
 /* --- Footer - Top --- */
 
 .section-footer .top-footer {
-  padding: 0 0 6em 0;
+  padding: 0 0 12em 0;
 }
 
 .section-footer .top-footer .flex-col:nth-child(1) {
-  width: 25%;
+  width: 12.5%;
   margin: auto;
 }
 
@@ -702,8 +702,8 @@ main.nav-active .hamburger-bar:after {
 
 @media screen and (max-width: 720px) {
   .section-footer .top-footer {
-    padding: 0 0 3em 0;
-    margin-bottom: 11em;
+    padding: 0;
+    margin: 0;
   }
 
   .section-footer .top-footer .flex-col:nth-child(1) {
