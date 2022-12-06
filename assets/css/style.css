@@ -578,11 +578,11 @@ main.nav-active .hamburger-bar:after {
 /* --- Footer - Top --- */
 
 .section-footer .top-footer {
-  padding: 0 0 6em 0;
+  padding: 0 0 12em 0;
 }
 
 .section-footer .top-footer .flex-col:nth-child(1) {
-  width: 25%;
+  width: 12.5%;
   margin: auto;
 }
 
@@ -702,8 +702,8 @@ main.nav-active .hamburger-bar:after {
 
 @media screen and (max-width: 720px) {
   .section-footer .top-footer {
-    padding: 0 0 3em 0;
-    margin-bottom: 11em;
+    padding: 0;
+    margin: 0;
   }
 
   .section-footer .top-footer .flex-col:nth-child(1) {
@@ -774,13 +774,13 @@ main.nav-active .hamburger-bar:after {
   padding: 4em 0;
 }
 
-.section-footer .bottom-footer .flex-col:nth-child(1) {
+/* .section-footer .bottom-footer .flex-col:nth-child(1) {
   width: 40%;
-}
+} */
 
-.section-footer .bottom-footer .flex-col:nth-child(2) {
+/* .section-footer .bottom-footer .flex-col:nth-child(2) {
   width: 60%;
-}
+} */
 
 .section-footer .bottom-footer .flex-col:nth-child(1) a {
   display: flex;
@@ -816,7 +816,7 @@ main.nav-active .hamburger-bar:after {
 
 .section-footer .bottom-footer .flex-col:nth-child(2) li {
   float: left;
-  padding: 1em 3.5em 1em 0;
+  padding: 1em 3em 1em 0;
   color: rgba(32, 32, 34, 0.5);
 }
 
@@ -859,14 +859,14 @@ main.nav-active .hamburger-bar:after {
     padding: 3em 0;
   }
 
-  .section-footer .bottom-footer .flex-col:nth-child(1) {
+  /* .section-footer .bottom-footer .flex-col:nth-child(1) {
     width: 100%;
   }
 
   .section-footer .bottom-footer .flex-col:nth-child(2) {
     width: 100%;
     padding-top: 2em;
-  }
+  } */
 
   .section-footer .bottom-footer .flex-col:nth-child(2) li {
     width: 100%;
@@ -3104,4 +3104,45 @@ a,
 .scroll-it p {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+}
+
+/* --- Footer --- */
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: var(--secondary-medium);
+}
+
+footer .nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+footer .bottom-footer {
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+/* --- Find us button on nav bar */
+.find-us-btn {
+  padding: 0.5rem 2rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #fff;
+  text-transform: capitalize;
+  transition: 0.2s;
+}
+
+.find-us-btn:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.1);
 }

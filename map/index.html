@@ -250,6 +250,7 @@
       position: relative;
       height: 80vh;
       width: auto;
+      margin-top: 3rem;
     }
 
     .nav {
@@ -267,23 +268,22 @@
     <nav id="sticky" class="nav-up-down dark">
       <div class="row">
         <div class="flex-col left-nav slow-load">
-          <a href="/" class="logo animate-logo">
+          <a href="../home/" class="logo animate-logo">
             <img height="auto" viewBox="100 0 100 100" width="140" src="../logo.png" alt="">
           </a>
           </a>
         </div>
         <ul class="flex-col center-nav slow-load">
-          <li class="home-li-nav">
-            <a href="/home/">Home </a>
-          </li>
           <li class="">
-            <a href="../featured-strains/">Products
-              <div class="nav-number">13</div>
-            </a>
+            <a href="../home/">Home </a>
           </li>
+          <li class="active">
+            <a href="../products/">Products
+              <div class="nav-number active">13</div>
+            </a>
 
-          <li class="external">
-            <a href="#" class="">Apparel
+          <li class="">
+            <a href="../apparel/" target="_blank">Apparel
               <svg width="10" viewBox="0 0 10 10" height="10">
                 <g stroke="#242424" fill="none" fill-rule="evenodd">
                   <path d="M1 1h8v8M1 9l8-8" />
@@ -293,7 +293,7 @@
           </li>
         </ul>
         <div class="flex-col right-nav slow-load">
-          <a href="javascript:void(0)" class="btn loop">
+          <!-- <a href="javascript:void(0)" class="btn loop">
             <div class="btn-wrap">
               <div class="btn-text">Find Us Nearby</div>
               <div class="btn-text yellow-dot">•</div>
@@ -301,6 +301,9 @@
               <div class="btn-text yellow-dot">•</div>
               <div class="btn-text">Find Us Nearby</div>
             </div>
+          </a> -->
+          <a href="#" role="button" class="find-us-btn">
+            Find Us
           </a>
         </div>
       </div>
@@ -324,26 +327,17 @@
     <footer class="section section-footer dark" style="background-color: #000000; padding-bottom: 0; padding-top: 5em">
       <div class="container">
 
-        <div class="row bottom-footer" style="border-top: 0px;">
-          <div class="flex-col">
-            <a href="https://wowpage.design" target="_blank"><svg width="60" viewBox="0 0 60 60" height="60">
-                <g fill="none" fill-rule="evenodd">
-                  <rect fill="#E89E4A" width="60" height="60" rx="30" />
-                  <g transform="translate(18 18)" stroke="#FFF" stroke-width="2">
-                    <circle cx="12" cy="12" r="12" />
-                    <path d="M6 12a6 6 0 1 0 12 0" />
-                  </g>
-                </g>
-              </svg>
-              <h4 style="color: #fff">Powered by WOWPage</h4>
-            </a>
+        <div class="bottom-footer" style="border-top: 0px">
+          <div class="flex-col nav-links">
+            <a href="../home/">Home</a>
+            <a href="../products/">Products</a>
+            <a href="../apparel/">Apparel</a>
+            <a href="#">Map</a>
           </div>
           <div class="flex-col">
             <ul>
               <li class="small" style="color: #fff">© 2022 Sesshin</li>
-              <li class="small">
-                <a style="color: #fff" href="newsletter.html">Terms & Conditions</a>
-              </li>
+              <li class="small"><a style="color: #fff">Terms & Conditions</a></li>
             </ul>
           </div>
         </div>
