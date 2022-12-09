@@ -6,6 +6,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -33,20 +34,144 @@ html {
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--primary-medium);
 }
+
 ::-webkit-scrollbar-thumb {
   border-radius: 8px;
   background: var(--primary);
   border: 2px solid var(--primary-medium);
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #171614;
 }
+
 ::-webkit-scrollbar-thumb:active {
   background: var(--primary);
 }
+
+/* ** Age Confirmation Page ** */
+/* Path: /index.html */
+
+.confirm-age-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background: var(--primary);
+}
+
+/* Preloader */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary);
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fade-out 1s ease-in-out;
+  opacity: 0;
+}
+
+/* Main content */
+.confirm-age {
+  clip-path: circle(0%);
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+}
+
+@font-face {
+  font-family: 'BauzietNorm';
+  src: url('../fonts/BauzietNorm-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
+
+.confirm-age .content {
+  color: #8f79bd;
+  background: linear-gradient(to bottom right, #d5c9f1, #daa8f1, #efbfef, #ffe7f5);
+  background-size: 150% 150%;
+
+  animation: moveBackground 5s linear infinite;
+  font-family: "BauzietNorm", sans-serif;
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  transform: translate3d(0, -50%, 0);
+  transition: color 0.5s ease;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1em;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 100% 0%;
+  }
+  75% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#alert {
+  display: none;
+  font-size: 0.5em;
+  color: #B33951;
+  margin-bottom: 1em;
+}
+
+.confirm-age a {
+  color: #8f79bd;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 0rem 0.5rem;
+  transition: 0.5s ease;
+}
+
+.confirm-age a:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.confirm-age .buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 250px;
+  margin: 1rem auto;
+}
+
+.confirm-age .buttons a {
+  font-size: 0.85em;
+}
+
 
 /* ** HomePage ** */
 /* Path: /home/index.html */
@@ -78,6 +203,7 @@ html {
   .desktop-video {
     display: block;
   }
+
   .mobile-video {
     display: none;
   }
@@ -106,9 +232,11 @@ html {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(10px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -118,6 +246,7 @@ html {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
