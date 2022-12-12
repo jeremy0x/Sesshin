@@ -330,6 +330,8 @@ nav.light {
 .apparel__cta a:active {
   color: var(--white);
   text-decoration: underline;
+  background: rgba(255, 255, 255, 0.03);
+  transition: .1s ease;
 }
 
 @media (max-width: 768px) {
