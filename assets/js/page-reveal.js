@@ -42,7 +42,7 @@ tl.fromTo(
     {
       clipPath: 'circle(100%)',
       duration: 1.5,
-      delay: 2.5,
+      delay: 1,
       ease: 'power2.inOut',
     }
   )
@@ -54,7 +54,5 @@ tl.fromTo(
     },
     {
       opacity: 1,
-      duration: 0.5,
-      delay: 0.5,
     }
   );
