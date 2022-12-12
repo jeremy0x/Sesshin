@@ -218,3 +218,43 @@ html {
 html.sr .reveal {
   visibility: hidden;
 }
+
+/* All products button */
+.vibes__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block: 4rem;
+}
+.vibes__cta a {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: 'ClarikaProGeo', sans-serif;
+  text-decoration: none;
+  color: var(--white);
+  border: 1px solid var(--white);
+  background-color: transparent;
+  padding: 1rem 8rem;
+  border-radius: 41px;
+  transition: all 0.2s ease-in-out;
+}
+
+.vibes__cta a:hover,
+.vibes__cta a:active {
+  color: var(--white);
+  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.03);
+  transition: .1s ease;
+}
+
+@media (max-width: 768px) {
+  .vibes__cta a {
+    padding: 1rem 4rem;
+  }
+}
+@media (max-width: 480px) {
+  .vibes__cta a {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
+}
