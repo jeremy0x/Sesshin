@@ -73,6 +73,7 @@ html {
 
 .hero-container {
   position: relative;
+  overflow: hidden;
   clip-path: circle(0%);
 }
 

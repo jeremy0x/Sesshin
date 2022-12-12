@@ -48,11 +48,36 @@ tl.fromTo(
   )
 
   .fromTo(
+    '.hero-video',
+    {
+      scale: 1,
+    },
+    {
+      scale: 1.5,
+      duration: 1.5,
+      delay: -1.5,
+      ease: 'power2.inOut',
+    }
+  )
+
+  .fromTo(
     '.navbar',
     {
       opacity: 0,
     },
     {
       opacity: 1,
+    }
+  )
+  .fromTo(
+    '.hero-video',
+    {
+      scale: 1.5,
+    },
+    {
+      scale: 1,
+      duration: 3,
+      ease: 'power2.inOut',
+      delay: 2,
     }
   );
