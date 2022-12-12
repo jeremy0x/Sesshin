@@ -176,14 +176,29 @@ html {
 /* ** HomePage ** */
 /* Path: /home/index.html */
 
-/* Hero Section */
+.page-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--black);
+  z-index: 100;
+  clip-path: circle(0%);
+}
+
+.navbar {
+  opacity: 0;
+}
+
+/* -- Hero Section -- */
 .hero {
-  background: var(--black);
+  background: var(--secondary);
 }
 
 .hero-container {
   position: relative;
-  clip-path: circle(7%);
+  clip-path: circle(0%);
 }
 
 .hero-video {
@@ -213,17 +228,13 @@ html {
   position: absolute;
   bottom: 0;
   left: 0;
-
   width: 100%;
   height: 75px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   background: var(--black);
   clip-path: ellipse(60% 100% at 50% 100%);
-
   z-index: 1;
   animation: bounce 2.5s ease-in-out infinite;
 }
@@ -252,6 +263,7 @@ html {
   }
 }
 
+
 .scroll-down-container a {
   border-radius: 10px;
   padding: 0.5rem;
@@ -261,6 +273,7 @@ html {
   background-color: rgba(255, 255, 255, 0.03);
 }
 
+/* -- Vibes Section -- */
 .vibes-section {
   padding: 3rem 2rem;
 }
