@@ -134,6 +134,28 @@ html {
   background-color: rgba(255, 255, 255, 0.03);
 }
 
+.hero-find-us-btn {
+  position: absolute;
+  color: #000;
+  left: -1.5rem;
+  bottom: 5rem;
+  padding: 0.5rem 1rem;
+  transform: rotate(90deg);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.hero-find-us-btn:active {
+  color: #000;
+  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+@media (min-width: 721px) {
+  .hero-find-us-btn {
+    display: none;
+  }
+}
+
 /* -- Vibes Section -- */
 .vibes-section {
   padding: 3rem 2rem;
