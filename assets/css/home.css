@@ -296,6 +296,79 @@ html {
   }
 }
 
+/* play video button */
+
+.playbutton {
+  display: block;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  transform: translate(-50%, -50%) rotate(0deg);
+  width: 12rem;
+  cursor: pointer;
+}
+
+.playbutton-inner-wrap {
+  display: block;
+  width: 100%;
+}
+
+.playbutton-inner {
+  display: block;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.playbutton:hover .playbutton-inner {
+  transform: scale(1.1);
+}
+
+.playbutton:hover svg .playbutton-text {
+  fill: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.playbutton:hover svg:first-child {
+  transform: scale(1);
+  animation: playbuttonRotate 5s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000;
+}
+
+.playbutton svg:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+}
+
+@keyframes playbuttonRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .playbutton {
+    right: -5rem;
+    bottom: 1rem;
+  }
+
+  .playbutton:hover .playbutton-inner {
+    transform: scale(1);
+  }
+
+  .playbutton svg:first-child {
+    transform: scale(1);
+    animation: playbuttonRotate 10s linear infinite;
+  }
+}
+
 /* -- Vibes Section -- */
 .vibes-section {
   padding: 3rem 2rem;
@@ -321,8 +394,8 @@ html {
 }
 
 .vibes-container .vibe {
-  height: 150px;
-  width: 150px;
+  height: 145px;
+  width: 145px;
   border-radius: 10px;
   overflow: hidden;
   text-decoration: none;
