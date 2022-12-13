@@ -97,11 +97,11 @@
     <section class="hero">
       <div class="hero-container">
         <!-- Background Video -->
-        <video autoplay muted id="hero-video" class="hero-video desktop-video">
+        <video autoplay muted loop id="hero-video" class="hero-video desktop-video">
           <source src="../media/pages/home/sesshin-trim_cropped.mp4" type="video/mp4" id="video-source">
           Your browser does not support HTML5 video.
         </video>
-        <video autoplay id="hero-video" class="hero-video mobile-video">
+        <video autoplay muted loop id="hero-video" class="hero-video mobile-video">
           <source src="../media/pages/home/sesshin-intro.mp4" type="video/mp4" id="video-source">
           Your browser does not support HTML5 video.
         </video>
@@ -197,6 +197,25 @@
       </div>
     </section>
     <!-- End Hero Section -->
+
+    <!-- Full Screen Video -->
+    <div class="video-modal size_option2">
+      <div class="video-modal-wrap">
+        <iframe id="vimeo-modal"
+          src="https://player.vimeo.com/video/760665900?playsinline=0&amp;title=0&amp;byline=0&amp;portrait=0"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%" frameborder="0"
+          allow="autoplay; fullscreen" allowfullscreen playsinline="0"></iframe>
+      </div>
+    </div>
+    <div class="video-modal-bg">
+      <div class="close-button">
+        <svg class="icon" width="16" height="16">
+          <g stroke="#FFF" fill="none" fill-rule="evenodd">
+            <path d="M1 1l14.142 14.142M15.142 1L1 15.142" />
+          </g>
+        </svg>
+      </div>
+    </div>
 
     <!-- Begin Vibes Section -->
     <section class="vibes-section" id="vibes">
