@@ -198,6 +198,7 @@ html {
 
 .hero-container {
   position: relative;
+  overflow: hidden;
   clip-path: circle(0%);
 }
 
@@ -271,6 +272,28 @@ html {
 
 .scroll-down-container a:hover {
   background-color: rgba(255, 255, 255, 0.03);
+}
+
+.hero-find-us-btn {
+  position: absolute;
+  color: #000;
+  left: -1.5rem;
+  bottom: 5rem;
+  padding: 0.5rem 1rem;
+  transform: rotate(90deg);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.hero-find-us-btn:active {
+  color: #000;
+  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+@media (min-width: 721px) {
+  .hero-find-us-btn {
+    display: none;
+  }
 }
 
 /* -- Vibes Section -- */
@@ -356,4 +379,44 @@ html {
 /* ScrollReveal extension */
 html.sr .reveal {
   visibility: hidden;
+}
+
+/* All products button */
+.vibes__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block: 4rem;
+}
+.vibes__cta a {
+  font-size: 1.2rem;
+  font-weight: 400;
+  font-family: 'ClarikaProGeo', sans-serif;
+  text-decoration: none;
+  color: var(--white);
+  border: 1px solid var(--white);
+  background-color: transparent;
+  padding: 1rem 8rem;
+  border-radius: 41px;
+  transition: all 0.2s ease-in-out;
+}
+
+.vibes__cta a:hover,
+.vibes__cta a:active {
+  color: var(--white);
+  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.03);
+  transition: .1s ease;
+}
+
+@media (max-width: 768px) {
+  .vibes__cta a {
+    padding: 1rem 4rem;
+  }
+}
+@media (max-width: 480px) {
+  .vibes__cta a {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+  }
 }

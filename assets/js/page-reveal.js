@@ -1,63 +1,83 @@
 let tl = gsap.timeline();
 
 tl.fromTo(
-  ".page-overlay",
+  '.page-overlay',
   {
-    clipPath: "circle(0%)",
+    clipPath: 'circle(0%)',
   },
   {
-    clipPath: "circle(100%)",
+    clipPath: 'circle(100%)',
     delay: 1,
     duration: 1.5,
-    ease: "power2.inOut",
-    display: "none",
-  }
-);
-
-tl.to(
-  ".hero",
-  {
-    background: "#000",
-    delay: -0.5,  
+    ease: 'power2.inOut',
+    display: 'none',
   }
 )
 
-tl.fromTo(
-  ".hero-container",
-  {
-    clipPath: "circle(0%)",
-    rotation: 45,
-    opacity: 0,
-  },
-  {
-    clipPath: "circle(10%)",
-    rotation: 0,
-    opacity: 1,
-    duration: 1,
-  }
-);
+  .to('.hero', {
+    background: '#000',
+    delay: -0.5,
+  })
 
-tl.fromTo(
-  ".hero-container",
-  {
-    clipPath: "circle(10%)",
-  },
-  {
-    clipPath: "circle(100%)",
-    duration: 1,
-    delay: 2.5,
-    ease: "power2.inOut",
-  }
-);
+  .fromTo(
+    '.hero-container',
+    {
+      clipPath: 'circle(0%)',
+      rotation: 45,
+      opacity: 0,
+    },
+    {
+      clipPath: 'circle(10%)',
+      rotation: 0,
+      opacity: 1,
+      duration: 1,
+    }
+  )
 
-tl.fromTo(
-  ".navbar",
-  {
-    opacity: 0,
-  },
-  {
-    opacity: 1,
-    duration: 0.5,
-    delay: 0.5,
-  }
-);
+  .fromTo(
+    '.hero-container',
+    {
+      clipPath: 'circle(10%)',
+    },
+    {
+      clipPath: 'circle(100%)',
+      duration: 1.5,
+      delay: 1,
+      ease: 'power2.inOut',
+    }
+  )
+
+  .fromTo(
+    '.hero-video',
+    {
+      scale: 1,
+    },
+    {
+      scale: 1.5,
+      duration: 1.5,
+      delay: -1.5,
+      ease: 'power2.inOut',
+    }
+  )
+
+  .fromTo(
+    '.navbar',
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+    }
+  )
+  .fromTo(
+    '.hero-video',
+    {
+      scale: 1.5,
+    },
+    {
+      scale: 1,
+      duration: 3,
+      ease: 'power2.inOut',
+      delay: 2,
+    }
+  );
