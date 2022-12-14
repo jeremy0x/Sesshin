@@ -37,10 +37,10 @@ nav.scroll-up {
   nav.scroll-up {
     padding-left: 2em;
     padding-right: 2em;
-    padding-top: 2em;
+    padding-top: 1em;
     padding-bottom: 2em;
     top: 0.01em;
-    height: 6em;
+    height: 0em;
   }
 
   nav .row {
@@ -1328,7 +1328,7 @@ main.nav-active .hamburger-bar:after {
   right: 3em;
   top: 2.75em;
   height: 60px;
-  background: var(--secondary);
+  background: var(--black);
   overflow: hidden;
   z-index: 30;
   border-radius: 30px;

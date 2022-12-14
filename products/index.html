@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="../assets/css/style.css" />
 
   <!-- Scripts -->
+  <script src="../assets/js/custom-slider.js" defer></script>
   <script src="../assets/js/image-drag-highlight.js" defer></script>
   <script src="../assets/js/change-text-content.js" defer></script>
 
@@ -100,107 +101,396 @@
     </nav>
     <div class="nav-back"></div>
 
-    <!-- Products Images -->
-    <section class="featured-strains-section">
-      <div class="title">
-        Flowers and Pre-rolls
-      </div>
-      <div class="featured-strains items container" id="container">
-        <div href="#strains-description" class="featured-strains__container active" data-tab-value="#dessert">
-          <img src="../assets/images/dessert-0.png" alt="" draggable="false" />
-          <img src="../assets/images/dessert-1.png" alt="" draggable="false" class="dessert" />
-        </div>
-        <div href="#strains-description" class="featured-strains__container" data-tab-value="#dough-lato">
-          <img src="../assets/images/dough-lato-0.png" alt="" draggable="false" />
-          <img src="../assets/images/dough-lato-1.png" alt="" draggable="false" class="dough-lato" />
-        </div>
-        <div href="#strains-description" class="featured-strains__container" data-tab-value="#gelato">
-          <img src="../assets/images/gelato-0.png" alt="" draggable="false" />
-          <img src="../assets/images/gelato-1.png" alt="" draggable="false" class="gelato" />
-        </div>
-        <div href="#strains-description" class="featured-strains__container" data-tab-value="#sour-diesel">
-          <img src="../assets/images/sour-diesel-0.png" alt="" draggable="false" />
-          <img src="../assets/images/sour-diesel-1.png" alt="" draggable="false" class="sour-diesel" />
-        </div>
-      </div>
-    </section>
+    <div class="slider">
+      <!-- Slide 1 - Creative -->
+      <div class="item">
 
-    <!-- Tabs -->
-    <section class="strains-description" id="strains-description">
-
-      <!-- Dessert -->
-      <div class="dropdown-content active" id="dessert" data-tab-info>
-        <div class="strains-description__title">Beverages</div>
-        <!-- Description -->
-        <div class="strains-description__text">
-          <div class="strains-description__flex mt-40 packaging-items">
-            <span>
-              <img src="../assets/images/can.png" alt="can" class="beverage" />
-              
-            </span>
-            <span>
-              <img src="../assets/images/can.png" alt="can" class="beverage" />
-              
-            </span>
+        <!-- Header slides -->
+        <header class="header">
+          <div class="header__slide">
+            <div class="header__background">
+              <div class="header__background__image">
+                <img
+                  src="https://news.artnet.com/app/news-upload/2019/06/negative-space-woman-painter-artist-studio-burst-1-1024x576.jpg"
+                  alt="" draggable="false" />
+              </div>
+            </div>
+            <div class="header__content">
+              <div class="header__content__text">
+                <div class="header__content__text__title">
+                  Creative
+                </div>
+              </div>
+            </div>
+            <div class="header__arrow">
+              <div class="header__arrow__left arrow" onclick="previousSlide()">
+                <span class="arrow-icon">&#10094;</span> Adventure
+              </div>
+              <div class="header__arrow__right arrow" onclick="nextSlide()">
+                Social <span class="arrow-icon">&#10095;</span>
+              </div>
+            </div>
           </div>
-        </div>
+        </header>
+
+        <!-- Products Images -->
+        <section class="featured-strains-section">
+          <div class="title">
+            Flowers and Pre-rolls (Creative)
+          </div>
+          <div class="featured-strains items container" id="container">
+            <div href="#strains-description" class="featured-strains__container active" data-tab-value="#dessert1">
+              <img src="../assets/images/dessert-0.png" alt="" draggable="false" />
+              <img src="../assets/images/dessert-1.png" alt="" draggable="false" class="dessert" />
+            </div>
+            <div href="#strains-description" class="featured-strains__container" data-tab-value="#dough-lato1">
+              <img src="../assets/images/dough-lato-0.png" alt="" draggable="false" />
+              <img src="../assets/images/dough-lato-1.png" alt="" draggable="false" class="dough-lato" />
+            </div>
+            <div href="#strains-description" class="featured-strains__container" data-tab-value="#gelato1">
+              <img src="../assets/images/gelato-0.png" alt="" draggable="false" />
+              <img src="../assets/images/gelato-1.png" alt="" draggable="false" class="gelato" />
+            </div>
+            <div href="#strains-description" class="featured-strains__container" data-tab-value="#sour-diesel1">
+              <img src="../assets/images/sour-diesel-0.png" alt="" draggable="false" />
+              <img src="../assets/images/sour-diesel-1.png" alt="" draggable="false" class="sour-diesel" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Tabs -->
+        <section class="strains-description" id="strains-description">
+
+          <!-- Dessert -->
+          <div class="dropdown-content active" id="dessert1" data-tab-info>
+            <div class="strains-description__title">Beverages</div>
+
+            <!-- Description -->
+            <div class="strains-description__text">
+              <div class="strains-description__flex mt-40 packaging-items">
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dough Lato -->
+          <div class="dropdown-content" id="dough-lato1" data-tab-info>
+            <div class="strains-description__title">Beverages</div>
+            <!-- Description -->
+            <div class="strains-description__text">
+              <div class="strains-description__flex mt-40 packaging-items">
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gelato -->
+          <div class="dropdown-content" id="gelato1" data-tab-info>
+            <div class="strains-description__title">Beverages</div>
+            <!-- Description -->
+            <div class="strains-description__text">
+              <div class="strains-description__flex mt-40 packaging-items">
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sour Diesel -->
+          <div class="dropdown-content" id="sour-diesel1" data-tab-info>
+            <div class="strains-description__title">Beverages</div>
+            <!-- Description -->
+            <div class="strains-description__text">
+              <div class="strains-description__flex mt-40 packaging-items">
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Sour Diesel -->
+
+        </section>
       </div>
 
-      <!-- Dough Lato -->
-      <div class="dropdown-content" id="dough-lato" data-tab-info>
-        <div class="strains-description__title">Beverages</div>
-        <!-- Description -->
-        <div class="strains-description__text">
-          <div class="strains-description__flex mt-40 packaging-items">
-            <span>
-              <img src="../assets/images/can.png" alt="can" class="beverage" />
-              
-            </span>
-            <span>
-              <img src="../assets/images/can.png" alt="can" class="beverage" />
-              
-            </span>
+      <!-- Slide 2 - Social -->
+      <div class="item">
+
+        <!-- Header slides -->
+        <header class="header">
+          <div class="header__slide">
+            <div class="header__background">
+              <div class="header__background__image">
+                <img
+                  src="https://media.istockphoto.com/id/1137914572/photo/afro-female-fine-artists-drawing-in-studio.jpg?s=612x612&w=0&k=20&c=rR-qRawv9Jez65A0kdZg_uLqegH7NFQ9K7Sof8p0YGA="
+                  alt="" draggable="false" />
+              </div>
+            </div>
+            <div class="header__content">
+              <div class="header__content__text">
+                <div class="header__content__text__title">
+                  Social
+                </div>
+              </div>
+            </div>
+            <div class="header__arrow">
+              <div class="header__arrow__left arrow" onclick="previousSlide()">
+                <span class="arrow-icon">&#10094;</span> Creative
+              </div>
+              <div class="header__arrow__right arrow" onclick="nextSlide()">
+                Adventure <span class="arrow-icon">&#10095;</span>
+              </div>
+            </div>
           </div>
-        </div>
+        </header>
+
+        <!-- Products Images -->
+        <section class="featured-strains-section">
+          <div class="title">
+            Flowers and Pre-rolls (Social)
+          </div>
+          <div class="featured-strains items container" id="container">
+            <div href="#strains-description" class="featured-strains__container active" data-tab-value="#dessert2">
+              <img src="../assets/images/dessert-0.png" alt="" draggable="false" />
+              <img src="../assets/images/dessert-1.png" alt="" draggable="false" class="dessert" />
+            </div>
+            <div href="#strains-description" class="featured-strains__container" data-tab-value="#dough-lato2">
+              <img src="../assets/images/dough-lato-0.png" alt="" draggable="false" />
+              <img src="../assets/images/dough-lato-1.png" alt="" draggable="false" class="dough-lato" />
+            </div>
+            <div href="#strains-description" class="featured-strains__container" data-tab-value="#gelato2">
+              <img src="../assets/images/gelato-0.png" alt="" draggable="false" />
+              <img src="../assets/images/gelato-1.png" alt="" draggable="false" class="gelato" />
+            </div>
+            <div href="#strains-description" class="featured-strains__container" data-tab-value="#sour-diesel2">
+              <img src="../assets/images/sour-diesel-0.png" alt="" draggable="false" />
+              <img src="../assets/images/sour-diesel-1.png" alt="" draggable="false" class="sour-diesel" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Tabs -->
+        <section class="strains-description" id="strains-description">
+
+          <!-- Dessert -->
+          <div class="dropdown-content active" id="dessert2" data-tab-info>
+            <div class="strains-description__title">Beverages</div>
+
+            <!-- Description -->
+            <div class="strains-description__text">
+              <div class="strains-description__flex mt-40 packaging-items">
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dough Lato -->
+          <div class="dropdown-content" id="dough-lato2" data-tab-info>
+            <div class="strains-description__title">Beverages</div>
+
+            <!-- Description -->
+            <div class="strains-description__text">
+              <div class="strains-description__flex mt-40 packaging-items">
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gelato -->
+          <div class="dropdown-content" id="gelato2" data-tab-info>
+            <div class="strains-description__title">Beverages</div>
+
+            <!-- Description -->
+            <div class="strains-description__text">
+              <div class="strains-description__flex mt-40 packaging-items">
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sour Diesel -->
+          <div class="dropdown-content" id="sour-diesel2" data-tab-info>
+            <div class="strains-description__title">Beverages</div>
+
+            <!-- Description -->
+            <div class="strains-description__text">
+              <div class="strains-description__flex mt-40 packaging-items">
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Sour Diesel -->
+
+        </section>
       </div>
 
-      <!-- Gelato -->
-      <div class="dropdown-content" id="gelato" data-tab-info>
-        <div class="strains-description__title">Beverages</div>
-        <!-- Description -->
-        <div class="strains-description__text">
-          <div class="strains-description__flex mt-40 packaging-items">
-            <span>
-              <img src="../assets/images/can.png" alt="can" class="beverage" />
-              
-            </span>
-            <span>
-              <img src="../assets/images/can.png" alt="can" class="beverage" />
-              
-            </span>
-          </div>
-        </div>
-      </div>
+      <!-- Slide 3 - Adventure -->
+      <div class="item">
 
-      <!-- Sour Diesel -->
-      <div class="dropdown-content" id="sour-diesel" data-tab-info>
-        <div class="strains-description__title">Beverages</div>
-        <!-- Description -->
-        <div class="strains-description__text">
-          <div class="strains-description__flex mt-40 packaging-items">
-            <span>
-              <img src="../assets/images/can.png" alt="can" class="beverage" />
-              
-            </span>
-            <span>
-              <img src="../assets/images/can.png" alt="can" class="beverage" />
-              
-            </span>
+        <!-- Header slides -->
+        <header class="header">
+          <div class="header__slide">
+            <div class="header__background">
+              <div class="header__background__image">
+                <img src="https://media.smallbiztrends.com/2021/12/how-to-make-money-as-an-artist.png" alt=""
+                  draggable="false" />
+              </div>
+            </div>
+            <div class="header__content">
+              <div class="header__content__text">
+                <div class="header__content__text__title">
+                  Adventure
+                </div>
+              </div>
+            </div>
+            <div class="header__arrow">
+              <div class="header__arrow__left arrow" onclick="previousSlide()">
+                <span class="arrow-icon">&#10094;</span> Social
+              </div>
+              <div class="header__arrow__right arrow" onclick="nextSlide()">
+                Creative <span class="arrow-icon">&#10095;</span>
+              </div>
+            </div>
           </div>
-        </div>
+        </header>
+
+        <!-- Products Images -->
+        <section class="featured-strains-section">
+          <div class="title">
+            Flowers and Pre-rolls (Adventure)
+          </div>
+          <div class="featured-strains items container" id="container">
+            <div href="#strains-description" class="featured-strains__container active" data-tab-value="#dessert3">
+              <img src="../assets/images/dessert-0.png" alt="" draggable="false" />
+              <img src="../assets/images/dessert-1.png" alt="" draggable="false" class="dessert" />
+            </div>
+            <div href="#strains-description" class="featured-strains__container" data-tab-value="#dough-lato3">
+              <img src="../assets/images/dough-lato-0.png" alt="" draggable="false" />
+              <img src="../assets/images/dough-lato-1.png" alt="" draggable="false" class="dough-lato3" />
+            </div>
+            <div href="#strains-description" class="featured-strains__container" data-tab-value="#gelato3">
+              <img src="../assets/images/gelato-0.png" alt="" draggable="false" />
+              <img src="../assets/images/gelato-1.png" alt="" draggable="false" class="gelato" />
+            </div>
+            <div href="#strains-description" class="featured-strains__container" data-tab-value="#sour-diesel3">
+              <img src="../assets/images/sour-diesel-0.png" alt="" draggable="false" />
+              <img src="../assets/images/sour-diesel-1.png" alt="" draggable="false" class="sour-diesel" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Tabs -->
+        <section class="strains-description" id="strains-description">
+
+          <!-- Dessert -->
+          <div class="dropdown-content active" id="dessert3" data-tab-info>
+            <div class="strains-description__title">Beverages</div>
+
+            <!-- Description -->
+            <div class="strains-description__text">
+              <div class="strains-description__flex mt-40 packaging-items">
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dough Lato -->
+          <div class="dropdown-content" id="dough-lato3" data-tab-info>
+            <div class="strains-description__title">Beverages</div>
+
+            <!-- Description -->
+            <div class="strains-description__text">
+              <div class="strains-description__flex mt-40 packaging-items">
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gelato -->
+          <div class="dropdown-content" id="gelato3" data-tab-info>
+            <div class="strains-description__title">Beverages</div>
+
+            <!-- Description -->
+            <div class="strains-description__text">
+              <div class="strains-description__flex mt-40 packaging-items">
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sour Diesel -->
+          <div class="dropdown-content" id="sour-diesel3" data-tab-info>
+            <div class="strains-description__title">Beverages</div>
+
+            <!-- Description -->
+            <div class="strains-description__text">
+              <div class="strains-description__flex mt-40 packaging-items">
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+                <span>
+                  <img src="../assets/images/can.png" alt="can" class="beverage" />
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Sour Diesel -->
+
+        </section>
       </div>
-      <!-- Sour Diesel -->
-    </section>
+    </div>
   </main>
 
   <!-- Footer -->
