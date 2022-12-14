@@ -244,8 +244,9 @@ nav.light {
   display: block;
 }
 
-.dropdown-content {
-  animation: fadeEffect 1s;
+.dropdown-content,
+.item {
+  animation: fadeEffect 1s ease-in-out;
 }
 
 @keyframes fadeEffect {
