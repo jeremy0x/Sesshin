@@ -33,6 +33,7 @@
   <link rel="stylesheet" href="../assets/css/style.css" />
 
   <!-- Scripts -->
+  <script src="../assets/js/custom-slider.js" defer></script>
   <script src="../assets/js/image-drag-highlight.js" defer></script>
   <script src="../assets/js/change-text-content.js" defer></script>
 
@@ -101,11 +102,15 @@
     <div class="nav-back"></div>
 
     <!-- Header slides -->
-    <header class="header">
-      <div class="header__slide">
+    <header class="header slider">
+
+      <!-- Slide 1 -->
+      <div class="header__slide item">
         <div class="header__background">
           <div class="header__background__image">
-            <img src="https://news.artnet.com/app/news-upload/2019/06/negative-space-woman-painter-artist-studio-burst-1-1024x576.jpg" alt="" draggable="false" />
+            <img
+              src="https://news.artnet.com/app/news-upload/2019/06/negative-space-woman-painter-artist-studio-burst-1-1024x576.jpg"
+              alt="" draggable="false" />
           </div>
         </div>
         <div class="header__content">
@@ -116,11 +121,87 @@
           </div>
         </div>
         <div class="header__arrow">
-          <div class="header__arrow__left arrow">
-            &lsaquo; Cloud 9
+          <div class="header__arrow__left arrow" onclick="previousSlide()">
+            <span class="arrow-icon">&#10094;</span> Cloud 9
           </div>
-          <div class="header__arrow__right arrow">
-            Social &rsaquo;
+          <div class="header__arrow__right arrow" onclick="nextSlide()">
+            Social <span class="arrow-icon">&#10095;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="header__slide item">
+        <div class="header__background">
+          <div class="header__background__image">
+            <img
+              src="https://media.istockphoto.com/id/1137914572/photo/afro-female-fine-artists-drawing-in-studio.jpg?s=612x612&w=0&k=20&c=rR-qRawv9Jez65A0kdZg_uLqegH7NFQ9K7Sof8p0YGA="
+              alt="" draggable="false" />
+          </div>
+        </div>
+        <div class="header__content">
+          <div class="header__content__text">
+            <div class="header__content__text__title">
+              Social
+            </div>
+          </div>
+        </div>
+        <div class="header__arrow">
+          <div class="header__arrow__left arrow" onclick="previousSlide()">
+            <span class="arrow-icon">&#10094;</span> Creative
+          </div>
+          <div class="header__arrow__right arrow" onclick="nextSlide()">
+            Adventure <span class="arrow-icon">&#10095;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="header__slide item">
+        <div class="header__background">
+          <div class="header__background__image">
+            <img src="https://media.smallbiztrends.com/2021/12/how-to-make-money-as-an-artist.png" alt=""
+              draggable="false" />
+          </div>
+        </div>
+        <div class="header__content">
+          <div class="header__content__text">
+            <div class="header__content__text__title">
+              Adventure
+            </div>
+          </div>
+        </div>
+        <div class="header__arrow">
+          <div class="header__arrow__left arrow" onclick="previousSlide()">
+            <span class="arrow-icon">&#10094;</span> Social
+          </div>
+          <div class="header__arrow__right arrow" onclick="nextSlide()">
+            Cloud 9 <span class="arrow-icon">&#10095;</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="header__slide item">
+        <div class="header__background">
+          <div class="header__background__image">
+            <img src="http://media.bizj.us/view/img/10058602/howtoartist*1200xx2783-1567-0-61.jpg" alt=""
+              draggable="false" />
+          </div>
+        </div>
+        <div class="header__content">
+          <div class="header__content__text">
+            <div class="header__content__text__title">
+              Cloud 9
+            </div>
+          </div>
+        </div>
+        <div class="header__arrow">
+          <div class="header__arrow__left arrow" onclick="previousSlide()">
+            <span class="arrow-icon">&#10094;</span> Adventure
+          </div>
+          <div class="header__arrow__right arrow" onclick="nextSlide()">
+            Creative <span class="arrow-icon">&#10095;</span>
           </div>
         </div>
       </div>
@@ -162,11 +243,11 @@
           <div class="strains-description__flex mt-40 packaging-items">
             <span>
               <img src="../assets/images/can.png" alt="can" class="beverage" />
-              
+
             </span>
             <span>
               <img src="../assets/images/can.png" alt="can" class="beverage" />
-              
+
             </span>
           </div>
         </div>
@@ -180,11 +261,11 @@
           <div class="strains-description__flex mt-40 packaging-items">
             <span>
               <img src="../assets/images/can.png" alt="can" class="beverage" />
-              
+
             </span>
             <span>
               <img src="../assets/images/can.png" alt="can" class="beverage" />
-              
+
             </span>
           </div>
         </div>
@@ -198,11 +279,11 @@
           <div class="strains-description__flex mt-40 packaging-items">
             <span>
               <img src="../assets/images/can.png" alt="can" class="beverage" />
-              
+
             </span>
             <span>
               <img src="../assets/images/can.png" alt="can" class="beverage" />
-              
+
             </span>
           </div>
         </div>
@@ -216,11 +297,11 @@
           <div class="strains-description__flex mt-40 packaging-items">
             <span>
               <img src="../assets/images/can.png" alt="can" class="beverage" />
-              
+
             </span>
             <span>
               <img src="../assets/images/can.png" alt="can" class="beverage" />
-              
+
             </span>
           </div>
         </div>

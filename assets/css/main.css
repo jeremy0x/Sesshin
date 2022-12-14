@@ -494,10 +494,15 @@ header {
   font-size: 1.5rem;
   display: flex;
   flex-direction: row;
+  gap: 0.5rem;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+}
+
+.header__arrow .arrow-icon {
+  font-size: 1rem;
 }
 
 .header__arrow .arrow:hover {
