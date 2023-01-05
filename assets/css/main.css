@@ -137,7 +137,7 @@ img {
 /* ** Products Page ** */
 /* Path: /products/index.html */
 .featured-strains-section {
-  margin-top: 7rem;
+  margin-top: 5rem;
 }
 
 @media (max-width: 480px) {
@@ -158,110 +158,73 @@ img {
   -webkit-text-fill-color: transparent;
 }
 
-.featured-strains {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 3rem;
-  padding: 5rem 5rem 0 5rem;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  width: 100%;
-  -webkit-mask: linear-gradient(90deg, #0000, #000 10% 80%, #0000);
-  mask: linear-gradient(90deg, #0000, #000 10% 80%, #0000);
-  cursor: grab;
+/* @media (min-width: 1010px) {
+  .featured-strains .swiper-wrapper {
+    justify-content: center;
+  }
+} */
+
+.featured-strains .swiper-slide {
+  width: 275px;
+  height: auto;
 }
 
-.featured-strains::-webkit-scrollbar {
-  display: none;
+@media (max-width: 768px) {
+  .featured-strains .swiper-slide {
+    width: 225px;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-strains .swiper-slide {
+    width: 185px;
+  }
+}
+
+.featured-strains .swiper-wrapper {
+  padding-bottom: 1rem;
 }
 
 .featured-strains__container {
   display: flex;
   flex-direction: column;
-  padding-bottom: 4rem;
   cursor: pointer;
+  padding: 4.25rem 1rem 1.5rem 1rem;
 }
 
 .featured-strains__container img {
-  width: auto;
-  max-width: 250px;
-  height: auto;
   object-fit: cover;
   transition: all 0.2s ease-in-out;
   user-select: none;
 }
 
-@media (max-width: 768px) {
-  .featured-strains {
-    padding: 5rem 2rem 0 2rem;
-  }
+.swiper-pagination-bullet {
+  background-color: #fff !important;
+}
 
-  .featured-strains__container img {
-    width: 200px;
-  }
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
 }
 
 .featured-strains__container.active img:first-child {
-  filter: drop-shadow(0 0 60px #ffffffb3);
+  filter: drop-shadow(0 0 45px #ffffffb3);
 }
 
 .featured-strains__container.active img:last-child {
-  filter: drop-shadow(0 0 35px #ffffffb3);
+  filter: drop-shadow(0 0 25px #ffffffb3);
 }
 
 .featured-strains-section {
   position: relative;
 }
 
-@keyframes bounce {
-  0% {
-    transform: translateX(-50%) translateY(0);
-  }
-
-  50% {
-    transform: translateX(-50%) translateY(5px);
-  }
-
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
+/* ----- Beverages ----- */
+.beverages-section {
+  margin-top: 2rem;
+  padding-bottom: 5rem;
 }
 
-[data-tab-info] {
-  display: none;
-}
-
-.active[data-tab-info] {
-  display: block;
-}
-
-.dropdown-content,
-.item {
-  animation: fadeEffect 1s ease-in-out;
-}
-
-@keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.strains-description {
-  font-family: ClarikaProGeo, sans-serif;
-  text-align: center;
-  padding: 2rem;
-  margin: auto;
-  color: #e7e7e7;
-}
-
-.strains-description__title {
+.beverages-title {
   font-size: clamp(1.75rem, 3vw, 2.75rem);
   font-weight: 400;
   margin-bottom: 4rem;
@@ -270,51 +233,46 @@ img {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
 }
 
-.strains-description__flex {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem 4rem;
-}
-
-.packaging-items img {
-  max-width: 100%;
-  width: 95px;
-  height: auto;
+.beverages img {
+  position: relative;
   object-fit: cover;
   transform: rotate(-15deg);
 }
 
-.packaging-items span {
-  border: 1px solid #FAC89E;
-  padding: 1.5rem 4.5rem;
+.beverages .swiper-slide {
+  width: 225px;
+  height: auto;
+  padding: 2rem 4.5rem;
+  margin-inline: 1.75rem;
+
+  border: thin solid var(--secondary-medium);
   border-radius: 50%;
 }
 
 @media (max-width: 768px) {
-  .strains-description {
-    padding: 2rem 0.5rem;
-  }
-
-  .packaging-items img {
-    width: 65px;
-  }
-
-  .packaging-items span {
-    padding: 1.25rem 3.5rem;
+  .beverages .swiper-slide {
+    width: 195px;
+    padding: 2rem 4rem;
+    margin-inline: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .strains-description__flex {
-    flex-direction: column;
+  .beverages .swiper-slide {
+    width: 145px;
+    padding: 1.5rem 3rem;
   }
 }
 
-/* ** Apparel Page ** */
+.beverages .swiper-wrapper {
+  padding-bottom: 3rem;
+}
+
+
+/* *----------* Apparel Page *----------* */
 /* Path: /apparel/index.html */
 /* h1.apparel__title {
   font-weight: 400;
@@ -369,6 +327,9 @@ img {
 .swiper {
   width: 100%;
   height: 100%;
+}
+
+.apparel .swiper {
   margin-top: 10rem;
 }
 
@@ -377,7 +338,7 @@ img {
   margin: auto;
 }
 
-.swiper-slide {
+.apparel .swiper-slide {
   width: 215px;
   height: 435px;
   background-color: #fff;
@@ -401,13 +362,13 @@ img {
 .header {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: max(50vh, 325px);
   overflow: hidden;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .header {
-    height: 50vh;
+    height: max(30vh, 200px);
   }
 }
 
@@ -418,6 +379,16 @@ img {
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+.gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, .75) 100%);
+  z-index: 1;
 }
 
 .header__background__image {
@@ -447,7 +418,7 @@ img {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  z-index: 1;
+  z-index: 2;
 }
 
 .header__content__text {
@@ -460,7 +431,9 @@ img {
 
 .header__content__text__title {
   font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 700;
+  font-weight: 500;
+  font-family: 'BauzietNorm', sans-serif;
+  letter-spacing: 1px;
   color: #fff;
   margin-bottom: 1rem;
 }
@@ -474,7 +447,7 @@ img {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media (max-width: 768px) {
@@ -485,7 +458,8 @@ img {
 
 .header__arrow .arrow {
   color: var(--white);
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-family: 'BauzietNorm', sans-serif;
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
@@ -493,6 +467,10 @@ img {
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  border-radius: .5rem;
+  padding: .25rem 1rem;
+  line-height: 1;
+  /* border: 1px solid #fff; */
 }
 
 .header__arrow .arrow-icon {
@@ -500,7 +478,35 @@ img {
 }
 
 .header__arrow .arrow:hover {
-  color: var(--white);
-  transform: scale(1.1);
+  background-color: rgba(0, 0, 0, 0.25);
   transition: all 0.2s ease-in-out;
+}
+
+/*
+  This code block applies styles to the data-tab-info elements and their
+  children. The display of the data-tab-info elements is toggled by adding
+  or removing the 'active' class. The elements being toggled have a
+  fade-in animation applied to them.
+*/
+[data-tab-info] {
+  display: none;
+}
+
+.active[data-tab-info] {
+  display: block;
+}
+
+.item,
+.dropdown-content {
+  animation: fadeEffect 1.5s ease;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
