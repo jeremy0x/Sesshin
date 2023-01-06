@@ -76,7 +76,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fade-out 1s ease-in-out;
+  /* animation: fade-out 1s ease-in-out; */
   opacity: 0;
 }
 
@@ -124,15 +124,19 @@ html {
   0% {
     background-position: 0% 50%;
   }
+
   25% {
     background-position: 100% 50%;
   }
+
   50% {
     background-position: 100% 0%;
   }
+
   75% {
     background-position: 0% 0%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -176,7 +180,7 @@ html {
 /* ** HomePage ** */
 /* Path: /home/index.html */
 
-.page-overlay {
+/* .page-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -185,28 +189,38 @@ html {
   background-color: var(--black);
   z-index: 100;
   clip-path: circle(0%);
-}
+} */
 
 .navbar {
   opacity: 0;
 }
 
 /* -- Hero Section -- */
-.hero {
+/* .hero {
   background: var(--secondary);
-}
+} */
 
 .hero-container {
   position: relative;
   overflow: hidden;
-  clip-path: circle(0%);
+  width: 100%;
+  height: 100vh;
+}
+
+/* reduce height on mobile to account for browser controls */
+@media screen and (max-width: 480px) {
+  .hero-container {
+    height: 90vh;
+  }
 }
 
 .hero-video {
   min-width: 100%;
   min-height: 100%;
-  height: 100vh;
-  max-height: 100vh;
+  transform: scale(0);
+  clip-path: circle(15%);
+  border-radius: 50%;
+
   object-fit: cover;
   object-position: center;
 }
@@ -237,10 +251,15 @@ html {
   background: var(--black);
   clip-path: ellipse(60% 100% at 50% 100%);
   z-index: 1;
-  animation: bounce 2.5s ease-in-out infinite;
+  /* animation: bounce 2.5s ease-in-out infinite; */
 }
 
-@keyframes bounce {
+.scroll-down-btn {
+  opacity:  0;
+  transition: .5s ease;
+}
+
+/* @keyframes bounce {
   0% {
     transform: translateY(0);
   }
@@ -252,18 +271,7 @@ html {
   100% {
     transform: translateY(0);
   }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
+} */
 
 .scroll-down-container a {
   border-radius: 10px;
@@ -278,10 +286,11 @@ html {
   position: absolute;
   color: #000;
   left: -1.5rem;
-  bottom: 5rem;
+  bottom: 6rem;
   padding: 0.5rem 1rem;
   transform: rotate(90deg);
   background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
 }
 
 .hero-find-us-btn:active {
@@ -306,6 +315,7 @@ html {
   transform: translate(-50%, -50%) rotate(0deg);
   width: 12rem;
   cursor: pointer;
+  opacity: 0;
 }
 
 .playbutton-inner-wrap {
@@ -348,6 +358,7 @@ html {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(-360deg);
   }
@@ -390,7 +401,13 @@ html {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem 1rem;
+  max-width: 768px; /* 3 columns */
+  margin: 0 auto;
+}
+
+.vibes-container a:hover {
+  text-decoration: none;
 }
 
 .vibes-container .vibe {
@@ -450,7 +467,8 @@ html {
 }
 
 /* ScrollReveal extension */
-html.sr .reveal {
+html.sr .reveal,
+html.sr .vibe-text {
   visibility: hidden;
 }
 
@@ -461,6 +479,7 @@ html.sr .reveal {
   justify-content: center;
   margin-block: 4rem;
 }
+
 .vibes__cta a {
   font-size: 1.2rem;
   font-weight: 400;
@@ -487,6 +506,7 @@ html.sr .reveal {
     padding: 1rem 4rem;
   }
 }
+
 @media (max-width: 480px) {
   .vibes__cta a {
     font-size: 1rem;

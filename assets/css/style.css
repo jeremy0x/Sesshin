@@ -37,8 +37,8 @@ nav.scroll-up {
   nav.scroll-up {
     padding-left: 2em;
     padding-right: 2em;
-    padding-top: 1em;
-    padding-bottom: 2em;
+    padding-top: 0;
+    padding-bottom: 4em;
     top: 0.01em;
     height: 0em;
   }
@@ -62,9 +62,9 @@ nav.scroll-up {
 
 /* ------------------------- Logo -------------------------------------------------- */
 
-nav .row .left-nav {
+/* nav .row .left-nav {
   width: 10.8em;
-}
+} */
 
 .animate-logo {
   display: block;
@@ -184,16 +184,16 @@ nav ul li a:hover .nav-number {
 }
 
 nav ul li a.active {
-  color: var(--secondary-medium);
+  color: var(--purple);
 }
 
 nav.light ul li a:hover {
-  color: var(--secondary-medium);
+  color: var(--purple);
   text-decoration: none;
 }
 
 nav.light ul li a:hover .nav-number {
-  color: var(--secondary-medium);
+  color: var(--purple);
 }
 
 /* --- Small Number --- */
@@ -435,7 +435,7 @@ main.nav-active .hamburger-bar:after {
   .nav-icon {
     display: block;
     right: 2em;
-    top: 2em;
+    top: 1em;
   }
 }
 
@@ -683,10 +683,10 @@ main.nav-active .hamburger-bar:after {
     width: 70%;
   }
 
-  .circle {
+  /* .circle {
     width: 5em;
     height: 5em;
-  }
+  } */
   .circle-text {
     margin: 0;
     position: absolute;

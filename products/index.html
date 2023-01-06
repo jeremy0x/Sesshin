@@ -28,6 +28,9 @@
   <link rel="canonical" href="index.html" />
 
   <!-- Styles -->
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
   <link href="../assets/css/normalize.css" rel="stylesheet" />
   <link href="../assets/css/uikit.min.css" rel="stylesheet" />
   <link href="../assets/css/styleguide.css" rel="stylesheet" />
@@ -66,21 +69,12 @@
           <li>
             <a href="../home/"> Home </a>
           </li>
-
-          <li class="external active">
-            <a href="#" class="active">Products
-              <div class="nav-number">13</div>
-            </a>
+          <li class="active">
+            <a href="#" class="active">Products</a>
           </li>
 
           <li class="">
-            <a href="../apparel/" target="_blank">Apparel
-              <svg width="10" viewBox="0 0 10 10" height="10">
-                <g stroke="#242424" fill="none" fill-rule="evenodd">
-                  <path d="M1 1h8v8M1 9l8-8" />
-                </g>
-              </svg>
-            </a>
+            <a href="../apparel/">Apparel</a>
           </li>
         </ul>
         <div class="flex-col right-nav slow-load">
@@ -113,11 +107,10 @@
           <div class="header__slide">
             <div class="header__background">
               <div class="header__background__image">
-                <img
-                  src="https://news.artnet.com/app/news-upload/2019/06/negative-space-woman-painter-artist-studio-burst-1-1024x576.jpg"
-                  alt="" draggable="false" />
+                <img src="https://unsplash.it/1200/350" alt="" draggable="false" />
               </div>
             </div>
+            <div class="gradient"></div>
             <div class="header__content">
               <div class="header__content__text">
                 <div class="header__content__text__title">Creative</div>
@@ -134,96 +127,112 @@
           </div>
         </header>
 
-        <!-- Products Images -->
+        <!-- Flowers and Pre-rolls -->
         <section class="featured-strains-section">
-          <div class="title">Flowers and Pre-rolls (Creative)</div>
-          <div class="featured-strains items container" id="container">
-            <div href="#strains-description" class="featured-strains__container active" data-tab-value="#dessert1">
-              <img src="../assets/images/dessert-0.png" alt="" draggable="false" />
-              <img src="../assets/images/dessert-1.png" alt="" draggable="false" class="dessert" />
+          <div class="title">
+            Flowers and Pre-rolls
+          </div>
+          <div class="swiper mySwiper featured-strains">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="featured-strains__container active" data-tab-value="#dessert1">
+                  <img src="../assets/images/dessert-0.png" alt="" draggable="false" />
+                  <img src="../assets/images/dessert-1.png" alt="" draggable="false" class="dessert" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="featured-strains__container" data-tab-value="#dough-lato1">
+                  <img src="../assets/images/dough-lato-0.png" alt="" draggable="false" />
+                  <img src="../assets/images/dough-lato-1.png" alt="" draggable="false" class="dough-lato" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="featured-strains__container" data-tab-value="#gelato1">
+                  <img src="../assets/images/gelato-0.png" alt="" draggable="false" />
+                  <img src="../assets/images/gelato-1.png" alt="" draggable="false" class="gelato" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="featured-strains__container" data-tab-value="#sour-diesel1">
+                  <img src="../assets/images/sour-diesel-0.png" alt="" draggable="false" />
+                  <img src="../assets/images/sour-diesel-1.png" alt="" draggable="false" class="sour-diesel" />
+                </div>
+              </div>
             </div>
-            <div href="#strains-description" class="featured-strains__container" data-tab-value="#dough-lato1">
-              <img src="../assets/images/dough-lato-0.png" alt="" draggable="false" />
-              <img src="../assets/images/dough-lato-1.png" alt="" draggable="false" class="dough-lato" />
-            </div>
-            <div href="#strains-description" class="featured-strains__container" data-tab-value="#gelato1">
-              <img src="../assets/images/gelato-0.png" alt="" draggable="false" />
-              <img src="../assets/images/gelato-1.png" alt="" draggable="false" class="gelato" />
-            </div>
-            <div href="#strains-description" class="featured-strains__container" data-tab-value="#sour-diesel1">
-              <img src="../assets/images/sour-diesel-0.png" alt="" draggable="false" />
-              <img src="../assets/images/sour-diesel-1.png" alt="" draggable="false" class="sour-diesel" />
-            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </section>
 
         <!-- Tabs -->
-        <section class="strains-description" id="strains-description">
+        <section class="beverages-section">
           <!-- Dessert -->
           <div class="dropdown-content active" id="dessert1" data-tab-info>
-            <div class="strains-description__title">Beverages</div>
+            <div class="beverages-title">Beverages</div>
 
-            <!-- Description -->
-            <div class="strains-description__text">
-              <div class="strains-description__flex mt-40 packaging-items">
-                <span>
+            <!-- Beverages -->
+            <div class="swiper mySwiper beverages">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
-                <span>
+                </div>
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
+                </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
 
           <!-- Dough Lato -->
           <div class="dropdown-content" id="dough-lato1" data-tab-info>
-            <div class="strains-description__title">Beverages</div>
-            <!-- Description -->
-            <div class="strains-description__text">
-              <div class="strains-description__flex mt-40 packaging-items">
-                <span>
+            <div class="beverages-title">Beverages</div>
+            <!-- Beverages -->
+            <div class="swiper mySwiper beverages">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
-                <span>
+                </div>
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
+                </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
 
           <!-- Gelato -->
           <div class="dropdown-content" id="gelato1" data-tab-info>
-            <div class="strains-description__title">Beverages</div>
-            <!-- Description -->
-            <div class="strains-description__text">
-              <div class="strains-description__flex mt-40 packaging-items">
-                <span>
+            <div class="beverages-title">Beverages</div>
+            <!-- Beverages -->
+            <div class="swiper mySwiper beverages">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
-                <span>
+                </div>
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
+                </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
 
           <!-- Sour Diesel -->
           <div class="dropdown-content" id="sour-diesel1" data-tab-info>
-            <div class="strains-description__title">Beverages</div>
-            <!-- Description -->
-            <div class="strains-description__text">
-              <div class="strains-description__flex mt-40 packaging-items">
-                <span>
+            <div class="beverages-title">Beverages</div>
+            <!-- Beverages -->
+            <div class="swiper mySwiper beverages">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
-                <span>
+                </div>
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
+                </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
-          <!-- Sour Diesel -->
         </section>
       </div>
 
@@ -234,11 +243,10 @@
           <div class="header__slide">
             <div class="header__background">
               <div class="header__background__image">
-                <img
-                  src="https://media.istockphoto.com/id/1137914572/photo/afro-female-fine-artists-drawing-in-studio.jpg?s=612x612&w=0&k=20&c=rR-qRawv9Jez65A0kdZg_uLqegH7NFQ9K7Sof8p0YGA="
-                  alt="" draggable="false" />
+                <img src="https://unsplash.it/1200/375" alt="" draggable="false" />
               </div>
             </div>
+            <div class="gradient"></div>
             <div class="header__content">
               <div class="header__content__text">
                 <div class="header__content__text__title">Social</div>
@@ -255,99 +263,115 @@
           </div>
         </header>
 
-        <!-- Products Images -->
+        <!-- Flowers and Pre-rolls -->
         <section class="featured-strains-section">
-          <div class="title">Flowers and Pre-rolls (Social)</div>
-          <div class="featured-strains items container" id="container">
-            <div href="#strains-description" class="featured-strains__container active" data-tab-value="#dessert2">
-              <img src="../assets/images/dessert-0.png" alt="" draggable="false" />
-              <img src="../assets/images/dessert-1.png" alt="" draggable="false" class="dessert" />
+          <div class="title">
+            Flowers and Pre-rolls
+          </div>
+          <div class="swiper mySwiper featured-strains container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="featured-strains__container active" data-tab-value="#dessert2">
+                  <img src="../assets/images/dessert-0.png" alt="" draggable="false" />
+                  <img src="../assets/images/dessert-1.png" alt="" draggable="false" class="dessert" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="featured-strains__container" data-tab-value="#dough-lato2">
+                  <img src="../assets/images/dough-lato-0.png" alt="" draggable="false" />
+                  <img src="../assets/images/dough-lato-1.png" alt="" draggable="false" class="dough-lato" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="featured-strains__container" data-tab-value="#gelato2">
+                  <img src="../assets/images/gelato-0.png" alt="" draggable="false" />
+                  <img src="../assets/images/gelato-1.png" alt="" draggable="false" class="gelato" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="featured-strains__container" data-tab-value="#sour-diesel2">
+                  <img src="../assets/images/sour-diesel-0.png" alt="" draggable="false" />
+                  <img src="../assets/images/sour-diesel-1.png" alt="" draggable="false" class="sour-diesel" />
+                </div>
+              </div>
             </div>
-            <div href="#strains-description" class="featured-strains__container" data-tab-value="#dough-lato2">
-              <img src="../assets/images/dough-lato-0.png" alt="" draggable="false" />
-              <img src="../assets/images/dough-lato-1.png" alt="" draggable="false" class="dough-lato" />
-            </div>
-            <div href="#strains-description" class="featured-strains__container" data-tab-value="#gelato2">
-              <img src="../assets/images/gelato-0.png" alt="" draggable="false" />
-              <img src="../assets/images/gelato-1.png" alt="" draggable="false" class="gelato" />
-            </div>
-            <div href="#strains-description" class="featured-strains__container" data-tab-value="#sour-diesel2">
-              <img src="../assets/images/sour-diesel-0.png" alt="" draggable="false" />
-              <img src="../assets/images/sour-diesel-1.png" alt="" draggable="false" class="sour-diesel" />
-            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </section>
 
         <!-- Tabs -->
-        <section class="strains-description" id="strains-description">
+        <section class="strains-description">
           <!-- Dessert -->
           <div class="dropdown-content active" id="dessert2" data-tab-info>
-            <div class="strains-description__title">Beverages</div>
+            <div class="beverages-title">Beverages</div>
 
-            <!-- Description -->
-            <div class="strains-description__text">
-              <div class="strains-description__flex mt-40 packaging-items">
-                <span>
+            <!-- Beverages -->
+            <div class="swiper mySwiper beverages">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
-                <span>
+                </div>
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
+                </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
 
           <!-- Dough Lato -->
           <div class="dropdown-content" id="dough-lato2" data-tab-info>
-            <div class="strains-description__title">Beverages</div>
+            <div class="beverages-title">Beverages</div>
 
-            <!-- Description -->
-            <div class="strains-description__text">
-              <div class="strains-description__flex mt-40 packaging-items">
-                <span>
+            <!-- Beverages -->
+            <div class="swiper mySwiper beverages">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
-                <span>
+                </div>
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
+                </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
 
           <!-- Gelato -->
           <div class="dropdown-content" id="gelato2" data-tab-info>
-            <div class="strains-description__title">Beverages</div>
+            <div class="beverages-title">Beverages</div>
 
-            <!-- Description -->
-            <div class="strains-description__text">
-              <div class="strains-description__flex mt-40 packaging-items">
-                <span>
+            <!-- Beverages -->
+            <div class="swiper mySwiper beverages">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
-                <span>
+                </div>
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
+                </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
 
           <!-- Sour Diesel -->
           <div class="dropdown-content" id="sour-diesel2" data-tab-info>
-            <div class="strains-description__title">Beverages</div>
+            <div class="beverages-title">Beverages</div>
 
-            <!-- Description -->
-            <div class="strains-description__text">
-              <div class="strains-description__flex mt-40 packaging-items">
-                <span>
+            <!-- Beverages -->
+            <div class="swiper mySwiper beverages">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
-                <span>
+                </div>
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
+                </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
-          <!-- Sour Diesel -->
         </section>
       </div>
 
@@ -358,10 +382,10 @@
           <div class="header__slide">
             <div class="header__background">
               <div class="header__background__image">
-                <img src="https://media.smallbiztrends.com/2021/12/how-to-make-money-as-an-artist.png" alt=""
-                  draggable="false" />
+                <img src="https://unsplash.it/1250/325" alt="" draggable="false" />
               </div>
             </div>
+            <div class="gradient"></div>
             <div class="header__content">
               <div class="header__content__text">
                 <div class="header__content__text__title">Adventure</div>
@@ -378,99 +402,115 @@
           </div>
         </header>
 
-        <!-- Products Images -->
+        <!-- Flowers and Pre-rolls -->
         <section class="featured-strains-section">
-          <div class="title">Flowers and Pre-rolls (Adventure)</div>
-          <div class="featured-strains items container" id="container">
-            <div href="#strains-description" class="featured-strains__container active" data-tab-value="#dessert3">
-              <img src="../assets/images/dessert-0.png" alt="" draggable="false" />
-              <img src="../assets/images/dessert-1.png" alt="" draggable="false" class="dessert" />
+          <div class="title">
+            Flowers and Pre-rolls
+          </div>
+          <div class="swiper mySwiper featured-strains container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="featured-strains__container active" data-tab-value="#dessert3">
+                  <img src="../assets/images/dessert-0.png" alt="" draggable="false" />
+                  <img src="../assets/images/dessert-1.png" alt="" draggable="false" class="dessert" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="featured-strains__container" data-tab-value="#dough-lato3">
+                  <img src="../assets/images/dough-lato-0.png" alt="" draggable="false" />
+                  <img src="../assets/images/dough-lato-1.png" alt="" draggable="false" class="dough-lato" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="featured-strains__container" data-tab-value="#gelato3">
+                  <img src="../assets/images/gelato-0.png" alt="" draggable="false" />
+                  <img src="../assets/images/gelato-1.png" alt="" draggable="false" class="gelato" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="featured-strains__container" data-tab-value="#sour-diesel3">
+                  <img src="../assets/images/sour-diesel-0.png" alt="" draggable="false" />
+                  <img src="../assets/images/sour-diesel-1.png" alt="" draggable="false" class="sour-diesel" />
+                </div>
+              </div>
             </div>
-            <div href="#strains-description" class="featured-strains__container" data-tab-value="#dough-lato3">
-              <img src="../assets/images/dough-lato-0.png" alt="" draggable="false" />
-              <img src="../assets/images/dough-lato-1.png" alt="" draggable="false" class="dough-lato3" />
-            </div>
-            <div href="#strains-description" class="featured-strains__container" data-tab-value="#gelato3">
-              <img src="../assets/images/gelato-0.png" alt="" draggable="false" />
-              <img src="../assets/images/gelato-1.png" alt="" draggable="false" class="gelato" />
-            </div>
-            <div href="#strains-description" class="featured-strains__container" data-tab-value="#sour-diesel3">
-              <img src="../assets/images/sour-diesel-0.png" alt="" draggable="false" />
-              <img src="../assets/images/sour-diesel-1.png" alt="" draggable="false" class="sour-diesel" />
-            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </section>
 
         <!-- Tabs -->
-        <section class="strains-description" id="strains-description">
+        <section class="strains-description">
           <!-- Dessert -->
           <div class="dropdown-content active" id="dessert3" data-tab-info>
-            <div class="strains-description__title">Beverages</div>
+            <div class="beverages-title">Beverages</div>
 
-            <!-- Description -->
-            <div class="strains-description__text">
-              <div class="strains-description__flex mt-40 packaging-items">
-                <span>
+            <!-- Beverages -->
+            <div class="swiper mySwiper beverages">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
-                <span>
+                </div>
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
+                </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
 
           <!-- Dough Lato -->
           <div class="dropdown-content" id="dough-lato3" data-tab-info>
-            <div class="strains-description__title">Beverages</div>
+            <div class="beverages-title">Beverages</div>
 
-            <!-- Description -->
-            <div class="strains-description__text">
-              <div class="strains-description__flex mt-40 packaging-items">
-                <span>
+            <!-- Beverages -->
+            <div class="swiper mySwiper beverages">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
-                <span>
+                </div>
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
+                </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
 
           <!-- Gelato -->
           <div class="dropdown-content" id="gelato3" data-tab-info>
-            <div class="strains-description__title">Beverages</div>
+            <div class="beverages-title">Beverages</div>
 
-            <!-- Description -->
-            <div class="strains-description__text">
-              <div class="strains-description__flex mt-40 packaging-items">
-                <span>
+            <!-- Beverages -->
+            <div class="swiper mySwiper beverages">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
-                <span>
+                </div>
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
+                </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
 
           <!-- Sour Diesel -->
           <div class="dropdown-content" id="sour-diesel3" data-tab-info>
-            <div class="strains-description__title">Beverages</div>
+            <div class="beverages-title">Beverages</div>
 
-            <!-- Description -->
-            <div class="strains-description__text">
-              <div class="strains-description__flex mt-40 packaging-items">
-                <span>
+            <!-- Beverages -->
+            <div class="swiper mySwiper beverages">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
-                <span>
+                </div>
+                <div class="swiper-slide">
                   <img src="../assets/images/can.png" alt="can" class="beverage" />
-                </span>
+                </div>
               </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
-          <!-- Sour Diesel -->
         </section>
       </div>
     </div>
@@ -518,12 +558,27 @@
   </main>
 
   <!-- Scripts -->
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/js/swiper.js"></script>
+
+  <!-- jquery -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!-- Barba JS -->
   <script src="https://unpkg.com/@barba/core"></script>
+
+  <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
+  <!-- Swiper -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Recaptcha -->
   <script src="https://www.google.com/recaptcha/api.js?render=6Ld1MiYcAAAAANo3Cv2czYgssQlPHMOJE-hAFc1u"></script>
 
+  <!-- Barba JS -->
   <script>
     // Barba Load Wrapper
     barba.hooks.beforeEnter(() => {
@@ -539,6 +594,7 @@
     });
   </script>
 
+  <!-- Custom -->
   <script src="../assets/js/custom-slider.js"></script>
   <script src="../assets/js/image-drag-highlight.js"></script>
   <script src="../assets/js/change-text-content.js"></script>
