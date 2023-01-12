@@ -12,7 +12,7 @@ function setCookieAndRedirect() {
 
     // If the cookie value is true, load the index.html file
     if (cookieValue === "true") {
-		window.location.replace("/home/index.html");
+		window.location.replace("/home/");
     }
 }
 
@@ -28,7 +28,7 @@ window.onload = function() {
   
 	// If the cookie value is true, load the index.html file
 	if (cookieValue === "true") {
-		window.location.replace("/home/index.html");
+		window.location.replace("/home/");
 	}
   };
   
