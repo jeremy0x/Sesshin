@@ -32,21 +32,12 @@
 
   <link href="../assets/css/normalize.css" rel="stylesheet" />
   <link href="../assets/css/uikit.min.css" rel="stylesheet" />
-  <link href="../assets/css/styleguide.css" rel="stylesheet" />
-  <link href="../assets/css/style.css" rel="stylesheet" />
 
   <!-- Icons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <link rel="manifest" href="/site.webmanifest" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@200;300;400;500;600&display=swap"
-    rel="stylesheet" />
 
   <!-- Mapbox GL JS -->
   <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
@@ -62,7 +53,10 @@
   <style>
     body {
       color: #404040;
-      font: 400 15px/22px "Source Sans Pro", "Helvetica Neue", sans-serif !important;
+      /* font: 400 15px/22px "Source Sans Pro", "Helvetica Neue", sans-serif !important; */
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 22px;
       margin: 0;
       padding: 0;
       -webkit-font-smoothing: antialiased;
@@ -253,38 +247,38 @@
       margin-top: 3rem;
     }
 
-    .nav {
-      top: 0;
+    nav {
+      top: 1rem;
       left: 0;
       height: 100px;
       width: 100%;
-
+      position: relative;
     }
   </style>
 </head>
 
-<body>
+<body data-barba="wrapper">
   <div class="nav">
     <nav id="sticky" class="nav-up-down dark">
       <div class="row">
-        <div class="flex-col left-nav slow-load">
-          <a  href="../home/" class="logo animate-logo">
+        <div class="flex-col left-nav">
+          <a href="../home/" class="logo animate-logo">
             <img height="auto" viewBox="100 0 100 100" width="140" src="../logo.png" alt="">
           </a>
           </a>
         </div>
-        <ul class="flex-col center-nav slow-load">
+        <ul class="flex-col center-nav">
           <li class="">
-            <a   href="../home/">Home </a>
+            <a href="../home/">Home </a>
           </li>
           <li class="active">
-            <a ref="../products/">Products</a>
+            <a href="../products/">Products</a>
 
           <li class="">
             <a href="../apparel/">Apparel</a>
           </li>
         </ul>
-        <div class="flex-col right-nav slow-load">
+        <div class="flex-col right-nav">
           <!-- <a href="javascript:void(0)" class="btn loop">
             <div class="btn-wrap">
               <div class="btn-text">Find Us Nearby</div>
@@ -299,14 +293,14 @@
           </a>
         </div>
       </div>
-      <div class="nav-icon slow-load">
+      <div class="nav-icon">
         <div class="hamburger-bar"></div>
         <div class="nav-icon-back"></div>
       </div>
     </nav>
     <div class="nav-back"></div>
   </div>
-  <div class="map-container">
+  <div class="map-container" data-barba="container" class="main" id="home" data-barba-namespace="home">
     <div class="sidebar">
       <div class="heading" style="background-image: linear-gradient(to right, #875AE2, #FAC89E);">
         <h1 style="color: #fff;">Our locations</h1>

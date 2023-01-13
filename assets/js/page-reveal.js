@@ -7,7 +7,7 @@ if (!sessionStorage.getItem('animationPlayed')) {
     {
       clipPath: 'circle(15%)',
       scale: 0.3,
-      rotation: 90,
+      rotation: -90,
       borderRadius: '50%',
     },
     {

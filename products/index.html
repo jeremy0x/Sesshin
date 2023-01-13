@@ -58,12 +58,12 @@
       <!-- Begin Navbar -->
       <nav id="sticky" class="nav-up-down dark navbar">
         <div class="row">
-          <div class="flex-col left-nav slow-load">
+          <div class="flex-col left-nav">
             <a href="/" class="logo animate-logo">
               <img height="40" viewBox="100 0 100 100" width="140" src="../logo.png" alt="Sesshin logo" title="Go to homepage" />
             </a>
           </div>
-          <ul class="flex-col center-nav slow-load">
+          <ul class="flex-col center-nav">
             <li>
               <a href="../home/"> Home </a>
             </li>
@@ -71,12 +71,12 @@
               <a href="#" class="active">Products</a>
             </li>
 
-            <li class="">
-              <a href="../apparel/">Apparel</a>
-            </li>
-          </ul>
-          <div class="flex-col right-nav slow-load">
-            <!-- <a href="../map/" class="btn loop" >
+          <li class="">
+            <a href="../apparel/">Apparel</a>
+          </li>
+        </ul>
+        <div class="flex-col right-nav">
+          <!-- <a href="../map/" class="btn loop" target="_blank">
             <div class="btn-wrap">
               <div class="btn-text">Find Us Nearby</div>
               <div class="btn-text yellow-dot">•</div>
@@ -85,16 +85,16 @@
               <div class="btn-text">Find Us Nearby</div>
             </div>
           </a> -->
-            <a href="../map/" role="button" class="find-us-btn"> Find us </a>
-          </div>
+          <a href="../map/" role="button" class="find-us-btn"> Find us </a>
         </div>
-        <div class="nav-icon slow-load">
-          <div class="hamburger-bar"></div>
-          <div class="nav-icon-back"></div>
-        </div>
-      </nav>
-      <div class="nav-back"></div>
-      <!-- End Navbar -->
+      </div>
+      <div class="nav-icon">
+        <div class="hamburger-bar"></div>
+        <div class="nav-icon-back"></div>
+      </div>
+    </nav>
+    <div class="nav-back"></div>
+    <!-- End Navbar -->
 
       <!-- --- Main Page Content --- -->
       <div class="slider">
@@ -510,7 +510,7 @@
           </div> -->
             <div class="flex-col">
               <a href="../map/">
-                <div class="circle playbutton-inner-wrap">
+                <div class="circle">
                   <div class="circle-text" style="color: #fff">Find Us</div>
                 </div>
               </a>
@@ -574,17 +574,18 @@
       });
     </script>
 
-    <!-- Custom -->
-    <script src="../assets/js/custom-slider.js"></script>
-    <script src="../assets/js/image-drag-highlight.js"></script>
-    <script src="../assets/js/change-text-content.js"></script>
+  <!-- Custom -->
+  <script src="../assets/js/custom-slider.js"></script>
+  <script src="../assets/js/image-highlight.js"></script>
+  <script src="../assets/js/change-text-content.js"></script>
+  
+  <script src="../assets/js/page-transition.js"></script>
+  <script src="../assets/js/observers.js"></script>
+  <script src="../assets/js/uikit.min.js"></script>
+  <script src="../assets/js/swiper-custom.js"></script>
+  <script src="../assets/js/nav-up-down.js"></script>
+  <script src="../assets/js/magnetic.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
 
-    <script src="../assets/js/page-transition.js"></script>
-    <script src="../assets/js/observers.js"></script>
-    <script src="../assets/js/uikit.min.js"></script>
-    <script src="../assets/js/swiper-custom.js"></script>
-    <script src="../assets/js/nav-up-down.js"></script>
-    <script src="../assets/js/magnetic.js"></script>
-    <script src="../assets/js/main.js"></script>
-  </body>
 </html>
