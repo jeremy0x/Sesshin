@@ -312,10 +312,9 @@ html {
   position: absolute;
   right: 2rem;
   bottom: 2rem;
-  transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-50%, -50%) rotate(0deg) scale(0);
   width: 12rem;
   cursor: pointer;
-  opacity: 0;
 }
 
 .playbutton-inner-wrap {
