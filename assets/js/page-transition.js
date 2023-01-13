@@ -226,11 +226,6 @@ $(function () {
             rotation: 90,
           });
 
-          tl.set(".playbutton", {
-            scale: "0",
-            rotation: 45,
-          });
-
           tl.set(".home-video-before", {
             paddingBottom: "100%",
           });
@@ -339,17 +334,6 @@ $(function () {
               clearProps: "all",
             },
             "-=.5"
-          );
-
-          tl.to(
-            ".playbutton",
-            {
-              duration: 1.25,
-              ease: "Expo.easeInOut",
-              scale: "1",
-              rotation: 0,
-            },
-            "-=.75"
           );
         },
       },
