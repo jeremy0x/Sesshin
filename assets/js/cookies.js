@@ -1,8 +1,8 @@
 
 function setCookieAndRedirect() {
-    // Create a new date object that is 6 months in the future
+    // Create a new date object that is 1 month in the future
     var expirationDate = new Date();
-    expirationDate.setMonth(expirationDate.getMonth() + 6);
+    expirationDate.setMonth(expirationDate.getMonth() + 1);
 
     // Set the cookie with the desired value and expiration date
     document.cookie = "my-cookie=true; expires=" + expirationDate.toUTCString() + "; path=/";
@@ -33,9 +33,9 @@ window.onload = function() {
   };
   
   function setCookie() {
-	  // Create a new date object that is 6 months in the future
+	  // Create a new date object that is 1 month in the future
 	  var expirationDate = new Date();
-	  expirationDate.setMonth(expirationDate.getMonth() + 6);
+	  expirationDate.setMonth(expirationDate.getMonth() + 1);
   
 	  // Set the cookie with the desired value and expiration date
 	  document.cookie = "my-cookie=true; expires=" + expirationDate.toUTCString() + "; path=/";
