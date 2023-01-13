@@ -73,35 +73,35 @@ function loadAnimation() {
 }
 
 // Animation - Transition
-function pageTransition() {
-  var tl = gsap.timeline();
+// function pageTransition() {
+//   var tl = gsap.timeline();
 
-  tl.to(".main-fade", {
-    duration: 0.5,
-    ease: "Power0.easeNone",
-    opacity: "0",
-  });
+//   tl.to(".main-fade", {
+//     duration: 0.5,
+//     ease: "Power0.easeNone",
+//     opacity: "0",
+//   });
 
-  tl.to(
-    ".slow-load",
-    {
-      duration: 0.75,
-      ease: "Power3.easeOut",
-      opacity: "0",
-      clearProps: "all",
-    },
-    "-=.5"
-  );
+//   tl.to(
+//     ".slow-load",
+//     {
+//       duration: 0.75,
+//       ease: "Power3.easeOut",
+//       opacity: "0",
+//       clearProps: "all",
+//     },
+//     "-=.5"
+//   );
 
-  tl.set(".main-fade", {
-    y: 0,
-    opacity: "1",
-  });
+//   tl.set(".main-fade", {
+//     y: 0,
+//     opacity: "1",
+//   });
 
-  tl.set(".loading-screen", {
-    opacity: 0,
-  });
-}
+//   tl.set(".loading-screen", {
+//     opacity: 0,
+//   });
+// }
 
 // Animation - Loading page
 function contentAnimation() {
