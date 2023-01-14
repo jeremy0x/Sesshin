@@ -641,6 +641,11 @@ main.nav-active .hamburger-bar:after {
   border-radius: 50%;
   margin: auto;
 }
+.circle:hover,
+.circle:active,
+.circle:focus {
+  background: rgba(255, 255, 255, 0.03);
+}
 .circle-text {
   margin: 0;
   position: absolute;
@@ -649,6 +654,9 @@ main.nav-active .hamburger-bar:after {
   transform: translate(-50%, -50%);
   font-size: 1em;
   white-space: nowrap;
+}
+.circle:hover .circle-text {
+  text-decoration: underline;
 }
 
 .line {
