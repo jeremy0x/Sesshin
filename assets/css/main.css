@@ -358,6 +358,10 @@ img {
   object-fit: cover;
 }
 
+.apparel .swiper-slide img {
+  height: 100%;
+}
+
 /* Slide on /products/ */
 .header {
   position: relative;
