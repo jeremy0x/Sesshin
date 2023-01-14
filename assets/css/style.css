@@ -846,20 +846,20 @@ main.nav-active .hamburger-bar:after {
   }
 }
 
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
   .section-footer .bottom-footer .flex-col:nth-child(1) {
     width: 35%;
-  }
-
-  .section-footer .bottom-footer .flex-col:nth-child(2) {
+    }
+    
+    .section-footer .bottom-footer .flex-col:nth-child(2) {
     width: 65%;
-  }
-  
-
-  .section-footer .bottom-footer .flex-col:nth-child(1) a svg {
+    }
+    
+    
+    .section-footer .bottom-footer .flex-col:nth-child(1) a svg {
     width: 3em;
-  }
-}
+    }
+    } */
 
 @media screen and (max-width: 720px) {
   .section-footer .bottom-footer {
@@ -875,7 +875,7 @@ main.nav-active .hamburger-bar:after {
     padding-top: 2em;
   } */
 
-  .section-footer .bottom-footer .flex-col:nth-child(2) li {
+  /* .section-footer .bottom-footer .flex-col:nth-child(2) li {
     width: 100%;
     padding: 0.5em 0;
   }
@@ -896,7 +896,7 @@ main.nav-active .hamburger-bar:after {
 
   .section-footer .bottom-footer .flex-col:nth-child(2) li:first-of-type {
     order: 3;
-  }
+  } */
 }
 
 /* ------------------------- GDPR - Cookie Bar -------------------------------------------------- */
@@ -3127,15 +3127,33 @@ footer .nav-links {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem 1.5rem;
+  flex-wrap: wrap;
 }
 
 footer .bottom-footer {
   display: flex; 
   flex-direction: row;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 2rem;
   flex-wrap: wrap;
+}
+
+@media (max-width: 678px) {
+  footer .bottom-footer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 300px) {
+  footer .bottom-footer {
+    justify-content: flex-start;
+  }
+
+  footer .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* --- Find us button on nav bar */
