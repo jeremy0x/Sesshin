@@ -514,3 +514,7 @@ img {
     opacity: 1;
   }
 }
+
+.no-animation {
+  animation: none !important;
+}

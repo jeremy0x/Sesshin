@@ -99,7 +99,7 @@
       <!-- --- Main Page Content --- -->
       <div class="slider">
         <!-- Slide 1 - Creative -->
-        <div class="item">
+        <div class="item first-slide no-animation">
           <!-- Header slides -->
           <header class="header">
             <div class="header__slide">
@@ -115,8 +115,8 @@
                 </div>
               </div>
               <div class="header__arrow">
-                <div class="header__arrow__left arrow" onclick="previousSlide()"><span class="arrow-icon">&#10094;</span> Adventure</div>
-                <div class="header__arrow__right arrow" onclick="nextSlide()">Social <span class="arrow-icon">&#10095;</span></div>
+                <div class="header__arrow__left arrow" onclick="previousSlide(); animateFirstSlide();"><span class="arrow-icon">&#10094;</span> Adventure</div>
+                <div class="header__arrow__right arrow" onclick="nextSlide(); animateFirstSlide();">Social <span class="arrow-icon">&#10095;</span></div>
               </div>
             </div>
           </header>
@@ -937,6 +937,12 @@
     </main>
 
     <!-- Scripts -->
+
+    <script>
+      const animateFirstSlide = () => {
+        document.querySelector('.first-slide').classList.remove('no-animation');
+      }
+    </script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
