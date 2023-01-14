@@ -174,13 +174,11 @@ nav.dark ul li a {
   color: var(--white);
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:focus {
   /* color: var(--secondary); */
+  color: var(--purple);
   text-decoration: none;
-}
-
-nav ul li a:hover .nav-number {
-  color: var(--secondary);
 }
 
 nav ul li a.active {
