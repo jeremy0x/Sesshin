@@ -1,6 +1,8 @@
 // Used on the Apparel Extension Page
 
-// image zoom on hover functionality
+// --- image zoom functionality --- //
+
+// zoom in on mouse hover
 const container = document.querySelector(".selected-image-preview");
 const img = document.querySelector(".selected-image-preview img");
 
@@ -15,9 +17,9 @@ container.addEventListener("mousemove", (e) => {
 container.addEventListener("mouseleave", () => {
   img.style.transformOrigin = "center";
   img.style.transform = "scale(1)";
-})
+});
 
-// toggle the image based on the selected image
+// --- toggle the big image based on the selected image from the image gallery --- //
 let imageList = document.querySelector(".image-list");
 let selectedImage = document.querySelector(".selected-image-preview img");
 
@@ -27,7 +29,7 @@ imageList.addEventListener("click", function (e) {
   }
 });
 
-// toggle border on selected image
+// --- toggle border on selected image --- //
 let imgContainer = document.querySelectorAll(".img-container");
 
 imgContainer.forEach(function (container) {
