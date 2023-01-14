@@ -3134,7 +3134,7 @@ footer .bottom-footer {
   display: flex; 
   flex-direction: row;
   justify-content: space-between;
-  gap: 5rem;
+  gap: 3rem;
   flex-wrap: wrap;
 }
 
