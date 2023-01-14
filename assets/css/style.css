@@ -3119,7 +3119,7 @@ footer a {
 }
 
 footer a:hover {
-  color: var(--secondary-medium);
+  color: var(--purple);
 }
 
 footer .nav-links {
