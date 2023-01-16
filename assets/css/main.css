@@ -358,6 +358,10 @@ img {
   object-fit: cover;
 }
 
+.apparel .swiper-slide img {
+  height: 100%;
+}
+
 /* Slide on /products/ */
 .header {
   position: relative;
@@ -509,4 +513,120 @@ img {
   to {
     opacity: 1;
   }
+}
+
+.no-animation {
+  animation: none !important;
+}
+
+/* ----- Apparel Page Extensions ----- */
+.apparel-extension .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 8rem;
+  width: 100%;
+  margin-top: 11rem;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 768px) {
+  .apparel-extension .content {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 8rem;
+    margin-bottom: 10rem;
+  }
+}
+
+/* @media (min-width: 768px) {
+  .apparel-extension .selected-image-preview {
+    height: 557px;
+    overflow: hidden;
+  }
+} */
+
+.apparel-extension .selected-image-preview {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .apparel-extension .selected-image-preview {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.apparel-extension .selected-image-preview img {
+  transform-origin: center;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  cursor: zoom-in;
+  transition: all .1s linear;
+  position: relative;
+}
+
+.apparel-extension .right {
+  position: relative;
+  padding-inline: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apparel-extension .image-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.apparel-extension .apparel__cta {
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .apparel-extension .apparel__cta {
+    bottom: -125px;
+  }
+}
+
+.apparel-extension .apparel__cta:hover {
+  background: rgba(0, 0, 0, 0.03)
+}
+
+.apparel-extension .image-list img {
+  width: 105px;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.apparel-extension .image-list .img-container {
+  border-radius: 21px;
+  border: 2px solid transparent;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.apparel-extension .image-list .img-container.active {
+  border: 2px solid var(--black);
+}
+
+.apparel-extension .apparel__cta a {
+  font-weight: 500;
+  color: var(--black);
+  border: 1px solid var(--black);
+  white-space: nowrap;
+  max-width: 90%;
+  padding: 1rem 8rem 1rem 7rem;
 }

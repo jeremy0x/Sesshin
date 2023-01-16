@@ -174,13 +174,11 @@ nav.dark ul li a {
   color: var(--white);
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:focus {
   /* color: var(--secondary); */
+  color: var(--purple);
   text-decoration: none;
-}
-
-nav ul li a:hover .nav-number {
-  color: var(--secondary);
 }
 
 nav ul li a.active {
@@ -399,7 +397,7 @@ main.nav-active .nav-icon .nav-icon-back {
 
 nav.light .hamburger-bar:before,
 nav.light .hamburger-bar:after {
-  background: var(--white);
+  background: var(--black);
 }
 
 main.nav-active .hamburger-bar:before,
@@ -641,6 +639,11 @@ main.nav-active .hamburger-bar:after {
   border-radius: 50%;
   margin: auto;
 }
+.circle:hover,
+.circle:active,
+.circle:focus {
+  background: rgba(255, 255, 255, 0.03);
+}
 .circle-text {
   margin: 0;
   position: absolute;
@@ -649,6 +652,22 @@ main.nav-active .hamburger-bar:after {
   transform: translate(-50%, -50%);
   font-size: 1em;
   white-space: nowrap;
+}
+.circle:hover .circle-text {
+  text-decoration: underline;
+}
+
+footer.light .circle {
+  border: 2px solid var(--black);
+}
+footer.light .circle:hover,
+footer.light .circle:active,
+footer.light .circle:focus {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+footer.light .circle-text {
+  color: var(--black);
 }
 
 .line {
@@ -775,6 +794,10 @@ main.nav-active .hamburger-bar:after {
   padding: 4em 0;
 }
 
+.section-footer.light .bottom-footer {
+  border-top: 1px solid var(--black);
+}
+
 /* .section-footer .bottom-footer .flex-col:nth-child(1) {
   width: 40%;
 } */
@@ -818,7 +841,6 @@ main.nav-active .hamburger-bar:after {
 .section-footer .bottom-footer .flex-col:nth-child(2) li {
   float: left;
   padding: 1em 3em 1em 0;
-  color: rgba(32, 32, 34, 0.5);
 }
 
 .section-footer .bottom-footer .flex-col:nth-child(2) li:last-of-type {
@@ -840,20 +862,20 @@ main.nav-active .hamburger-bar:after {
   }
 }
 
-@media screen and (max-width: 900px) {
+/* @media screen and (max-width: 900px) {
   .section-footer .bottom-footer .flex-col:nth-child(1) {
     width: 35%;
-  }
-
-  .section-footer .bottom-footer .flex-col:nth-child(2) {
+    }
+    
+    .section-footer .bottom-footer .flex-col:nth-child(2) {
     width: 65%;
-  }
-  
-
-  .section-footer .bottom-footer .flex-col:nth-child(1) a svg {
+    }
+    
+    
+    .section-footer .bottom-footer .flex-col:nth-child(1) a svg {
     width: 3em;
-  }
-}
+    }
+    } */
 
 @media screen and (max-width: 720px) {
   .section-footer .bottom-footer {
@@ -869,7 +891,7 @@ main.nav-active .hamburger-bar:after {
     padding-top: 2em;
   } */
 
-  .section-footer .bottom-footer .flex-col:nth-child(2) li {
+  /* .section-footer .bottom-footer .flex-col:nth-child(2) li {
     width: 100%;
     padding: 0.5em 0;
   }
@@ -890,7 +912,7 @@ main.nav-active .hamburger-bar:after {
 
   .section-footer .bottom-footer .flex-col:nth-child(2) li:first-of-type {
     order: 3;
-  }
+  } */
 }
 
 /* ------------------------- GDPR - Cookie Bar -------------------------------------------------- */
@@ -3112,8 +3134,12 @@ footer a {
   color: #fff;
 }
 
+footer.light a {
+  color: #000;
+}
+
 footer a:hover {
-  color: var(--secondary-medium);
+  color: var(--purple);
 }
 
 footer .nav-links {
@@ -3121,15 +3147,33 @@ footer .nav-links {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem 1.5rem;
+  flex-wrap: wrap;
 }
 
 footer .bottom-footer {
   display: flex; 
   flex-direction: row;
   justify-content: space-between;
-  gap: 5rem;
+  gap: 2rem;
   flex-wrap: wrap;
+}
+
+@media (max-width: 678px) {
+  footer .bottom-footer {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 300px) {
+  footer .bottom-footer {
+    justify-content: flex-start;
+  }
+
+  footer .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* --- Find us button on nav bar */
@@ -3146,4 +3190,16 @@ footer .bottom-footer {
   color: #fff;
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav.light .find-us-btn {
+  color: #000;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #000;
+}
+
+nav.light .find-us-btn:hover {
+  color: #000;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.1);
 }

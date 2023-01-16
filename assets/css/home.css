@@ -254,6 +254,16 @@ html {
   /* animation: bounce 2.5s ease-in-out infinite; */
 }
 
+@media screen and (max-width: 480px) {
+  .scroll-down-container {
+    height: 45px;
+  }
+  .scroll-down-container svg {
+    width: 40px;
+    height: auto;
+  }
+}
+
 .scroll-down-btn {
   opacity:  0;
   transition: .5s ease;
@@ -293,6 +303,7 @@ html {
   opacity: 0;
 }
 
+.hero-find-us-btn:hover,
 .hero-find-us-btn:active {
   color: #000;
   text-decoration: underline;
@@ -429,20 +440,18 @@ html {
   }
 }
 
-.vibe-creative {
-  background-color: #ecb4c5;
+@media (max-width: 370px) {
+  .vibes-container .vibe {
+    height: 125px;
+    width: 125px;
+  }
 }
 
-.vibe-social {
-  background-color: var(--secondary-medium);
-}
-
-.vibe-relaxing {
-  background-color: #85a0d3;
-}
-
-.vibe-music {
-  background-color: #dc89e7;
+@media (max-width: 320px) {
+  .vibes-container .vibe {
+    height: 100px;
+    width: 100px;
+  }
 }
 
 .vibe img {
@@ -456,7 +465,7 @@ html {
 .vibe-text {
   color: var(--white);
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: clamp(0.85rem, 2vw, 1.25rem);
   margin-top: 0.5rem;
   text-align: center;
 }
