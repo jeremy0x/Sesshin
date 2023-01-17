@@ -546,6 +546,7 @@ html.sr .vibe-text {
   border-radius: 41px;
   height: auto;
   line-height: 1;
+  margin: 0;
   transition: all 0.2s ease-in-out;
 }
 
@@ -572,4 +573,5 @@ html.sr .vibe-text {
 #mc_embed_signup .foot {
   width: fit-content;
   margin: auto;
+  display: block;
 }
