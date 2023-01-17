@@ -521,3 +521,50 @@ html.sr .vibe-text {
     padding: 1rem 2rem;
   }
 }
+
+/* Newsletter Section */
+.newsletter #mc_embed_signup {
+  background: #000;
+  font-family: 'ClarikaProGeo', sans-serif;
+  max-width: 1200px;
+  color: #fff;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.newsletter #mc_embed_signup h2 {
+  font-family: 'BauzietNorm', sans-serif;
+  color: #fff;
+  text-align: center;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+#mc_embed_signup form .button {
+  border: 1px solid var(--white);
+  background-color: transparent;
+  padding: 1rem 4rem;
+  border-radius: 41px;
+  height: auto;
+  line-height: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+#mc_embed_signup form .button:hover,
+#mc_embed_signup form .button:active {
+  color: var(--white);
+  text-decoration: underline;
+  background: rgba(255, 255, 255, 0.03);
+  transition: .1s ease;
+}
+
+#mc_embed_signup .helper_text {
+  display: none;
+}
+
+#mc_embed_signup input {
+  background-color: var(--black);
+}
+
+#mc_embed_signup input:focus {
+  background-color: var(--primary-medium);
+}
