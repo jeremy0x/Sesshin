@@ -568,3 +568,8 @@ html.sr .vibe-text {
 #mc_embed_signup input:focus {
   background-color: var(--primary-medium);
 }
+
+#mc_embed_signup .foot {
+  width: fit-content;
+  margin: auto;
+}
