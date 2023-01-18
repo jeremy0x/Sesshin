@@ -3154,9 +3154,11 @@ footer .nav-links {
 footer .bottom-footer {
   display: flex; 
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
+  color: #fff;
 }
 
 @media (max-width: 678px) {
