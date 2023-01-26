@@ -93,13 +93,14 @@
     <!-- Begin Hero Section -->
     <section class="hero">
       <div class="hero-container">
-        <!-- Background Video -->
+        <!-- Desktop Video -->
         <video autoplay muted loop playsinline id="hero-video" class="hero-video desktop-video">
           <source src="../media/pages/home/sesshin-trim_cropped.mp4" type="video/mp4" id="video-source">
           Your browser does not support HTML5 video.
         </video>
+        <!-- Mobile Video -->
         <video autoplay muted loop playsinline id="hero-video" class="hero-video mobile-video">
-          <source src="../media/pages/home/sesshin-intro.mp4" type="video/mp4" id="video-source">
+          <source src="../media/pages/home/bg-draft.mp4" type="video/mp4" id="video-source">
           Your browser does not support HTML5 video.
         </video>
         <!-- Play video button -->
@@ -330,7 +331,9 @@
           </div> -->
           <div class="flex-col">
             <ul>
-              <li class="small">© 2022 Sesshin</li>
+              <li class="small">
+                © <span id="currentYear"></span> Sesshin
+              </li>
               <!-- <li class="small"><a>Terms & Conditions</a></li> -->
             </ul>
           </div>
@@ -342,6 +345,11 @@
   </main>
 
   <!-- Scripts -->
+
+  <!-- Footer Date -->
+  <script>
+    document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+  </script>
 
   <!-- ScrollReveal -->
   <!-- <script type="text/javascript">
