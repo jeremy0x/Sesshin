@@ -1,879 +1,817 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Primary Meta Tags -->
+    <title>Find Us — Sesshin</title>
+    <meta name="title" content="Find Us — Sesshin" />
+    <meta name="description" content="Experience euphoria" />
 
-  <!-- Primary Meta Tags -->
-  <title>Find Us — Sesshin</title>
-  <meta name="title" content="Find Us — Sesshin" />
-  <meta name="description" content="Experience euphoria" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="Find Us — Sesshin" />
+    <meta property="og:description" content="Experience euphoria" />
+    <meta
+      property="og:image"
+      content="https://sesshin.co/assets/images/og-image.png"
+    />
+    <meta property="og:site_name" content="Find Us — Sesshin" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="" />
-  <meta property="og:title" content="Find Us — Sesshin" />
-  <meta property="og:description" content="Experience euphoria" />
-  <meta property="og:image" content="https://sesshin.co/assets/images/og-image.png" />
-  <meta property="og:site_name" content="Find Us — Sesshin" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="" />
+    <meta property="twitter:title" content="Find Us — Sesshin" />
+    <meta property="twitter:description" content="Experience euphoria" />
+    <meta
+      property="twitter:image"
+      content="https://sesshin.co/assets/images/og-image.png"
+    />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="" />
-  <meta property="twitter:title" content="Find Us — Sesshin" />
-  <meta property="twitter:description" content="Experience euphoria" />
-  <meta property="twitter:image" content="https://sesshin.co/assets/images/og-image.png" />
+    <link rel="canonical" href="index.html" />
 
-  <link rel="canonical" href="index.html" />
+    <!-- Mapbox GL JS -->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css"
+      rel="stylesheet"
+    />
 
-  <!-- Mapbox GL JS -->
-  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
-  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet" />
+    <!-- Styles -->
+    <link href="../assets/css/uikit.min.css" rel="stylesheet" />
+    <link href="../assets/css/styleguide.css" rel="stylesheet" />
+    <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href="../assets/css/main.css" rel="stylesheet" />
 
-  <!-- Styles -->
-  <link href="../assets/css/uikit.min.css" rel="stylesheet" />
-  <link href="../assets/css/styleguide.css" rel="stylesheet" />
-  <link href="../assets/css/style.css" rel="stylesheet" />
-  <link href="../assets/css/main.css" rel="stylesheet" />
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-  <!-- Icons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="manifest" href="/site.webmanifest" />
+    <!-- Mapbox GL JS -->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <!-- Geocoder plugin -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css"
+      type="text/css"
+    />
+    <!-- Turf.js plugin -->
+    <script src="https://npmcdn.com/@turf/turf/turf.min.js"></script>
+    <style>
+      body {
+        color: #404040;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        margin: 0;
+        padding: 0;
+        -webkit-font-smoothing: antialiased;
+      }
 
-  <!-- Mapbox GL JS -->
-  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.js"></script>
-  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.9.2/mapbox-gl.css" rel="stylesheet" />
-  <!-- Geocoder plugin -->
-  <script
-    src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
-  <link rel="stylesheet"
-    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css"
-    type="text/css" />
-  <!-- Turf.js plugin -->
-  <script src="https://npmcdn.com/@turf/turf/turf.min.js"></script>
-  <style>
-    body {
-      color: #404040;
-      /* font: 400 15px/22px "Source Sans Pro", "Helvetica Neue", sans-serif !important; */
-      font-weight: 400;
-      font-size: 15px;
-      line-height: 22px;
-      margin: 0;
-      padding: 0;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-
-    .sidebar {
-      background-color: #fff;
-      position: absolute;
-      width: 33.3333%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      overflow: hidden;
-      border-right: 1px solid rgba(0, 0, 0, 0.25);
+      * {
+        box-sizing: border-box;
+      }
 
 
-    }
-
-    .map {
-      position: absolute;
-      left: 33.3333%;
-      width: 66.6666%;
-      top: 0;
-      bottom: 0;
-    }
-
-    @media screen and (max-width: 767.98px) {
       .sidebar {
-        width: 100%;
-        height: 45%;
-        display: block;
-        float: none;
-        top: 55%;
+        background-color: #fff;
+        position: absolute;
+        width: 33.3333%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        border-right: 1px solid rgba(0, 0, 0, 0.25);
+
 
       }
 
       .map {
-        left: 0;
-        width: 100%;
-        height: 55%;
-        display: block;
-        float: none;
+        position: absolute;
+        left: 33.3333%;
+        width: 66.6666%;
+        top: 0;
+        bottom: 0;
       }
 
-    }
+      @media screen and (max-width: 767.98px) {
+        .sidebar {
+          width: 100%;
+          height: 45%;
+          display: block;
+          float: none;
+          top: 55%;
 
-    h1 {
-      font-size: 22px !important;
-      margin: 0;
-      font-weight: 400;
-      line-height: 20px;
-      padding: 20px 2px;
-    }
+        }
 
-    a {
-      color: #404040;
-      text-decoration: none;
-    }
+        .map {
+          left: 0;
+          width: 100%;
+          height: 55%;
+          display: block;
+          float: none;
+        }
 
-    a:hover {
-      color: #101010;
-    }
+      }
 
-    .heading {
-      background: #fff;
-      border-bottom: 1px solid #eee;
-      min-height: 60px;
-      line-height: 60px;
-      padding: 0 10px;
-      background-color: #FAC89E;
-      color: #fff;
-    }
+      h1 {
+        font-size: 22px !important;
+        margin: 0;
+        font-weight: 400;
+        line-height: 20px;
+        padding: 20px 2px;
+      }
 
-    .listings {
-      height: 100%;
-      overflow: auto;
-      padding-bottom: 60px;
-    }
+      a {
+        color: #404040;
+        text-decoration: none;
+      }
 
-    .listings .item {
-      display: block;
-      border-bottom: 1px solid #eee;
-      padding: 10px;
-      text-decoration: none;
-    }
+      a:hover {
+        color: #101010;
+      }
 
-    .listings .item:last-child {
-      border-bottom: none;
-    }
+      .heading {
+        background: #fff;
+        border-bottom: 1px solid #eee;
+        min-height: 60px;
+        line-height: 60px;
+        padding: 0 10px;
+        background-color: #FAC89E;
+        color: #fff;
+      }
 
-    .listings .item .title {
-      display: block;
-      color: #bda5f7;
-      font-weight: 700;
-    }
+      .listings {
+        height: 100%;
+        overflow: auto;
+        padding-bottom: 60px;
+      }
 
-    .listings .item .title small {
-      font-weight: 400;
-    }
+      .listings .item {
+        display: block;
+        border-bottom: 1px solid #eee;
+        padding: 10px;
+        text-decoration: none;
+      }
 
-    .listings .item.active .title,
-    .listings .item .title:hover {
-      color: #FAC89E;
-    }
+      .listings .item:last-child {
+        border-bottom: none;
+      }
 
-    .listings .item.active {
-      background-color: #f8f8f8;
-    }
+      .listings .item .title {
+        display: block;
+        color: #bda5f7;
+        font-weight: 700;
+      }
 
-    ::-webkit-scrollbar {
-      width: 3px;
-      height: 3px;
-      border-left: 0;
-      background: rgba(0, 0, 0, 0.1);
-    }
+      .listings .item .title small {
+        font-weight: 400;
+      }
 
-    ::-webkit-scrollbar-track {
-      background: none;
-    }
+      .listings .item.active .title,
+      .listings .item .title:hover {
+        color: #FAC89E;
+      }
 
-    ::-webkit-scrollbar-thumb {
-      background: #BD6629 !important;
-      border-radius: 0;
-    }
+      .listings .item.active {
+        background-color: #f8f8f8;
+      }
 
-    .marker {
-      border: none;
-      cursor: pointer;
-      height: 56px;
-      width: 56px;
-      background-image: url(marker.png);
-    }
+      ::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+        border-left: 0;
+        background: rgba(0, 0, 0, 0.1);
+      }
 
-    /* Marker tweaks */
-    .mapboxgl-popup {
-      padding-bottom: 50px;
-    }
+      ::-webkit-scrollbar-track {
+        background: none;
+      }
 
-    .mapboxgl-popup-close-button {
-      display: none;
-    }
+      ::-webkit-scrollbar-thumb {
+        background: #BD6629 !important;
+        border-radius: 0;
+      }
 
-    .mapboxgl-popup-content {
-      font: 400 15px/22px "Source Sans Pro", "Helvetica Neue", sans-serif;
-      padding: 0;
-      width: 180px;
-      padding-top: 1em;
-      text-align: center;
-    }
+      .marker {
+        border: none;
+        cursor: pointer;
+        height: 56px;
+        width: 56px;
+        background-image: url(marker.png);
+      }
 
-    .mapboxgl-popup-content h3 {
-      background: #000000;
-      color: #fff;
-      margin: 0;
-      padding: 10px !important;
-      border-radius: 3px 3px 0 0;
-      font-weight: 500 !important;
-      margin-top: -15px;
-    }
+      /* Marker tweaks */
+      .mapboxgl-popup {
+        padding-bottom: 50px;
+      }
 
-    .mapboxgl-popup-content h4 {
-      margin: 0;
-      padding: 10px;
-      font-weight: 400;
-    }
+      .mapboxgl-popup-close-button {
+        display: none;
+      }
 
-    .mapboxgl-popup-content div {
-      padding: 10px;
-    }
+      .mapboxgl-popup-content {
+        font: 400 15px/22px "Source Sans Pro", "Helvetica Neue", sans-serif;
+        padding: 0;
+        width: 180px;
+        padding-top: 1em;
+        text-align: center;
+      }
 
-    .mapboxgl-popup-anchor-top>.mapboxgl-popup-content {
-      margin-top: 15px;
-    }
+      .mapboxgl-popup-content h3 {
+        background: #000000;
+        color: #fff;
+        margin: 0;
+        padding: 10px !important;
+        border-radius: 3px 3px 0 0;
+        font-weight: 500 !important;
+        margin-top: -15px;
+      }
 
-    .mapboxgl-popup-anchor-top>.mapboxgl-popup-tip {
-      border-bottom-color: #909090;
-    }
+      .mapboxgl-popup-content h4 {
+        margin: 0;
+        padding: 10px;
+        font-weight: 400;
+      }
 
-    .map-container {
-      position: relative;
-      height: 80vh;
-      width: auto;
-      margin-top: 8rem;
-    }
-  </style>
-</head>
+      .mapboxgl-popup-content div {
+        padding: 10px;
+      }
 
-<body data-barba="wrapper">
-  <main data-barba="container" class="main" id="home" data-barba-namespace="home">
-    <!-- Begin Navbar -->
-    <nav id="sticky" class="nav-up-down dark navbar">
-      <div class="row">
-        <div class="flex-col left-nav">
-          <a href="../home/" class="logo animate-logo">
-            <img height="40" viewBox="100 0 100 100" width="140" src="../logo.png" alt="Sesshin logo"
-              title="Go to homepage" />
-          </a>
-        </div>
-        <ul class="flex-col center-nav">
-          <li>
-            <a href="../home/"> Home </a>
-          </li>
-          <li>
-            <a href="../products/">Products</a>
-          </li>
+      .mapboxgl-popup-anchor-top>.mapboxgl-popup-content {
+        margin-top: 15px;
+      }
 
-          <li class="external">
-            <a href="../apparel/">Apparel</a>
-          </li>
-        </ul>
-        <div class="flex-col right-nav">
-          <a href="#" role="button" class="find-us-btn"> Find us </a>
-        </div>
-      </div>
-      <div class="nav-icon">
-        <div class="hamburger-bar"></div>
-        <div class="nav-icon-back"></div>
-      </div>
-    </nav>
-    <div class="nav-back"></div>
-    <!-- End Navbar -->
+      .mapboxgl-popup-anchor-top>.mapboxgl-popup-tip {
+        border-bottom-color: #909090;
+      }
 
-    <!-- --- Main Page Content --- -->
-    <div class="map-container" data-barba="container" class="main" id="home" data-barba-namespace="home">
-      <div class="sidebar">
-        <div class="heading" style="background-image: linear-gradient(to right, #875AE2, #FAC89E);">
-          <h1 style="color: #fff;">Our locations</h1>
-        </div>
-        <div id="listings" class="listings"></div>
-      </div>
-      <div id="map" class="map"></div>
-    </div>
-    <!-- --- Main Page Content --- -->
+      .map-container {
+        position: relative;
+        height: 80vh;
+        width: auto;
+        margin-top: 8rem;
+      }
+    </style>
+  </head>
 
-    <!-- Begin Footer -->
-    <footer class="section section-footer dark" style="background-color: #000000" id="footer">
-      <div class="container">
-        <div class="row top-footer">
-          <div class="flex-col">
-            <a href="../map/">
-              <div class="circle">
-                <div class="circle-text" style="color: #fff">Find Us</div>
-              </div>
+  <body data-barba="wrapper">
+    <main
+      data-barba="container"
+      class="main"
+      id="home"
+      data-barba-namespace="home"
+    >
+      <!-- Begin Navbar -->
+      <nav id="sticky" class="nav-up-down dark navbar">
+        <div class="row">
+          <div class="flex-col left-nav">
+            <a href="/" class="logo animate-logo">
+              <img
+                height="40"
+                viewBox="100 0 100 100"
+                width="140"
+                src="/assets/images/logo.png"
+                alt="Sesshin logo"
+                title="Go to homepage"
+              />
             </a>
           </div>
-        </div>
-        <div class="bottom-footer">
-          <div class="flex-col nav-links">
-            <a href="../home/">Home</a>
-            <a href="../products/">Products</a>
-            <a href="#">Apparel</a>
-            <a href="../map/">Map</a>
+          <ul class="flex-col center-nav">
+            <li>
+              <a href="/"> Home </a>
+            </li>
+            <li>
+              <a href="../products/">Products</a>
+            </li>
+
+            <li class="external">
+              <a href="../apparel/">Apparel</a>
+            </li>
+          </ul>
+          <div class="flex-col right-nav">
+            <a href="#" role="button" class="find-us-btn"> Find us </a>
           </div>
-          <div class="flex-col">
-            <ul>
-              <li class="small" style="color: #fff">© 2022 Sesshin</li>
-              <li class="small">
-                <a style="color: #fff">Terms & Conditions</a>
-              </li>
-            </ul>
-          </div>
         </div>
+        <div class="nav-icon">
+          <div class="hamburger-bar"></div>
+          <div class="nav-icon-back"></div>
+        </div>
+      </nav>
+      <div class="nav-back"></div>
+      <!-- End Navbar -->
+
+      <!-- --- Main Page Content --- -->
+      <div
+        class="map-container"
+        data-barba="container"
+        class="main"
+        id="home"
+        data-barba-namespace="home"
+      >
+        <div class="sidebar">
+          <div
+            class="heading"
+            style="background-image: linear-gradient(to right, #875AE2, #FAC89E);"
+          >
+            <h1 style="color: #fff;">Our locations</h1>
+          </div>
+          <div id="listings" class="listings"></div>
+        </div>
+        <div id="map" class="map"></div>
       </div>
-    </footer>
-    <!-- End Footer -->
-  </main>
+      <!-- --- Main Page Content --- -->
 
-  <!-- Map Script -->
-  <script>
-    mapboxgl.accessToken = "pk.eyJ1Ijoic2Vzc2hpbjEiLCJhIjoiY2xhNndoOWcxMDBtYjQxb3ptNzQ5ZTNyMyJ9.IRZoTu3MJbBsgtO5o7STuw";
+      <!-- Begin Footer -->
+      <footer
+        class="section section-footer dark"
+        style="background-color: #000000"
+        id="footer"
+      >
+        <div class="container">
+          <div class="row top-footer">
+            <div class="flex-col">
+              <a href="../map/">
+                <div class="circle">
+                  <div class="circle-text" style="color: #fff">Find Us</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="bottom-footer">
+            <div class="flex-col nav-links">
+              <a href="/">Home</a>
+              <a href="../products/">Products</a>
+              <a href="#">Apparel</a>
+              <a href="../map/">Map</a>
+            </div>
+            <div class="flex-col">
+              <ul>
+                <li class="small" style="color: #fff">© 2022 Sesshin</li>
+                <li class="small">
+                  <a style="color: #fff">Terms & Conditions</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer -->
+    </main>
 
-    /**
-     * Add the map to the page
-     */
-    const map = new mapboxgl.Map({
-      container: "map",
-      style: "mapbox://styles/mapbox/light-v10",
-      center: [-77.034084142948, 38.909671288923],
-      zoom: 13,
-      scrollZoom: false,
-    });
+    <!-- Map Script -->
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1Ijoic2Vzc2hpbjEiLCJhIjoiY2xhNndoOWcxMDBtYjQxb3ptNzQ5ZTNyMyJ9.IRZoTu3MJbBsgtO5o7STuw";
 
-    const stores = {
-      type: "FeatureCollection",
-      features: [
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [-77.034084142948, 38.909671288923],
-          },
-          properties: {
-            phoneFormatted: "(202) 234-7336",
-            phone: "2022347336",
-            address: "Store Name",
-            city: "Washington DC",
-            country: "United States",
-            crossStreet: "at 15th St NW",
-            postalCode: "20005",
-            state: "D.C.",
-            image: "http://127.0.0.1:5501/assets/images/flower-jar-map.png",
-            strains: "Flower"
-          },
-        },
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [-77.049766, 38.900772],
-          },
-          properties: {
-            phoneFormatted: "(202) 507-8357",
-            phone: "2025078357",
-            address: "Store Name 1",
-            city: "Washington DC",
-            country: "United States",
-            crossStreet: "at 22nd St NW",
-            postalCode: "20037",
-            state: "D.C.",
-            image: "http://127.0.0.1:5501/assets/images/pre-rolls-map.png",
-            strains: "Pre-Rolls"
-          },
-        },
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [-77.043929, 38.910525],
-          },
-          properties: {
-            phoneFormatted: "(202) 387-9338",
-            phone: "2023879338",
-            address: "Store Name 2",
-            city: "Washington DC",
-            country: "United States",
-            crossStreet: "at Dupont Circle",
-            postalCode: "20036",
-            state: "D.C.",
-            image: "http://127.0.0.1:5501/assets/images/strain4.png",
-            strains: "Gelato"
-          },
-        },
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [-77.0672, 38.90516896],
-          },
-          properties: {
-            phoneFormatted: "(202) 337-9338",
-            phone: "2023379338",
-            address: "Store Name 3",
-            city: "Washington DC",
-            country: "United States",
-            crossStreet: "at 34th St NW",
-            postalCode: "20007",
-            state: "D.C.",
-            image: "http://127.0.0.1:5501/assets/images/strain1.png",
-            strains: "Sour Diesel"
-          },
-        },
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [-77.002583742142, 38.887041080933],
-          },
-          properties: {
-            phoneFormatted: "(202) 547-9338",
-            phone: "2025479338",
-            address: "Store Name 4",
-            city: "Washington DC",
-            country: "United States",
-            crossStreet: "btwn 2nd & 3rd Sts. SE",
-            postalCode: "20003",
-            state: "D.C.",
-            image: "http://127.0.0.1:5501/assets/images/strain2.png",
-            strains: "Dessert"
-          },
-        },
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [-76.933492720127, 38.99225245786],
-          },
-          properties: {
-            address: "Store Name 5",
-            city: "College Park",
-            country: "United States",
-            postalCode: "20740",
-            state: "MD",
-            image: "http://127.0.0.1:5501/assets/images/strain3.png",
-            strains: "Dough Lato"
-          },
-        },
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [-77.097083330154, 38.980979],
-          },
-          properties: {
-            phoneFormatted: "(301) 654-7336",
-            phone: "3016547336",
-            address: "Store Name 6",
-            cc: "US",
-            city: "Bethesda",
-            country: "United States",
-            postalCode: "20814",
-            state: "MD",
-            image: "http://127.0.0.1:5501/assets/images/flower-jar-map.png",
-            strains: "Flower"
-          },
-        },
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [-77.359425054188, 38.958058116661],
-          },
-          properties: {
-            phoneFormatted: "(571) 203-0082",
-            phone: "5712030082",
-            address: "Store Name 7",
-            city: "Reston",
-            country: "United States",
-            crossStreet: "btw Explorer & Library",
-            postalCode: "20190",
-            state: "VA",
-            image: "http://127.0.0.1:5501/assets/images/strain3.png",
-            strains: "Dough Lato"
-          },
-        },
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [-77.10853099823, 38.880100922392],
-          },
-          properties: {
-            phoneFormatted: "(703) 522-2016",
-            phone: "7035222016",
-            address: "Store Name 8",
-            city: "Arlington",
-            country: "United States",
-            crossStreet: "at N Randolph St.",
-            postalCode: "22203",
-            state: "VA",
-            image: "http://127.0.0.1:5501/assets/images/pre-rolls-map.png",
-            strains: "Pre-Rolls"
-          },
-        },
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [-75.28784, 40.008008],
-          },
-          properties: {
-            phoneFormatted: "(610) 642-9400",
-            phone: "6106429400",
-            address: "Store Name 9",
-            city: "Ardmore",
-            country: "United States",
-            postalCode: "19003",
-            state: "PA",
-            image: "http://127.0.0.1:5501/assets/images/strain2.png",
-            strains: "Dessert"
-          },
-        },
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [-75.20121216774, 39.954030175164],
-          },
-          properties: {
-            phoneFormatted: "(215) 386-1365",
-            phone: "2153861365",
-            address: "Store Name 10",
-            city: "Philadelphia",
-            country: "United States",
-            postalCode: "19104",
-            state: "PA",
-            image: "http://127.0.0.1:5501/assets/images/strain1.png",
-            strains: "Sour Diesel"
-          },
-        },
-        {
-          type: "Feature",
-          geometry: {
-            type: "Point",
-            coordinates: [-77.043959498405, 38.903883387232],
-          },
-          properties: {
-            phoneFormatted: "(202) 331-3355",
-            phone: "2023313355",
-            address: "Store Name 11",
-            city: "Washington DC",
-            country: "United States",
-            crossStreet: "at 19th St",
-            postalCode: "20036",
-            state: "D.C.",
-            image: "http://127.0.0.1:5501/assets/images/flower-jar-map.png",
-            strains: "Flower"
-          },
-        },
-      ],
-    };
-
-    /**
-       * Assign a unique id to each store. You'll use this `id`
-       * later to associate each point on the map with a listing
-       * in the sidebar.
-       */
-    stores.features.forEach((store, i) => {
-      store.properties.id = i;
-    });
-
-    /**
-     * Wait until the map loads to make changes to the map.
-     */
-    map.on('load', () => {
       /**
-       * This is where your '.addLayer()' used to be, instead
-       * add only the source without styling a layer
+       * Add the map to the page
        */
-      map.addSource('places', {
-        'type': 'geojson',
-        'data': stores
+      const map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/light-v10",
+        center: [-77.034084142948, 38.909671288923],
+        zoom: 13,
+        scrollZoom: false,
       });
 
-      /**
-       * Create a new MapboxGeocoder instance.
-       */
-      const geocoder = new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken,
-        mapboxgl: mapboxgl,
-        marker: true,
-        bbox: [-77.210763, 38.803367, -76.853675, 39.052643]
+      const stores = {
+        type: "FeatureCollection",
+        features: [
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [-77.034084142948, 38.909671288923],
+            },
+            properties: {
+              phoneFormatted: "(202) 234-7336",
+              phone: "2022347336",
+              address: "Store Name",
+              city: "Washington DC",
+              country: "United States",
+              crossStreet: "at 15th St NW",
+              postalCode: "20005",
+              state: "D.C.",
+              image: "http://127.0.0.1:5501/assets/images/flower-jar-map.png",
+              strains: "Flower",
+            },
+          },
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [-77.049766, 38.900772],
+            },
+            properties: {
+              phoneFormatted: "(202) 507-8357",
+              phone: "2025078357",
+              address: "Store Name 1",
+              city: "Washington DC",
+              country: "United States",
+              crossStreet: "at 22nd St NW",
+              postalCode: "20037",
+              state: "D.C.",
+              image: "http://127.0.0.1:5501/assets/images/pre-rolls-map.png",
+              strains: "Pre-Rolls",
+            },
+          },
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [-77.043929, 38.910525],
+            },
+            properties: {
+              phoneFormatted: "(202) 387-9338",
+              phone: "2023879338",
+              address: "Store Name 2",
+              city: "Washington DC",
+              country: "United States",
+              crossStreet: "at Dupont Circle",
+              postalCode: "20036",
+              state: "D.C.",
+              image: "http://127.0.0.1:5501/assets/images/strain4.png",
+              strains: "Gelato",
+            },
+          },
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [-77.0672, 38.90516896],
+            },
+            properties: {
+              phoneFormatted: "(202) 337-9338",
+              phone: "2023379338",
+              address: "Store Name 3",
+              city: "Washington DC",
+              country: "United States",
+              crossStreet: "at 34th St NW",
+              postalCode: "20007",
+              state: "D.C.",
+              image: "http://127.0.0.1:5501/assets/images/strain1.png",
+              strains: "Sour Diesel",
+            },
+          },
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [-77.002583742142, 38.887041080933],
+            },
+            properties: {
+              phoneFormatted: "(202) 547-9338",
+              phone: "2025479338",
+              address: "Store Name 4",
+              city: "Washington DC",
+              country: "United States",
+              crossStreet: "btwn 2nd & 3rd Sts. SE",
+              postalCode: "20003",
+              state: "D.C.",
+              image: "http://127.0.0.1:5501/assets/images/strain2.png",
+              strains: "Dessert",
+            },
+          },
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [-76.933492720127, 38.99225245786],
+            },
+            properties: {
+              address: "Store Name 5",
+              city: "College Park",
+              country: "United States",
+              postalCode: "20740",
+              state: "MD",
+              image: "http://127.0.0.1:5501/assets/images/strain3.png",
+              strains: "Dough Lato",
+            },
+          },
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [-77.097083330154, 38.980979],
+            },
+            properties: {
+              phoneFormatted: "(301) 654-7336",
+              phone: "3016547336",
+              address: "Store Name 6",
+              cc: "US",
+              city: "Bethesda",
+              country: "United States",
+              postalCode: "20814",
+              state: "MD",
+              image: "http://127.0.0.1:5501/assets/images/flower-jar-map.png",
+              strains: "Flower",
+            },
+          },
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [-77.359425054188, 38.958058116661],
+            },
+            properties: {
+              phoneFormatted: "(571) 203-0082",
+              phone: "5712030082",
+              address: "Store Name 7",
+              city: "Reston",
+              country: "United States",
+              crossStreet: "btw Explorer & Library",
+              postalCode: "20190",
+              state: "VA",
+              image: "http://127.0.0.1:5501/assets/images/strain3.png",
+              strains: "Dough Lato",
+            },
+          },
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [-77.10853099823, 38.880100922392],
+            },
+            properties: {
+              phoneFormatted: "(703) 522-2016",
+              phone: "7035222016",
+              address: "Store Name 8",
+              city: "Arlington",
+              country: "United States",
+              crossStreet: "at N Randolph St.",
+              postalCode: "22203",
+              state: "VA",
+              image: "http://127.0.0.1:5501/assets/images/pre-rolls-map.png",
+              strains: "Pre-Rolls",
+            },
+          },
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [-75.28784, 40.008008],
+            },
+            properties: {
+              phoneFormatted: "(610) 642-9400",
+              phone: "6106429400",
+              address: "Store Name 9",
+              city: "Ardmore",
+              country: "United States",
+              postalCode: "19003",
+              state: "PA",
+              image: "http://127.0.0.1:5501/assets/images/strain2.png",
+              strains: "Dessert",
+            },
+          },
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [-75.20121216774, 39.954030175164],
+            },
+            properties: {
+              phoneFormatted: "(215) 386-1365",
+              phone: "2153861365",
+              address: "Store Name 10",
+              city: "Philadelphia",
+              country: "United States",
+              postalCode: "19104",
+              state: "PA",
+              image: "http://127.0.0.1:5501/assets/images/strain1.png",
+              strains: "Sour Diesel",
+            },
+          },
+          {
+            type: "Feature",
+            geometry: {
+              type: "Point",
+              coordinates: [-77.043959498405, 38.903883387232],
+            },
+            properties: {
+              phoneFormatted: "(202) 331-3355",
+              phone: "2023313355",
+              address: "Store Name 11",
+              city: "Washington DC",
+              country: "United States",
+              crossStreet: "at 19th St",
+              postalCode: "20036",
+              state: "D.C.",
+              image: "http://127.0.0.1:5501/assets/images/flower-jar-map.png",
+              strains: "Flower",
+            },
+          },
+        ],
+      };
+
+      stores.features.forEach((store, i) => {
+        store.properties.id = i;
       });
 
-      /**
-       * Add all the things to the page:
-       * - The location listings on the side of the page
-       * - The search box (MapboxGeocoder) onto the map
-       * - The markers onto the map
-       */
-      buildLocationList(stores);
-      map.addControl(geocoder, 'top-left');
-      addMarkers();
+      map.on("load", () => {
+        map.addSource("places", {
+          type: "geojson",
+          data: stores,
+        });
 
-      /**
-       * Listen for when a geocoder result is returned. When one is returned:
-       * - Calculate distances
-       * - Sort stores by distance
-       * - Rebuild the listings
-       * - Adjust the map camera
-       * - Open a popup for the closest store
-       * - Highlight the listing for the closest store.
-       */
-      geocoder.on('result', (event) => {
-        /* Get the coordinate of the search result */
-        const searchResult = event.result.geometry;
+        const geocoder = new MapboxGeocoder({
+          accessToken: mapboxgl.accessToken,
+          mapboxgl: mapboxgl,
+          marker: true,
+          bbox: [-77.210763, 38.803367, -76.853675, 39.052643],
+        });
 
-        /**
-         * Calculate distances:
-         * For each store, use turf.disance to calculate the distance
-         * in miles between the searchResult and the store. Assign the
-         * calculated value to a property called `distance`.
-         */
-        const options = { units: 'miles' };
-        for (const store of stores.features) {
-          store.properties.distance = turf.distance(
-            searchResult,
-            store.geometry,
-            options
+        buildLocationList(stores);
+        map.addControl(geocoder, "top-left");
+        addMarkers();
+
+        geocoder.on("result", (event) => {
+          const searchResult = event.result.geometry;
+
+          const options = { units: "miles" };
+          for (const store of stores.features) {
+            store.properties.distance = turf.distance(
+              searchResult,
+              store.geometry,
+              options
+            );
+          }
+
+          stores.features.sort((a, b) => {
+            if (a.properties.distance > b.properties.distance) {
+              return 1;
+            }
+            if (a.properties.distance < b.properties.distance) {
+              return -1;
+            }
+            return 0;
+          });
+
+          const listings = document.getElementById("listings");
+          while (listings.firstChild) {
+            listings.removeChild(listings.firstChild);
+          }
+          buildLocationList(stores);
+
+          createPopUp(stores.features[0]);
+
+          const activeListing = document.getElementById(
+            `listing-${stores.features[0].properties.id}`
           );
-        }
+          activeListing.classList.add("active");
 
-        /**
-         * Sort stores by distance from closest to the `searchResult`
-         * to furthest.
-         */
-        stores.features.sort((a, b) => {
-          if (a.properties.distance > b.properties.distance) {
+          const bbox = getBbox(stores, 0, searchResult);
+          map.fitBounds(bbox, {
+            padding: 100,
+          });
+        });
+      });
+
+      function getBbox(sortedStores, storeIdentifier, searchResult) {
+        const lats = [
+          sortedStores.features[storeIdentifier].geometry.coordinates[1],
+          searchResult.coordinates[1],
+        ];
+        const lons = [
+          sortedStores.features[storeIdentifier].geometry.coordinates[0],
+          searchResult.coordinates[0],
+        ];
+        const sortedLons = lons.sort((a, b) => {
+          if (a > b) {
             return 1;
           }
-          if (a.properties.distance < b.properties.distance) {
+          if (a.distance < b.distance) {
             return -1;
           }
-          return 0; // a must be equal to b
+          return 0;
         });
-
-        /**
-         * Rebuild the listings:
-         * Remove the existing listings and build the location
-         * list again using the newly sorted stores.
-         */
-        const listings = document.getElementById('listings');
-        while (listings.firstChild) {
-          listings.removeChild(listings.firstChild);
-        }
-        buildLocationList(stores);
-
-        /* Open a popup for the closest store. */
-        createPopUp(stores.features[0]);
-
-        /** Highlight the listing for the closest store. */
-        const activeListing = document.getElementById(
-          `listing-${stores.features[0].properties.id}`
-        );
-        activeListing.classList.add('active');
-
-        /**
-         * Adjust the map camera:
-         * Get a bbox that contains both the geocoder result and
-         * the closest store. Fit the bounds to that bbox.
-         */
-        const bbox = getBbox(stores, 0, searchResult);
-        map.fitBounds(bbox, {
-          padding: 100
-        });
-      });
-    });
-
-    /**
-     * Using the coordinates (lng, lat) for
-     * (1) the search result and
-     * (2) the closest store
-     * construct a bbox that will contain both points
-     */
-    function getBbox(sortedStores, storeIdentifier, searchResult) {
-      const lats = [
-        sortedStores.features[storeIdentifier].geometry.coordinates[1],
-        searchResult.coordinates[1]
-      ];
-      const lons = [
-        sortedStores.features[storeIdentifier].geometry.coordinates[0],
-        searchResult.coordinates[0]
-      ];
-      const sortedLons = lons.sort((a, b) => {
-        if (a > b) {
-          return 1;
-        }
-        if (a.distance < b.distance) {
-          return -1;
-        }
-        return 0;
-      });
-      const sortedLats = lats.sort((a, b) => {
-        if (a > b) {
-          return 1;
-        }
-        if (a.distance < b.distance) {
-          return -1;
-        }
-        return 0;
-      });
-      return [
-        [sortedLons[0], sortedLats[0]],
-        [sortedLons[1], sortedLats[1]]
-      ];
-    }
-
-    /**
-     * Add a marker to the map for every store listing.
-     **/
-    function addMarkers() {
-      /* For each feature in the GeoJSON object above: */
-      for (const marker of stores.features) {
-        /* Create a div element for the marker. */
-        const el = document.createElement('div');
-        /* Assign a unique `id` to the marker. */
-        el.id = `marker-${marker.properties.id}`;
-        /* Assign the `marker` class to each marker for styling. */
-        el.className = 'marker';
-
-        /**
-         * Create a marker using the div element
-         * defined above and add it to the map.
-         **/
-        new mapboxgl.Marker(el, { offset: [0, -23] })
-          .setLngLat(marker.geometry.coordinates)
-          .addTo(map);
-
-        /**
-         * Listen to the element and when it is clicked, do three things:
-         * 1. Fly to the point
-         * 2. Close all other popups and display popup for clicked store
-         * 3. Highlight listing in sidebar (and remove highlight for all other listings)
-         **/
-        el.addEventListener("click", (e) => {
-          /* Fly to the point */
-          flyToStore(marker);
-          createPopUp(marker);
-          /* Highlight listing in sidebar */
-          const activeItem = document.getElementsByClassName("active");
-          e.stopPropagation();
-          if (activeItem[0]) {
-            activeItem[0].classList.remove('active');
+        const sortedLats = lats.sort((a, b) => {
+          if (a > b) {
+            return 1;
           }
-          const listing = document.getElementById(
-            `listing-${marker.properties.id}`
-          );
-          listing.classList.add('active');
+          if (a.distance < b.distance) {
+            return -1;
+          }
+          return 0;
         });
+        return [
+          [sortedLons[0], sortedLats[0]],
+          [sortedLons[1], sortedLats[1]],
+        ];
       }
-    }
 
-    /**
-     * Add a listing for each store to the sidebar.
-     **/
-    function buildLocationList(stores) {
-      for (const store of stores.features) {
-        /* Add a new listing section to the sidebar. */
-        const listings = document.getElementById('listings');
-        const listing = listings.appendChild(document.createElement('div'));
-        /* Assign a unique `id` to the listing. */
-        listing.id = `listing-${store.properties.id}`;
-        /* Assign the `item` class to each listing for styling. */
-        listing.className = 'item';
+      function addMarkers() {
+        for (const marker of stores.features) {
+          const el = document.createElement("div");
+          el.id = `marker-${marker.properties.id}`;
+          el.className = "marker";
 
-        /* Add the link to the individual listing created above. */
-        const link = listing.appendChild(document.createElement('a'));
-        link.href = '#';
-        link.className = 'title';
-        link.id = `link-${store.properties.id}`;
-        link.innerHTML = `${store.properties.address}`;
+          new mapboxgl.Marker(el, { offset: [0, -23] })
+            .setLngLat(marker.geometry.coordinates)
+            .addTo(map);
 
-        /* Add details to the individual listing. */
-        const details = listing.appendChild(document.createElement('div'));
-        details.innerHTML = `${store.properties.city}`;
-        if (store.properties.phone) {
-          details.innerHTML += ` &middot; ${store.properties.phoneFormatted}`;
-        }
-        if (store.properties.distance) {
-          const roundedDistance =
-            Math.round(store.properties.distance * 100) / 100;
-          details.innerHTML += `<div><strong>${roundedDistance} miles away</strong></div>`;
-        }
-
-        /**
-         * Listen to the element and when it is clicked, do four things:
-         * 1. Update the `currentFeature` to the store associated with the clicked link
-         * 2. Fly to the point
-         * 3. Close all other popups and display popup for clicked store
-         * 4. Highlight listing in sidebar (and remove highlight for all other listings)
-         **/
-        link.addEventListener('click', function () {
-          for (const feature of stores.features) {
-            if (this.id === `link-${feature.properties.id}`) {
-              flyToStore(feature);
-              createPopUp(feature);
+          el.addEventListener("click", (e) => {
+            flyToStore(marker);
+            createPopUp(marker);
+            const activeItem = document.getElementsByClassName("active");
+            e.stopPropagation();
+            if (activeItem[0]) {
+              activeItem[0].classList.remove("active");
             }
+            const listing = document.getElementById(
+              `listing-${marker.properties.id}`
+            );
+            listing.classList.add("active");
+          });
+        }
+      }
+
+      function buildLocationList(stores) {
+        for (const store of stores.features) {
+          const listings = document.getElementById("listings");
+          const listing = listings.appendChild(document.createElement("div"));
+          listing.id = `listing-${store.properties.id}`;
+          listing.className = "item";
+
+          const link = listing.appendChild(document.createElement("a"));
+          link.href = "#";
+          link.className = "title";
+          link.id = `link-${store.properties.id}`;
+          link.innerHTML = `${store.properties.address}`;
+
+          const details = listing.appendChild(document.createElement("div"));
+          details.innerHTML = `${store.properties.city}`;
+          if (store.properties.phone) {
+            details.innerHTML += ` &middot; ${store.properties.phoneFormatted}`;
           }
-          const activeItem = document.getElementsByClassName('active');
-          if (activeItem[0]) {
-            activeItem[0].classList.remove('active');
+          if (store.properties.distance) {
+            const roundedDistance =
+              Math.round(store.properties.distance * 100) / 100;
+            details.innerHTML += `<div><strong>${roundedDistance} miles away</strong></div>`;
           }
-          this.parentNode.classList.add('active');
+
+          link.addEventListener("click", function () {
+            for (const feature of stores.features) {
+              if (this.id === `link-${feature.properties.id}`) {
+                flyToStore(feature);
+                createPopUp(feature);
+              }
+            }
+            const activeItem = document.getElementsByClassName("active");
+            if (activeItem[0]) {
+              activeItem[0].classList.remove("active");
+            }
+            this.parentNode.classList.add("active");
+          });
+        }
+      }
+
+      function flyToStore(currentFeature) {
+        map.flyTo({
+          center: currentFeature.geometry.coordinates,
+          zoom: 15,
         });
       }
-    }
 
-    /**
-     * Use Mapbox GL JS's `flyTo` to move the camera smoothly
-     * a given center point.
-     **/
-    function flyToStore(currentFeature) {
-      map.flyTo({
-        center: currentFeature.geometry.coordinates,
-        zoom: 15
-      });
-    }
+      function createPopUp(currentFeature) {
+        const popUps = document.getElementsByClassName("mapboxgl-popup");
+        if (popUps[0]) popUps[0].remove();
+        const popup = new mapboxgl.Popup({ closeOnClick: false })
+          .setLngLat(currentFeature.geometry.coordinates)
+          .setHTML(
+            `<img src="${currentFeature.properties.image}" alt=""> <h3>${currentFeature.properties.strains}</h3><h4>${currentFeature.properties.address}</h4>`
+          )
+          .addTo(map);
+      }
 
+      map.addControl(new mapboxgl.NavigationControl());
+    </script>
 
-    /**
-     * Create a Mapbox GL JS `Popup`.
-     **/
-    function createPopUp(currentFeature) {
-      const popUps = document.getElementsByClassName("mapboxgl-popup");
-      if (popUps[0]) popUps[0].remove();
-      const popup = new mapboxgl.Popup({ closeOnClick: false })
-        .setLngLat(currentFeature.geometry.coordinates)
-        .setHTML(`<img src="${currentFeature.properties.image}" alt=""> <h3>${currentFeature.properties.strains}</h3><h4>${currentFeature.properties.address}</h4>`)
-        .addTo(map);
-    }
+    <!-- Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    // Add zoom and rotation controls to the map.
-    map.addControl(new mapboxgl.NavigationControl());
-  </script>
-
-  <!-- Libraries -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://unpkg.com/@barba/core"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Custom Scripts -->
-  <script src="../assets/js/page-transition.js"></script>
-  <script src="../assets/js/observers.js"></script>
-  <script src="../assets/js/uikit.min.js"></script>
-  <script src="../assets/js/swiper-custom.js"></script>
-  <script src="../assets/js/nav-up-down.js"></script>
-  <script src="../assets/js/magnetic.js"></script>
-  <script src="../assets/js/main.js"></script>
-</body>
-
+    <!-- Custom Scripts -->
+    <script src="../assets/js/page-transition.js"></script>
+    <script src="../assets/js/observers.js"></script>
+    <script src="../assets/js/uikit.min.js"></script>
+    <script src="../assets/js/swiper-custom.js"></script>
+    <script src="../assets/js/nav-up-down.js"></script>
+    <script src="../assets/js/magnetic.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
 </html>

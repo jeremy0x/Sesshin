@@ -41,16 +41,6 @@
   </head>
 
   <body data-barba="wrapper">
-    <!-- <div class="noise"></div> -->
-
-    <!-- <div class="loading-container">
-    <div class="loading-screen">
-      <img src="./logo.png" alt="" class="loading-svg" height="25" width="150">
-    </div>
-  </div> -->
-
-    <!-- <div class="page-overlay"></div> -->
-
     <main
       data-barba="container"
       class="main"
@@ -66,43 +56,41 @@
                 height="40"
                 viewBox="100 0 100 100"
                 width="140"
-                src="./logo.png"
+                src="/assets/images/logo.png"
                 alt="Sesshin logo"
                 title="Go to homepage"
               />
             </a>
           </div>
           <ul class="flex-col center-nav">
-          <li class="active">
-            <a href="#" class="active"> Home </a>
-          </li>
+            <li class="active">
+              <a href="#" class="active"> Home </a>
+            </li>
 
-          <li class="external">
-            <a href="#vibes">Products
-            </a>
-          </li>
+            <li class="external">
+              <a href="#vibes">Products </a>
+            </li>
 
-          <li>
-            <a  href="./apparel/">Apparel
+            <li>
+              <a href="./apparel/">Apparel </a>
+            </li>
+          </ul>
+          <div class="flex-col right-nav">
+            <a href="./map/" class="btn loop">
+              <div class="btn-wrap">
+                <div class="btn-text">Find Us Nearby</div>
+                <div class="btn-text yellow-dot">•</div>
+                <div class="btn-text">Find Us Nearby</div>
+                <div class="btn-text yellow-dot">•</div>
+                <div class="btn-text">Find Us Nearby</div>
+              </div>
             </a>
-          </li>
-        </ul>
-        <div class="flex-col right-nav">
-          <a href="./map/" class="btn loop" >
-            <div class="btn-wrap">
-              <div class="btn-text">Find Us Nearby</div>
-              <div class="btn-text yellow-dot">•</div>
-              <div class="btn-text">Find Us Nearby</div>
-              <div class="btn-text yellow-dot">•</div>
-              <div class="btn-text">Find Us Nearby</div>
-            </div>
-          </a>
-        </div>
+          </div>
         </div>
         <div class="nav-icon">
-        <div class="hamburger-bar"></div>
-        <div class="nav-icon-back"></div>
-      </div>
+          <div class="hamburger-bar"></div>
+          <div class="nav-icon-back"></div>
+        </div>
       </nav>
       <div class="nav-back"></div>
       <!-- End Navbar -->
@@ -120,7 +108,7 @@
             class="hero-video desktop-video"
           >
             <source
-              src="./media/pages/home/horizontal-bg.mp4"
+              src="./assets/videos/horizontal-bg.mp4"
               type="video/mp4"
               id="video-source"
             />
@@ -136,7 +124,7 @@
             class="hero-video mobile-video"
           >
             <source
-              src="./media/pages/home/vertical-bg.mp4"
+              src="./assets/videos/vertical-bg.mp4"
               type="video/mp4"
               id="video-source"
             />
@@ -205,26 +193,6 @@
                       <path
                         d="m112.667661 104.419766 7.921617.651899-1.025363 1.491005-5.731199-.465642-.190058.232821 2.565783 5.0793-1.025363 1.491005-3.494216-7.127175-3.168267-2.142904.932235-1.351312z"
                       />
-                      <!-- show starts here -->
-                      <!-- <path
-                      d="m101.903726 116.254678-1.258184.978798c-.605335-.792542-1.9566473-.88567-3.2613954.095029-1.3978766 1.071927-1.5375693 2.049776-.9322345 2.795754.4656421.605334 1.3047481.651898 2.4232395.095029l1.8635184-.978799c1.227329-.812374 2.877986-.503113 3.727988.698463 1.071927 1.397877.792542 3.401088-1.118491 4.846479-2.142904 1.677262-4.147066 1.304748-5.3586857-.232821l1.258184-.978799c.6053347.792542 1.9100827.932235 3.1217027 0 1.165055-.88567 1.304748-1.956647.745978-2.65606-.419078-.558771-1.118492-.698463-2.185667-.139693l-1.5375697.792542c-1.9566471 1.025363-3.3079595.88567-4.3333224-.419078-1.0719271-1.397877-.839106-3.354524 1.258184-4.985221 2.2322312-1.682014 4.3751351-1.402628 5.5867551.088377z" />
-                    <path
-                      d="m94.2624439 130.792214-1.4444408.698463-1.9566471-4.100501-4.941508 2.330111 1.9566471 4.100501-1.4444408.699414-4.6108071-9.738572 1.4444408-.699414 2.0032113 4.240194 4.941508-2.330111-2.0032113-4.240194 1.4444408-.699413z" />
-                    <path
-                      d="m78.9323656 131.537241c.6984631 3.214832-1.0719271 5.917456-3.8676803 6.476227-2.7957532.605335-5.498378-1.071927-6.1968411-4.333323-.6984632-3.214831 1.0719271-5.917455 3.8676803-6.477176 2.7529901-.604385 5.4974277 1.072877 6.1968411 4.334272zm-8.5269522 1.816955c.5122063 2.423239 2.3301111 3.588295 4.2867582 3.168267s3.1217027-2.236983 2.6094964-4.656421c-.5122064-2.419439-2.3301111-3.588295-4.2867582-3.168267-1.9110332.417177-3.1217027 2.234132-2.6094964 4.657371z" />
-                    <path
-                      d="m64.1144936 139.738244-1.7703903-.095029-1.6306976-8.573516h-.3259495l-2.6560605 8.340695-2.0032114-.095029-1.8179047-8.570665h-.3259495l-2.5163679 8.340695-1.7703903-.095029 3.2148311-10.623292 2.470754.139693 1.6772618 8.154438h.3259495l2.470754-7.968182 2.470754.139693z" /> -->
-                      <!-- show ends here -->
-                      <!-- <path
-                      d="m36.1113478 135.218665-4.4264508-1.956647c-.811095-.360651-1.4339667-1.044657-1.7173234-1.885878-.2833568-.841221-.2012713-1.762684.2263184-2.540573.2916658-.839713.9179074-1.521239 1.730009-1.882733.8121015-.361494 1.7376128-.370706 2.5567492-.025449l.3725137.139692-2.0079628-5.0812 1.9100829.839106 2.0032113 5.0793.6984632.325949 1.5375692-3.54078 1.491005.651899zm-2.2369826-6.84969c-.4447623-.155341-.9334545-.124114-1.3548278.086572-.4213732.210687-.7395703.582905-.8821549 1.031919-.4633225.863453-.1533533 1.938856.6984632 2.423239l2.8888816 1.258184 1.5375692-3.54078z" />
-                    <path
-                      d="m22.9251238 128.602746-5.7777632-4.053937.8856702-1.258184 4.4730151 3.168267 1.7684897-2.515418-4.1936298-2.98201.8856703-1.258184 4.1936297 2.98201 1.7703903-2.516368-4.473015-3.168267.8856703-1.258184 5.7777632 4.053937z" />
-                    <path
-                      d="m12.0690108 120.122358-4.84647902-5.122063 1.11849133-1.071927 3.77455189 3.960808 2.2341318-2.10014-3.5407806-3.727988 1.1184914-1.071927 3.5407805 3.727987 2.2369827-2.096339-3.7745519-3.960809 1.1184913-1.071927 4.846479 5.125864z" />
-                    <path
-                      d="m3.12298071 109.637808-.88567028-1.351312 7.78097457-4.941508-2.79575322-4.4264509 1.30474817-.839106 3.68142345 5.7777629z" />
-                    <path
-                      d="m10.4839271 104.559459c-12.24524306-18.0107745-13.88186852-41.2079721-4.28675824-60.7596425l1.53756923.7459776c-3.99120051 8.0685446-6.04905005 16.9555264-6.01058426 25.9571714-.01406938 11.8188757 3.54270684 23.3663084 10.20421407 33.1290105z" /> -->
                     </g>
                   </g>
                 </svg>
@@ -246,10 +214,6 @@
               </div>
             </div>
           </div>
-          <!-- Find us btn -->
-          <!-- <a href="./map/" role="button" class="hero-find-us-btn">
-          Find us
-        </a> -->
           <!-- Scroll down btn -->
           <div class="scroll-down-container ellipse">
             <a href="#vibes" class="scroll-down-btn">
@@ -312,10 +276,6 @@
               }
             }
           </style>
-          <!-- 
-            horizontal video - https://player.vimeo.com/video/807890339
-            vertical video - https://player.vimeo.com/video/807896574
-          -->
         </div>
       </div>
       <div class="video-modal-bg">
@@ -330,56 +290,56 @@
 
       <!-- Begin Vibes Section -->
       <section class="vibes-section" id="vibes">
-      <h2 class="title reveal">Choose your vibe</h2>
+        <h2 class="title reveal">Choose your vibe</h2>
 
-      <div class="vibes-container">
-        <a href="./products/" class="">
-          <div class="vibe reveal">
-            <img src="./assets/images/creative.png" alt="">
-          </div>
-          <div class="vibe-text">Creative</div>
-        </a>
+        <div class="vibes-container">
+          <a href="./products/" class="">
+            <div class="vibe reveal">
+              <img src="./assets/images/creative.png" alt="" />
+            </div>
+            <div class="vibe-text">Creative</div>
+          </a>
 
-        <a href="./products/" class="">
-          <div class="vibe reveal">
-            <img src="./assets/images/Social.png" alt="">
-          </div>
-          <div class="vibe-text">Social</div>
-        </a>
+          <a href="./products/" class="">
+            <div class="vibe reveal">
+              <img src="./assets/images/Social.png" alt="" />
+            </div>
+            <div class="vibe-text">Social</div>
+          </a>
 
-        <a  href="./products/" class="">
-          <div class="vibe reveal">
-            <img src="./assets/images/Cloud 9.png" alt="">
-          </div>
-          <div class="vibe-text">Cloud Nine</div>
-        </a>
+          <a href="./products/" class="">
+            <div class="vibe reveal">
+              <img src="./assets/images/Cloud 9.png" alt="" />
+            </div>
+            <div class="vibe-text">Cloud Nine</div>
+          </a>
 
-        <a  href="./products/" class="">
-          <div class="vibe reveal">
-            <img src="./assets/images/Experience.webp" alt="">
-          </div>
-          <div class="vibe-text">Experience</div>
-        </a>
+          <a href="./products/" class="">
+            <div class="vibe reveal">
+              <img src="./assets/images/Experience.webp" alt="" />
+            </div>
+            <div class="vibe-text">Experience</div>
+          </a>
 
-        <a  href="./products/" class="">
-          <div class="vibe reveal">
-            <img src="./assets/images/Chill.png" alt="">
-          </div>
-          <div class="vibe-text">Chill</div>
-        </a>
+          <a href="./products/" class="">
+            <div class="vibe reveal">
+              <img src="./assets/images/Chill.png" alt="" />
+            </div>
+            <div class="vibe-text">Chill</div>
+          </a>
 
-        <a  href="./products/" class="">
-          <div class="vibe reveal">
-            <img src="./assets/images/Adventure.png" alt="">
-          </div>
-          <div class="vibe-text">Adventure</div>
-        </a>
-      </div>
+          <a href="./products/" class="">
+            <div class="vibe reveal">
+              <img src="./assets/images/Adventure.png" alt="" />
+            </div>
+            <div class="vibe-text">Adventure</div>
+          </a>
+        </div>
 
-      <div class="vibes__cta reveal">
-        <a  href="./products/">All Products</a>
-      </div>
-    </section>
+        <div class="vibes__cta reveal">
+          <a href="./products/">All Products</a>
+        </div>
+      </section>
       <!-- End Vibes Section -->
 
       <!-- Begin Mailchimp Signup Form -->
@@ -456,8 +416,8 @@
           (function ($) {
             window.fnames = new Array();
             window.ftypes = new Array();
-            fnames[0] = 'EMAIL';
-            ftypes[0] = 'email';
+            fnames[0] = "EMAIL";
+            ftypes[0] = "email";
           })(jQuery);
           var $mcj = jQuery.noConflict(true);
         </script>
@@ -472,25 +432,24 @@
       >
         <div class="container">
           <div class="row top-footer">
-          <div class="flex-col">
-            <a href="./map/">
-              <div class="circle">
-                <div class="circle-text">Find Us</div>
-              </div>
-            </a>
+            <div class="flex-col">
+              <a href="./map/">
+                <div class="circle">
+                  <div class="circle-text">Find Us</div>
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
           <div class="bottom-footer">
             <div class="flex-col nav-links">
-            <a href="#">Home</a>
-            <a href="./products/">Products</a>
-            <a href="./apparel/">Apparel</a>
-            <a href="./map/">Map</a>
-          </div>
+              <a href="#">Home</a>
+              <a href="./products/">Products</a>
+              <a href="./apparel/">Apparel</a>
+              <a href="./map/">Map</a>
+            </div>
             <div class="flex-col">
               <ul>
                 <li class="small">© <span id="currentYear"></span> Sesshin</li>
-                <!-- <li class="small"><a>Terms & Conditions</a></li> -->
               </ul>
             </div>
           </div>
@@ -503,7 +462,7 @@
 
     <!-- Footer Date -->
     <script>
-      document.getElementById('currentYear').innerHTML =
+      document.getElementById("currentYear").innerHTML =
         new Date().getFullYear();
     </script>
 
@@ -513,38 +472,36 @@
         var videoUrl;
         if (window.innerWidth < 768) {
           videoUrl =
-            'https://player.vimeo.com/video/807896574?playsinline=0&amp;title=0&amp;byline=0&amp;portrait=0';
+            "https://player.vimeo.com/video/807896574?playsinline=0&amp;title=0&amp;byline=0&amp;portrait=0";
         } else {
           videoUrl =
-            'https://player.vimeo.com/video/807890339?playsinline=0&amp;title=0&amp;byline=0&amp;portrait=0';
+            "https://player.vimeo.com/video/807890339?playsinline=0&amp;title=0&amp;byline=0&amp;portrait=0";
         }
-        document.getElementById('vimeo-modal').setAttribute('src', videoUrl);
+        document.getElementById("vimeo-modal").setAttribute("src", videoUrl);
       }
 
-      window.addEventListener('resize', checkScreenSize);
+      window.addEventListener("resize", checkScreenSize);
       checkScreenSize();
     </script>
 
     <!-- ScrollReveal -->
     <script type="text/javascript">
-    ScrollReveal().reveal(".reveal", {
-      delay: 500,
-      duration: 1500,
-      interval: 500,
-    })
-    ScrollReveal().reveal(".vibe-text", {
-      delay: 4000,
-      duration: 1500,
-      interval: 500,
-    })
-
-  </script>
+      ScrollReveal().reveal(".reveal", {
+        delay: 500,
+        duration: 1500,
+        interval: 500,
+      });
+      ScrollReveal().reveal(".vibe-text", {
+        delay: 4000,
+        duration: 1500,
+        interval: 500,
+      });
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- <script src="./assets/js/cookies.js"></script> -->
     <script src="./assets/js/page-transition.js"></script>
     <script src="./assets/js/observers.js"></script>
     <script src="./assets/js/uikit.min.js"></script>

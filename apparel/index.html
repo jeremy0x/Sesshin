@@ -71,7 +71,7 @@
                 height="40"
                 viewBox="100 0 100 100"
                 width="140"
-                src="../logo.png"
+                src="/assets/images/logo.png"
                 alt="Sesshin logo"
                 title="Go to homepage"
               />
@@ -90,16 +90,15 @@
             </li>
           </ul>
           <div class="flex-col right-nav">
-            <!-- <a href="../map/" class="btn loop" >
-            <div class="btn-wrap">
-              <div class="btn-text">Find Us Nearby</div>
-              <div class="btn-text yellow-dot">•</div>
-              <div class="btn-text">Find Us Nearby</div>
-              <div class="btn-text yellow-dot">•</div>
-              <div class="btn-text">Find Us Nearby</div>
-            </div>
-          </a> -->
-            <a href="../map/" role="button" class="find-us-btn"> Find us </a>
+            <a href="../map/" class="btn loop">
+              <div class="btn-wrap">
+                <div class="btn-text">Find Us Nearby</div>
+                <div class="btn-text yellow-dot">•</div>
+                <div class="btn-text">Find Us Nearby</div>
+                <div class="btn-text yellow-dot">•</div>
+                <div class="btn-text">Find Us Nearby</div>
+              </div>
+            </a>
           </div>
         </div>
         <div class="nav-icon">
@@ -192,14 +191,6 @@
       >
         <div class="container">
           <div class="row top-footer">
-            <!-- <div class="flex-col">
-            <div class="footer-text">
-              <div class="line"></div>
-              <h2 style="padding: 0em 2em 0em 2em; color: #6b6b6b; text-align: center">Experience euphoria</h2>
-              <div class="line"></div>
-            </div>
-
-          </div> -->
             <div class="flex-col">
               <a href="../map/">
                 <div class="circle">
@@ -246,11 +237,11 @@
       barba.hooks.beforeEnter(() => {
         grecaptcha.ready(function () {
           grecaptcha
-            .execute('6Ld1MiYcAAAAANo3Cv2czYgssQlPHMOJE-hAFc1u', {
-              action: 'submit',
+            .execute("6Ld1MiYcAAAAANo3Cv2czYgssQlPHMOJE-hAFc1u", {
+              action: "submit",
             })
             .then(function (token) {
-              document.getElementById('g-recaptcha-response').value = token;
+              document.getElementById("g-recaptcha-response").value = token;
             });
         });
       });

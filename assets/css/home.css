@@ -176,29 +176,9 @@ html {
   font-size: 0.85em;
 }
 
-
-/* ** HomePage ** */
-/* Path: /home/index.html */
-
-/* .page-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--black);
-  z-index: 100;
-  clip-path: circle(0%);
-} */
-
 .navbar {
   opacity: 0;
 }
-
-/* -- Hero Section -- */
-/* .hero {
-  background: var(--secondary);
-} */
 
 .hero-container {
   position: relative;
@@ -251,7 +231,6 @@ html {
   background: var(--black);
   clip-path: ellipse(60% 100% at 50% 100%);
   z-index: 1;
-  /* animation: bounce 2.5s ease-in-out infinite; */
 }
 
 @media screen and (max-width: 480px) {
@@ -268,20 +247,6 @@ html {
   opacity:  0;
   transition: .5s ease;
 }
-
-/* @keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-} */
 
 .scroll-down-container a {
   border-radius: 10px;
