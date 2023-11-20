@@ -68,7 +68,7 @@
       <nav id="sticky" class="nav-up-down dark navbar">
         <div class="row">
           <div class="flex-col left-nav">
-            <a href="/" class="logo animate-logo">
+            <a target="_blank" href="/" class="logo animate-logo">
               <img
                 height="40"
                 viewBox="100 0 100 100"
@@ -81,26 +81,26 @@
           </div>
           <ul class="flex-col center-nav">
             <li>
-              <a href="/"> Home </a>
+              <a target="_blank" href="/"> Home </a>
             </li>
             <li class="active">
               <a href="#" class="active">Products</a>
             </li>
 
             <li class="">
-              <a href="../apparel/">Apparel</a>
+              <a target="_blank" href="../apparel/">Apparel</a>
             </li>
           </ul>
           <div class="flex-col right-nav">
-            <a href="../map/" class="btn loop" target="_blank">
-            <div class="btn-wrap">
-              <div class="btn-text">Find Us Nearby</div>
-              <div class="btn-text yellow-dot">•</div>
-              <div class="btn-text">Find Us Nearby</div>
-              <div class="btn-text yellow-dot">•</div>
-              <div class="btn-text">Find Us Nearby</div>
-            </div>
-          </a>
+            <a target="_blank" href="../map/" class="btn loop" target="_blank">
+              <div class="btn-wrap">
+                <div class="btn-text">Find Us Nearby</div>
+                <div class="btn-text yellow-dot">•</div>
+                <div class="btn-text">Find Us Nearby</div>
+                <div class="btn-text yellow-dot">•</div>
+                <div class="btn-text">Find Us Nearby</div>
+              </div>
+            </a>
           </div>
         </div>
         <div class="nav-icon">
@@ -1476,7 +1476,7 @@
 
           </div> -->
             <div class="flex-col">
-              <a href="../map/">
+              <a target="_blank" href="../map/">
                 <div class="circle">
                   <div class="circle-text" style="color: #fff">Find Us</div>
                 </div>
@@ -1485,10 +1485,10 @@
           </div>
           <div class="bottom-footer">
             <div class="flex-col nav-links">
-              <a href="/">Home</a>
+              <a target="_blank" href="/">Home</a>
               <a href="#">Products</a>
-              <a href="../apparel/">Apparel</a>
-              <a href="../map/">Map</a>
+              <a target="_blank" href="../apparel/">Apparel</a>
+              <a target="_blank" href="../map/">Map</a>
             </div>
             <div class="flex-col">
               <ul>
@@ -1508,7 +1508,7 @@
 
     <script>
       const animateFirstSlide = () => {
-        document.querySelector(".first-slide").classList.remove("no-animation");
+        document.querySelector('.first-slide').classList.remove('no-animation');
       };
     </script>
 
@@ -1537,11 +1537,11 @@
       barba.hooks.beforeEnter(() => {
         grecaptcha.ready(function () {
           grecaptcha
-            .execute("6Ld1MiYcAAAAANo3Cv2czYgssQlPHMOJE-hAFc1u", {
-              action: "submit",
+            .execute('6Ld1MiYcAAAAANo3Cv2czYgssQlPHMOJE-hAFc1u', {
+              action: 'submit',
             })
             .then(function (token) {
-              document.getElementById("g-recaptcha-response").value = token;
+              document.getElementById('g-recaptcha-response').value = token;
             });
         });
       });

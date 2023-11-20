@@ -72,11 +72,11 @@
             </li>
 
             <li>
-              <a href="./apparel/">Apparel </a>
+              <a target="_blank" href="./apparel/">Apparel </a>
             </li>
           </ul>
           <div class="flex-col right-nav">
-            <a href="./map/" class="btn loop">
+            <a target="_blank" href="./map/" class="btn loop">
               <div class="btn-wrap">
                 <div class="btn-text">Find Us Nearby</div>
                 <div class="btn-text yellow-dot">•</div>
@@ -293,42 +293,42 @@
         <h2 class="title reveal">Choose your vibe</h2>
 
         <div class="vibes-container">
-          <a href="./products/" class="">
+          <a target="_blank" href="./products/" class="">
             <div class="vibe reveal">
               <img src="./assets/images/creative.png" alt="" />
             </div>
             <div class="vibe-text">Creative</div>
           </a>
 
-          <a href="./products/" class="">
+          <a target="_blank" href="./products/" class="">
             <div class="vibe reveal">
               <img src="./assets/images/Social.png" alt="" />
             </div>
             <div class="vibe-text">Social</div>
           </a>
 
-          <a href="./products/" class="">
+          <a target="_blank" href="./products/" class="">
             <div class="vibe reveal">
               <img src="./assets/images/Cloud 9.png" alt="" />
             </div>
             <div class="vibe-text">Cloud Nine</div>
           </a>
 
-          <a href="./products/" class="">
+          <a target="_blank" href="./products/" class="">
             <div class="vibe reveal">
               <img src="./assets/images/Experience.webp" alt="" />
             </div>
             <div class="vibe-text">Experience</div>
           </a>
 
-          <a href="./products/" class="">
+          <a target="_blank" href="./products/" class="">
             <div class="vibe reveal">
               <img src="./assets/images/Chill.png" alt="" />
             </div>
             <div class="vibe-text">Chill</div>
           </a>
 
-          <a href="./products/" class="">
+          <a target="_blank" href="./products/" class="">
             <div class="vibe reveal">
               <img src="./assets/images/Adventure.png" alt="" />
             </div>
@@ -337,7 +337,7 @@
         </div>
 
         <div class="vibes__cta reveal">
-          <a href="./products/">All Products</a>
+          <a target="_blank" href="./products/">All Products</a>
         </div>
       </section>
       <!-- End Vibes Section -->
@@ -416,8 +416,8 @@
           (function ($) {
             window.fnames = new Array();
             window.ftypes = new Array();
-            fnames[0] = "EMAIL";
-            ftypes[0] = "email";
+            fnames[0] = 'EMAIL';
+            ftypes[0] = 'email';
           })(jQuery);
           var $mcj = jQuery.noConflict(true);
         </script>
@@ -433,7 +433,7 @@
         <div class="container">
           <div class="row top-footer">
             <div class="flex-col">
-              <a href="./map/">
+              <a target="_blank" href="./map/">
                 <div class="circle">
                   <div class="circle-text">Find Us</div>
                 </div>
@@ -443,9 +443,9 @@
           <div class="bottom-footer">
             <div class="flex-col nav-links">
               <a href="#">Home</a>
-              <a href="./products/">Products</a>
-              <a href="./apparel/">Apparel</a>
-              <a href="./map/">Map</a>
+              <a target="_blank" href="./products/">Products</a>
+              <a target="_blank" href="./apparel/">Apparel</a>
+              <a target="_blank" href="./map/">Map</a>
             </div>
             <div class="flex-col">
               <ul>
@@ -462,7 +462,7 @@
 
     <!-- Footer Date -->
     <script>
-      document.getElementById("currentYear").innerHTML =
+      document.getElementById('currentYear').innerHTML =
         new Date().getFullYear();
     </script>
 
@@ -472,26 +472,26 @@
         var videoUrl;
         if (window.innerWidth < 768) {
           videoUrl =
-            "https://player.vimeo.com/video/807896574?playsinline=0&amp;title=0&amp;byline=0&amp;portrait=0";
+            'https://player.vimeo.com/video/807896574?playsinline=0&amp;title=0&amp;byline=0&amp;portrait=0';
         } else {
           videoUrl =
-            "https://player.vimeo.com/video/807890339?playsinline=0&amp;title=0&amp;byline=0&amp;portrait=0";
+            'https://player.vimeo.com/video/807890339?playsinline=0&amp;title=0&amp;byline=0&amp;portrait=0';
         }
-        document.getElementById("vimeo-modal").setAttribute("src", videoUrl);
+        document.getElementById('vimeo-modal').setAttribute('src', videoUrl);
       }
 
-      window.addEventListener("resize", checkScreenSize);
+      window.addEventListener('resize', checkScreenSize);
       checkScreenSize();
     </script>
 
     <!-- ScrollReveal -->
     <script type="text/javascript">
-      ScrollReveal().reveal(".reveal", {
+      ScrollReveal().reveal('.reveal', {
         delay: 500,
         duration: 1500,
         interval: 500,
       });
-      ScrollReveal().reveal(".vibe-text", {
+      ScrollReveal().reveal('.vibe-text', {
         delay: 4000,
         duration: 1500,
         interval: 500,

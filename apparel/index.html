@@ -66,7 +66,7 @@
       <nav id="sticky" class="nav-up-down dark navbar">
         <div class="row">
           <div class="flex-col left-nav">
-            <a href="/" class="logo animate-logo">
+            <a target="_blank" href="/" class="logo animate-logo">
               <img
                 height="40"
                 viewBox="100 0 100 100"
@@ -79,10 +79,10 @@
           </div>
           <ul class="flex-col center-nav">
             <li>
-              <a href="/"> Home </a>
+              <a target="_blank" href="/"> Home </a>
             </li>
             <li>
-              <a href="../products/">Products</a>
+              <a target="_blank" href="../products/">Products</a>
             </li>
 
             <li class="external active">
@@ -90,7 +90,7 @@
             </li>
           </ul>
           <div class="flex-col right-nav">
-            <a href="../map/" class="btn loop">
+            <a target="_blank" href="../map/" class="btn loop">
               <div class="btn-wrap">
                 <div class="btn-text">Find Us Nearby</div>
                 <div class="btn-text yellow-dot">•</div>
@@ -115,7 +115,7 @@
         <div class="swiper mySwiper">
           <div href="https://example.com" class="swiper-wrapper">
             <div class="swiper-slide">
-              <a href="./black-apparel/">
+              <a target="_blank" href="./black-apparel/">
                 <img
                   src="../assets/images/stylish_happy_young_adult_in_a_black_hoodie_at_conc.png"
                   alt=""
@@ -123,7 +123,7 @@
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="./sky-blue-apparel/">
+              <a target="_blank" href="./sky-blue-apparel/">
                 <img
                   src="../assets/images/Happy_young_woman_in_sky_blue_knit_beanie.png"
                   alt=""
@@ -131,7 +131,7 @@
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="./beige-apparel/">
+              <a target="_blank" href="./beige-apparel/">
                 <img
                   src="../assets/images/stylish_happy_young_woman_in_a_beige_hoodie_at_park.png"
                   alt=""
@@ -139,7 +139,7 @@
               </a>
             </div>
             <div class="swiper-slide">
-              <a href="./white-apparel/">
+              <a target="_blank" href="./white-apparel/">
                 <img
                   src="../assets/images/stylish_happy_young_woman_in_a_white_baseball_hat.png"
                   alt=""
@@ -192,7 +192,7 @@
         <div class="container">
           <div class="row top-footer">
             <div class="flex-col">
-              <a href="../map/">
+              <a target="_blank" href="../map/">
                 <div class="circle">
                   <div class="circle-text" style="color: #fff">Find Us</div>
                 </div>
@@ -201,10 +201,10 @@
           </div>
           <div class="bottom-footer">
             <div class="flex-col nav-links">
-              <a href="/">Home</a>
-              <a href="../products/">Products</a>
+              <a target="_blank" href="/">Home</a>
+              <a target="_blank" href="../products/">Products</a>
               <a href="#">Apparel</a>
-              <a href="../map/">Map</a>
+              <a target="_blank" href="../map/">Map</a>
             </div>
             <div class="flex-col">
               <ul>
@@ -237,11 +237,11 @@
       barba.hooks.beforeEnter(() => {
         grecaptcha.ready(function () {
           grecaptcha
-            .execute("6Ld1MiYcAAAAANo3Cv2czYgssQlPHMOJE-hAFc1u", {
-              action: "submit",
+            .execute('6Ld1MiYcAAAAANo3Cv2czYgssQlPHMOJE-hAFc1u', {
+              action: 'submit',
             })
             .then(function (token) {
-              document.getElementById("g-recaptcha-response").value = token;
+              document.getElementById('g-recaptcha-response').value = token;
             });
         });
       });
